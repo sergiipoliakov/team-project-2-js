@@ -462,22 +462,22 @@ summary {
 
 ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(150, 41, 41, 0.5);
 }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(177, 57, 57, 0.5);
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(175, 57, 57, 0.5);
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(165, 55, 55, 0.5);
 }
 
 .modal-form-button {
