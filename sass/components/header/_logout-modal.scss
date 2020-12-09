@@ -1,0 +1,22 @@
+.modal-logout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $primaryWhiteColor;
+
+  @media screen and (min-width: 310px) and (max-width: 479px) {
+    width: 290px;
+    height: 205px;
+  }
+  @media screen and(min-width: 480px) and (max-width: 1199px) {
+    width: 650px;
+    height: 230px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: 650px;
+    height: 230px;
+  }
+}

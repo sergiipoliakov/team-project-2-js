@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        
+        <div class="search-form">
+            <button type="button" class="buttons" data-modal-open>
+            <svg width="24" height="24" aria-label="Переключатель модального окна">
+                <use class="icon-search" href="./images/sprite.svg#icon-search-form"></use>
+            </svg>
+            </button>
+           
+        </div>
+        <div class="logo">
+            <a href="./index.html" class="logo">LOGO</a>
+        </div>
+        <div class="my-cabinet">
+            <svg width="24" height="24" aria-label="Переключатель мобильного меню">
+                <use class="icon-search" href="./images/sprite.svg#icon-my-cabinet"></use>
+            </svg>
+            
+            <a href="">мiй кабинет</a>
+
+            <button type="button" class="exit-button" data-exit>
+                <svg width="24" height="24" aria-label="Переключатель мобильного меню">
+                    <use class="icon-search" href="./images/sprite.svg#icon-exit"></use>
+                </svg>
+            </button>
+
+
+            
+        </div>
+
+        <ul>
+            <li>
+                <button type="button" class="registration" data-register>Регесртрация</button>
+            </li>
+            <li>
+                <button type="button" class="login" data-login>Увийти</button>
+
+            </li>
+        </ul>
+
+        <div class="make-order">
+            <button type="button" class="make-order-button" data-add-bill>Сворити оголошеня</button>
+        </div>
+        
+        </div>
+    </div>
+
+<!-- модальное окно поиска -->
+    <div class="container ">
+        <div class=" backdrop is-hidden" data-modal>
+            <div class="modal">
+            <button class="buttons close-button" data-modal-close>
+                <svg width="24" height="24" class="close-button-icon">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <form class="modal-form" autocomplete="off">
+                <label class="modal-form-field">
+                    <input type="text" name="name" class="modal-form-input" placeholder="ПОШУК">
+                    
+                    <button type="submit" class="modal-form-button modal-form-label buttons ">
+                        
+                            <svg width="24" height="24" class="modal-icon">
+                                <use href="./images/sprite.svg#icon-search-form-white"></use>
+                            </svg>
+                        
+                    </button>
+                </label>
+            </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- модальное окно регистрации -->
+    <div class="container ">
+        <div class=" backdrop is-hidden" data-modal-register>
+            <div class="modal-register">
+                
+                <button class="buttons close-button" data-modal-register-close>
+                    <svg width="24" height="24" class="close-button-icon">
+                        <use href="./images/sprite.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                <form class="register-form" autocomplete="off">
+                    <label class="register-form-field">
+                        <input type="mail" name="name" class="register-form-input" placeholder="e-mail">  
+                    </label>
+                    <label class="register-form-field">
+                        <input type="text" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <button type="submit" class="register-form-button">увийти</button>
+                    <button type="submit" class="register-form-button">зарегистрироватися</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- модальное окно добавить обьявление -->
+    <div class="container">
+        <div class=" backdrop is-hidden" data-modal-add-bill>
+            <div class="modal-add-bill">
+                <h2>Додати оголошення</h2>
+               
+                <form class="bill-form" autocomplete="off">
+                    
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Назва товару</span>
+                        <input type="text" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <br>
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Фото</span>
+                        <input type="text" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <br>
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Опис товару</span>
+                        <input type="text" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <br>
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Категорія товару</span>
+                        <input type="text" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <br>
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Ціна</span>
+                        <input type="tel" name="name" class="register-form-input" placeholder="password">
+                    </label>
+                    <br>
+                    <label class="bill-form-field">
+                        <span class="modal-form-label">Телефон</span>
+                        <input type="mail" name="name" class="register-form-input" placeholder="e-mail">
+                    </label>
+                    <br>
+                    
+                    <button type="submit" class="bill-form-button">додати</button>
+                </form>
+
+                <button class="buttons add-bill-close-button close-button" data-modal-add-bill-close>
+                    <svg width="24" height="24" class="close-button-icon ">
+                        <use href="./images/sprite.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                 
+            </div>
+        </div>
+    </div>
+
+    <!-- выйти из аккаутна модальное окно -->
+    <div class="container">
+        <div class=" backdrop is-hidden" data-modal-logout>
+            <div class="modal-logout">
+                <h2>Ви дійсно хочете вийти з акаунта?</h2>
+
+                <button type="button" class="logout-button" data-logout>вийти</button>
+                <button type="button" class="cancel-button" data-cancel>видмина</button>
+
+                <button class="buttons add-bill-close-button close-button" data-modal-logout-close>
+                    <svg width="24" height="24" class="close-button-icon ">
+                        <use href="./images/sprite.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/register.js" type="module"></script>
+    <script src="./js/logout.js" type="module"></script>
+
+<script src="./js/search-model-form.js" type="module"></script>
+<script src="./js/add-bill.js" type="module"></script>
+
+
+</body>
+</html>
