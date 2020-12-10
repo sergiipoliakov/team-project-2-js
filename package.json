@@ -22,7 +22,6 @@
   "homepage": "https://github.com/sergiipoliakov/team-project-2-js#readme",
   "devDependencies": {
     "gh-pages": "^3.1.0",
-    "parcel-bundler": "^1.12.4",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "posthtml-include": "^1.6.0",
     "sass": "^1.26.9"
@@ -30,6 +29,7 @@
   "dependencies": {
     "flickity": "^2.2.1",
     "node-forge": "^0.10.0",
-    "siema": "^1.5.1"
+    "siema": "^1.5.1",
+    "parcel-bundler": "^1.12.4"
   }
 }
