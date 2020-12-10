@@ -1,4 +1,4 @@
-console.log(555);
+console.log('bill');
 const refs = {
   openModalBillBtn: document.querySelector('[data-add-bill]'),
   //   openModalLoginBtn: document.querySelector('[data-login]'),
@@ -13,7 +13,7 @@ console.log(refs.closeModalBtn);
 
 refs.openModalBillBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
-refs.openModalLoginBtn.addEventListener('click', toggleModal);
+// refs.openModalLoginBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
   console.log('eqweqw');

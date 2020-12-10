@@ -1,4 +1,7 @@
 console.log(555);
+
+import './header-main';
+
 const refs = {
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),

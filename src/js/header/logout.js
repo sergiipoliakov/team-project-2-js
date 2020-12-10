@@ -15,3 +15,6 @@ refs.closeModalBtn.addEventListener('click', toggleModal);
 function toggleModal() {
   refs.backdrop.classList.toggle('is-hidden');
 }
+// let response = fetch('https://callboard-backend.herokuapp.com/auth/logout', {
+//   method: 'POST',
+// });
