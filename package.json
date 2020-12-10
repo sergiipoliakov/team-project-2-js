@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.1",
+    "node-forge": "^0.10.0",
     "siema": "^1.5.1"
   }
 }
