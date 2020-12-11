@@ -1,0 +1,71 @@
+footer {   
+ 
+ background: #FFFFFF;
+}
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px; 
+    height: 83px;
+    margin: 0 auto;
+
+
+        
+}
+@media screen and (max-width: 480px){
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;   
+        justify-content: flex-start;
+        align-items: center;    
+        padding-top: 39px;
+        padding-bottom: 39px;
+        
+    }
+    }
+.line-vector{
+    width: 0px;
+    height: 20px;
+    border: 1px solid #E2E3E5;
+    margin-left: 9px;
+    margin-right: 9px;
+   
+}
+.heart-vector{
+    width: 16px;
+    height: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.emblem-vector{
+    width: 15px;
+    height: 15px;
+    margin-right: 7.5px;
+}
+
+.mobil-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+@media screen and (max-width: 480px){
+    .mobil-section{
+padding-left: 15px;
+    }
+}
+
+p{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    size: 12px;
+
+
+}
