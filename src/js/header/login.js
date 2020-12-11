@@ -1,32 +1,19 @@
-import headerTmpl from '../../templates/header-with-auth.hbs';
-
 const refs = {
   openModalRegisteBtn: document.querySelector('[data-register]'),
   closeModalBtn: document.querySelector('[data-modal-register-close]'),
   backdrop: document.querySelector('[data-modal-register]'),
 };
 
-const headerContainer = document.querySelector('.js-header');
+const loginRegisterBtn = document.querySelector('.off');
 const exitBtn = document.querySelector('.js-logout-button');
 
-const headerLoginDaneMarkup = headerTmpl();
 const myStorage = window.localStorage;
-
-console.log(headerLoginDaneMarkup);
-console.log(headerContainer);
-
-console.log(myStorage);
 
 let token = myStorage.getItem('Bearer');
 
-console.log(token);
-
-// if (myToken) {
-//   headerContainer.innerHTML = '';
-// } else {
-// const revove = myStorage.removeItem('Bearer');
-//   console.log(myToken);
-// }
+if (token) {
+  loginRegisterBtn.innerHTML = '';
+}
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -37,26 +24,14 @@ function toggleModal() {
   refs.backdrop.classList.toggle('is-hidden');
 }
 
-console.log(exitBtn);
-
 const formInputEmail = document.querySelector('#e-mail');
 const formInputPassword = document.querySelector('#password');
 const formRegistration = document.querySelector('[data-register-form]');
 const registerFormBtn = document.querySelector('#login');
 
 let registerFormQuery = {};
-console.dir(formInputEmail);
-console.log(formInputPassword);
-console.log(formRegistration);
 
 formRegistration.addEventListener('submit', onRegisterFormSubmit);
-if (token) {
-  // headerContainer.innerHTML = headerLoginDaneMarkup;
-}
-// else {
-// const revove = myStorage.removeItem('Bearer');
-// console.log(token);
-// }
 
 function onRegisterFormSubmit(event) {
   event.preventDefault();
@@ -66,12 +41,10 @@ function onRegisterFormSubmit(event) {
   registerFormQuery.password = formInputPassword.value;
 
   resolt(registerFormQuery).then(data => {
-    console.log(data);
-
     const Token = data.accessToken;
-    // console.log(accessToken);
 
     localStorage.setItem('Bearer', Token);
+    location.reload();
   });
 }
 
@@ -102,4 +75,5 @@ const resolt = function (data) {
 
 function onLogout() {
   myStorage.removeItem('Bearer');
+  location.reload();
 }
