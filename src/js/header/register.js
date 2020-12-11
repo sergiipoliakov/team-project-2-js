@@ -1,104 +1,56 @@
-console.log('register');
+// import PixabayApiServise from './apiServer';
+
 const refs = {
   openModalRegisteBtn: document.querySelector('[data-register]'),
-  openModalLoginBtn: document.querySelector('[data-login]'),
+  // openModalLoginBtn: document.querySelector('[data-login]'),
 
   closeModalBtn: document.querySelector('[data-modal-register-close]'),
   backdrop: document.querySelector('[data-modal-register]'),
-  registerForm: document.querySelectorAll('[data-register-form]'),
+  registerForm: document.querySelector('[data-register-form]'),
 };
 console.log(refs.registerForm);
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
-refs.openModalLoginBtn.addEventListener('click', toggleModal);
+refs.registerForm.addEventListener('submit', fetchApiRegist);
 
-function toggleModal() {
+const registerBtn = document.querySelector('#register');
+
+registerBtn.addEventListener('click', fetchApiRegist);
+
+function toggleModal(event) {
+  event.preventDefault();
   console.log('eqweqw');
+
   refs.backdrop.classList.toggle('is-hidden');
 }
+function fetchApiRegist(event) {
+  event.preventDefault();
+  const API = 'https://callboard-backend.herokuapp.com/';
 
-// const emailInput = refs.registerForm[0][0];
-// const passwordInput = refs.registerForm[0][1];
-// console.log(emailInput);
-// console.log(passwordInput);
-// let emailQuery;
-// emailInput.addEventListener('submit', onEMailInpaut);
+  async function postData(
+    url = 'https://callboard-backend.herokuapp.com/auth/login',
+    data = { email: 'rodiyod106@hmnmw.com', password: '123456' },
+    method = 'POST',
+  ) {
+    const response = await fetch(url, {
+      method: method, // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json',
+        // Authorization:
+        //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzYxZjgwZGFiZDAwMTc5ZDdmZjYiLCJzaWQiOiI1ZmQzMzY0MjgwZGFiZDAwMTc5ZDdmZjkiLCJpYXQiOjE2MDc2Nzc1MDYsImV4cCI6MTYwNzY4MTEwNn0.RnvvG68q1yWWaIVr777cLMJg-eNwugnc7x5ldqFuoNM',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
 
-// function onEMailInpaut(event) {
-//   event.preventDefault();
+    return await response.json();
 
-// emailQuery = event.target.value;
+    // parses JSON response into native JavaScript objects
+  }
 
-//   console.log(emailQuery);
-// }
-
-// let user = {
-//   email: `${emailQuery}`,
-//   password: 'qwerty123',
-// };
-// let response = fetch('https://callboard-backend.herokuapp.com/auth/register', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json;charset=utf-8',
-//   },
-//   body: JSON.stringify(user),
-// })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//   });
-// console.log(response);
-
-// export default class NewApiService {
-// constructor() {
-// this.searchQuery = '';
-// this.page = 1;
-// }
-// const url = 'https://callboard-backend.herokuapp.com/auth/login';
-
-// const data = {
-//   email: 'sergii@example.com',
-//   password: 'qwerty123',
-// };
-
-// let response = fetch('//https://callboard-backend.herokuapp.com/auth/login', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json;charset=utf-8',
-//   },
-//   body: JSON.stringify(user),
-// });
-
-// let result = await response.json();
-// alert(result.message);
-
-// try {
-//   const response = await fetch(url, {
-//     method: 'POST', // или 'PUT'
-//     body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   const json = await response.json();
-//   console.log('Успех:', JSON.stringify(json));
-// } catch (error) {
-//   console.error('Ошибка:', error);
-// }
-// {
-//   "email": "sergii@example.com",
-//   "password": "qwerty123"
-// }
-// {
-//     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQxM2Q0YTBjOGRhNDAwMTc2ODlkMmMiLCJzaWQiOiI1ZmQxM2Y0ODBjOGRhNDAwMTc2ODlkMzMiLCJpYXQiOjE2MDc1NDg3NDQsImV4cCI6MTYwNzU1MjM0NH0.7U5gwTEzObFnPvHCuI3x255d9Dhs1KQ53q-d2N06_2Q",
-//     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQxM2Q0YTBjOGRhNDAwMTc2ODlkMmMiLCJzaWQiOiI1ZmQxM2Y0ODBjOGRhNDAwMTc2ODlkMzMiLCJpYXQiOjE2MDc1NDg3NDQsImV4cCI6MTYxMDE3Njc0NH0.DiIyfDo-F2iWbhRjLcfZRHa8A9_dJqfhdz_7EEIsb_w",
-//     "sid": "5fd13f480c8da40017689d33",
-//     "user": {
-//         "email": "sergii@example.com",
-//         "registrationDate": "2020-12-9",
-//         "id": "5fd13d4a0c8da40017689d2c",
-//         "favourites": [],
-//         "calls": []
-//     }
-// }
+  postData().then(data => {
+    console.log(data.accessToken);
+  });
+}

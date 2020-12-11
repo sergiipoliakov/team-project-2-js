@@ -1,4 +1,3 @@
-console.log(555);
 const refs = {
   openModalBtn: document.querySelector('[data-exit]'),
   closeModalBtn: document.querySelector('[data-modal-logout-close]'),
@@ -15,6 +14,3 @@ refs.closeModalBtn.addEventListener('click', toggleModal);
 function toggleModal() {
   refs.backdrop.classList.toggle('is-hidden');
 }
-// let response = fetch('https://callboard-backend.herokuapp.com/auth/logout', {
-//   method: 'POST',
-// });
