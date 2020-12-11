@@ -9,7 +9,7 @@ const refs = {
 };
 
 const loginRegisterBtn = document.querySelector('.off');
-const exitBtn = document.querySelector('.js-logout-button');
+const logoutBtn = document.querySelector('.js-logout-button');
 
 const myStorage = window.localStorage;
 
@@ -18,12 +18,15 @@ console.log(token);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
+  document.getElementById('exit.btn').hidden = false;
+} else if (!token) {
+  document.getElementById('exit.btn').hidden = true;
 }
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
-exitBtn.addEventListener('click', onLogout);
+logoutBtn.addEventListener('click', onLogout);
 
 function toggleModal() {
   refs.backdrop.classList.toggle('is-hidden');
