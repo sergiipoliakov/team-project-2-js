@@ -52,9 +52,6 @@ function onRegisterFormSubmit(event) {
   registerFormQuery.email = formInputEmail.value;
   registerFormQuery.password = formInputPassword.value;
 
-  if (currentClick.id === 'login') {
-    console.log('super');
-  }
   toLogin(registerFormQuery)
     .then(data => {
       console.log(data.accessToken);
