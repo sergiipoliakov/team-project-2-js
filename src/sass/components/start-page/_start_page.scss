@@ -1,0 +1,37 @@
+// ! breakpoints
+$mobile: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1279px;
+$desktop: 1280px;
+
+.start-page {
+	@extend %container;
+	background-color: rgb(192, 183, 183);
+}
+
+%container {
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0;
+	// padding-left: 15px;
+	// padding-right: 15px;
+	outline: 1px solid red;
+
+	@media screen and (min-width: $mobile) {
+		width: $mobile;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@media screen and (min-width: $tablet-min) {
+		width: $tablet-min;
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
