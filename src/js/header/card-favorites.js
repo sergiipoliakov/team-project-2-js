@@ -10,8 +10,6 @@ const user = {
   price: '30',
 };
 
-const favoritesTmpl = FavoritesTmpl();
-
 console.log();
 
-favoritesContainer.innerHTML = favoritesTmpl(user);
+favoritesContainer.innerHTML = FavoritesTmpl(user);
