@@ -1,0 +1,65 @@
+.text {
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 28px;
+  margin-top: 18px;
+  margin-bottom: 0px;
+}
+
+.modal-favorites {
+  display: flex;
+  /*background-color: rgb(189, 199, 199);*/
+}
+
+.left-button,
+.right-button {
+  border-radius: 50%;
+  border: 0px;
+  height: 30px;
+  width: 30px;
+  background-color: #ffff;
+  margin-top: 11px;
+}
+
+.right-button {
+  margin-left: 87.4%;
+}
+
+.cards {
+  list-style: none;
+  width: 295px;
+  height: 350px;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  /*background-color: burlywood;*/
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.foto {
+  width: 295px;
+  height: 275px;
+  background-color: rgb(226, 226, 236);
+}
+
+.heart-like-icon {
+  margin-bottom: -25px;
+  margin-left: 270px;
+}
+
+.name {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: light;
+  font-size: 12px;
+}
+
+.price {
+  margin-left: 20px;
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
