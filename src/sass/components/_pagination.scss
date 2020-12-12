@@ -1,0 +1,25 @@
+.pagination {
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 480px) {
+    .pagination {
+        margin-top: 30px;
+    }
+}   
+
+.buttons {
+    display: flex;
+    padding: 0 10px;
+    list-style: none;
+}
+
+.number-button {
+    background-color: #ffffff;
+}
+
+.work-button {
+    width: 60px;
+    height: 60px;
+}
