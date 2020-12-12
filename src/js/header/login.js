@@ -92,10 +92,10 @@ function onRegisterFormSubmit(event) {
     });
 }
 
-const toLogin = function (data) {
+const toLogin = function (param) {
   async function postData(
     url = 'https://callboard-backend.herokuapp.com/auth/login',
-    data = registerFormQuery,
+    data = param,
     method = 'POST',
   ) {
     const response = await fetch(url, {
@@ -116,10 +116,10 @@ const toLogin = function (data) {
   }
   return postData();
 };
-const toRegistation = function (data) {
+const toRegistation = function (param) {
   async function postData(
     url = 'https://callboard-backend.herokuapp.com/auth/register',
-    data = registerFormQuery,
+    data = param,
     method = 'POST',
   ) {
     const response = await fetch(url, {
