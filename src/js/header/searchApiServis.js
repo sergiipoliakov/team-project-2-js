@@ -14,7 +14,7 @@ function onSearchFormInput(event) {
 
   searchQuery = searchInputEl.value;
 
-  console.log(searchQuery);
+  // console.log(searchQuery);
   const url = `https://callboard-backend.herokuapp.com/call/find?search=${searchQuery}`;
   toSearch(url).then(data => {
     searchResoultContainer.innerHTML = searchResoultTmpl(data);
