@@ -1,4 +1,4 @@
-console.log(555);
+// console.log(555);
 
 // import './header-main';
 
@@ -8,9 +8,9 @@ const refs = {
   backdrop: document.querySelector('[data-modal]'),
 };
 
-console.log(refs.backdrop);
-console.log(refs.openModalBtn);
-console.log(refs.closeModalBtn);
+// console.log(refs.backdrop);
+// console.log(refs.openModalBtn);
+// console.log(refs.closeModalBtn);
 
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);

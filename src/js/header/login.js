@@ -14,7 +14,7 @@ const logoutBtn = document.querySelector('.js-logout-button');
 const myStorage = window.localStorage;
 
 let token = myStorage.getItem('Bearer');
-console.log(token);
+// console.log(token);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
@@ -47,7 +47,7 @@ function onRegisterFormSubmit(event) {
   // toggleModal();
 
   const currentClick = event.currentTarget.nodeName;
-  console.dir(currentClick);
+  // console.dir(currentClick);
 
   registerFormQuery.email = formInputEmail.value;
   registerFormQuery.password = formInputPassword.value;
@@ -57,7 +57,7 @@ function onRegisterFormSubmit(event) {
       console.log(data.accessToken);
 
       const message = data.message;
-      console.log(data.message);
+      // console.log(data.message);
       if (message) {
         return error({
           text: message,
@@ -74,7 +74,7 @@ function onRegisterFormSubmit(event) {
         location.reload();
       } else if (Token === undefined) {
         toRegistation(registerFormQuery).then(data => {
-          console.log(data.accessToken);
+          // console.log(data.accessToken);
           const Token = data.accessToken;
 
           if (Token !== undefined) {
@@ -85,7 +85,7 @@ function onRegisterFormSubmit(event) {
       }
     })
     .catch(error => {
-      console.log(error);
+      // console.log(error);s
     });
 }
 
