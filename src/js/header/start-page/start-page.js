@@ -1,19 +1,19 @@
 import StartPageTmplt from '../../../templates/start_page.hbs';
 // const startPageTmplt = StartPageTmplt();
 
-console.log(StartPageTmplt);
+// console.log(StartPageTmplt);
 
 // const startPageContainer = document.querySelector('.start-page');
 const productsContainer = document.querySelector('.products');
 
 // console.log(startPageContainer);
-console.log(productsContainer);
+// console.log(productsContainer);
 
-console.log(11001100);
+// console.log(11001100);
 
 const stPage = {
-	name: 'manGoGO',
-	age: '100500',
+  name: 'manGoGO',
+  age: '100500',
 };
 
 // console.log();

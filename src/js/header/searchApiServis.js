@@ -1,3 +1,7 @@
+import '@pnotify/core/dist/BrightTheme.css';
+import '@pnotify/core/dist/PNotify.css';
+import { error } from '@pnotify/core';
+
 import searchResoultTmpl from '../../templates/test.hbs';
 
 const searchFormEl = document.querySelector('.js-search-modal-form');
@@ -14,10 +18,29 @@ function onSearchFormInput(event) {
 
   searchQuery = searchInputEl.value;
 
-  console.log(searchQuery);
+  // console.log(searchQuery);
   const url = `https://callboard-backend.herokuapp.com/call/find?search=${searchQuery}`;
   toSearch(url).then(data => {
+    const message = data.message;
+
+    if (message) {
+      return error({
+        text: message,
+        type: 'info',
+        animateSpeed: 'normal',
+        delay: 2000,
+      });
+    }
+    if (data.length === 0) {
+      return error({
+        text: 'search" is not allowed to be empty',
+        type: 'info',
+        animateSpeed: 'normal',
+        delay: 2000,
+      });
+    }
     searchResoultContainer.innerHTML = searchResoultTmpl(data);
+
     toggleModal();
   });
 }

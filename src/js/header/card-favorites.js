@@ -6,10 +6,10 @@ console.log();
 
 const user = {
   foto: 'foto',
-  name: 'монстера',
+  name: 'Рослина монстера',
   price: '30',
 };
 
-console.log();
+// console.log();
 
 favoritesContainer.innerHTML = FavoritesTmpl(user);
