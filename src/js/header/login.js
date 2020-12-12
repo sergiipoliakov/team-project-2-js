@@ -66,7 +66,7 @@ function onRegisterFormSubmit(event) {
           text: message,
           type: 'info',
           animateSpeed: 'normal',
-          delay: 1000,
+          delay: 2000,
         });
       }
 
