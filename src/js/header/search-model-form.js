@@ -1,6 +1,6 @@
 console.log(555);
 
-import './header-main';
+// import './header-main';
 
 const refs = {
   openModalBtn: document.querySelector('[data-modal-open]'),
@@ -16,6 +16,6 @@ refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
-  console.log('eqweqw');
+  // console.log('eqweqw');
   refs.backdrop.classList.toggle('is-hidden');
 }

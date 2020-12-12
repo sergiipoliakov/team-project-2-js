@@ -1,36 +1,57 @@
-// import PixabayApiServise from './apiServer';
-
 const refs = {
   openModalRegisteBtn: document.querySelector('[data-register]'),
-  // openModalLoginBtn: document.querySelector('[data-login]'),
-
   closeModalBtn: document.querySelector('[data-modal-register-close]'),
   backdrop: document.querySelector('[data-modal-register]'),
-  registerForm: document.querySelector('[data-register-form]'),
 };
-console.log(refs.registerForm);
+
+const loginRegisterBtn = document.querySelector('.off');
+const exitBtn = document.querySelector('.js-logout-button');
+
+const myStorage = window.localStorage;
+
+let token = myStorage.getItem('Bearer');
+
+if (token) {
+  loginRegisterBtn.innerHTML = '';
+}
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
-refs.registerForm.addEventListener('submit', fetchApiRegist);
 
-const registerBtn = document.querySelector('#register');
+exitBtn.addEventListener('click', onLogout);
 
-registerBtn.addEventListener('click', fetchApiRegist);
-
-function toggleModal(event) {
-  event.preventDefault();
-  console.log('eqweqw');
-
+function toggleModal() {
   refs.backdrop.classList.toggle('is-hidden');
 }
-function fetchApiRegist(event) {
-  event.preventDefault();
-  const API = 'https://callboard-backend.herokuapp.com/';
 
+const formInputEmail = document.querySelector('#e-mail');
+const formInputPassword = document.querySelector('#password');
+const formRegistration = document.querySelector('[data-register-form]');
+const registerFormBtn = document.querySelector('#login');
+
+let registerFormQuery = {};
+
+formRegistration.addEventListener('submit', onRegisterFormSubmit);
+
+function onRegisterFormSubmit(event) {
+  event.preventDefault();
+  toggleModal();
+
+  registerFormQuery.email = formInputEmail.value;
+  registerFormQuery.password = formInputPassword.value;
+
+  resolt(registerFormQuery).then(data => {
+    const Token = data.accessToken;
+
+    localStorage.setItem('Bearer', Token);
+    location.reload();
+  });
+}
+
+const resolt = function (data) {
   async function postData(
     url = 'https://callboard-backend.herokuapp.com/auth/login',
-    data = { email: 'rodiyod106@hmnmw.com', password: '123456' },
+    data = registerFormQuery,
     method = 'POST',
   ) {
     const response = await fetch(url, {
@@ -49,8 +70,10 @@ function fetchApiRegist(event) {
 
     // parses JSON response into native JavaScript objects
   }
+  return postData();
+};
 
-  postData().then(data => {
-    console.log(data.accessToken);
-  });
+function onLogout() {
+  myStorage.removeItem('Bearer');
+  location.reload();
 }
