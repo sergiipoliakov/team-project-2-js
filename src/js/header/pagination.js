@@ -1,14 +1,14 @@
-const refs = {
-    numberBtn: document.querySelector(`.button`),
-};
+// const refs = {
+//     numberBtn: document.querySelector(`.button`),
+// };
 
-console.log(refs.numberBtn);
+// console.log(refs.numberBtn);
 
-refs.numberBtn.addEventListener('click', onNumberBtn);
+// refs.numberBtn.addEventListener('click', onNumberBtn);
 
-function onNumberBtn(e) {
-    e.preventDefault();
-    newApiService.fetchApiRegists()
-    .then(renderApiRegists)
-    .catch(onFetchError);
-};
+// function onNumberBtn(e) {
+//     e.preventDefault();
+//     newApiService.fetchApiRegists()
+//     .then(renderApiRegists)
+//     .catch(onFetchError);
+// };
