@@ -9,7 +9,6 @@
     margin-right: auto;
     margin-top: 0;
     padding-inline-start: 0;
-    
   }
 }
 
@@ -44,7 +43,6 @@
   list-style: none;
 }
 
-
 a {
   text-decoration: none;
   color: black;
@@ -53,7 +51,7 @@ a {
 .svg-suffix {
   margin-right: 15px;
 
-.catigories-container {
-  display: flex;
-
+  .catigories-container {
+    display: flex;
+  }
 }
