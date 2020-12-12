@@ -1,0 +1,110 @@
+<div data-backdrop class=" backdrop  is-hidden " data-modal>
+
+
+    <div class="container">
+
+        <div class="button-win ">
+            <button class="form-button" data-modal-close style="float:right;margin-right: 0px;">
+                <img class="close-vector" src="./images/close-vector.png" alt="close">
+
+            </button>
+        </div>
+
+
+        <h2>Додати оголошення</h2>
+
+
+        <form action="/action_page.php">
+
+            <div class="row">
+                <div class="col-25">
+                    <label class="form-label name-label" for="name">Назва товару</label>
+                </div>
+                ` <div class="col-75">
+                    <input class="form-input name-input" type="text" name="name" id="name" placeholder=" ">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Опис товару</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="" style="height:56px"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <div class="foto-input ">
+                    <div class="col-25">
+                        <label class="form-label foto-label text-name">Фото</label>
+                    </div>
+                    <label class="label-upload-photo" for="upload-photo"><input type="file" id="upload-photo">
+                    </label>
+
+                    <label class="label-upload-photo" for="upload-photo"><input type="file" id="upload-photo">
+                    </label>
+
+
+                    <label for="upload-photo" class="label-upload-photo"><input type="file" id="upload-photo">
+                    </label>
+
+
+                    <label class="label-upload-photo" for="upload-photo"><input type="file" id="upload-photo">
+                    </label>
+
+
+                    <label class="label-upload-photo" for="upload-photo"><input type="file" id="upload-photo">
+                    </label>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Категорія товару</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="сcategoria">
+                        <option></option>
+                        <option>Нерухомість</option>
+                        <option>Транспорт</option>
+                        <option>Робота</option>
+                        <option>Електроніка</option>
+                        <option>Бізнес та послуги</option>
+                        <option>Відпочинок і спорт</option>
+                        <option>Віддам безкоштовно</option>
+                        <option>Обмін</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Ціна</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="0.00грн">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="tel">Телефон</label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" id="tel" name="tel" placeholder="+38 (0--) --- -- --">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <input type="submit" value="Додати">
+        </div>
+    </div>
+</div>
