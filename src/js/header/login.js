@@ -54,7 +54,7 @@ function onRegisterFormSubmit(event) {
 
   toLogin(registerFormQuery)
     .then(data => {
-      console.log(data.accessToken);
+      // console.log(data.accessToken);
 
       const message = data.message;
       // console.log(data.message);
@@ -140,5 +140,27 @@ const toRegistation = function (param) {
 
 function onLogout() {
   myStorage.removeItem('Bearer');
+
+  async function postData(
+    url = 'https://callboard-backend.herokuapp.com/auth/logout',
+    // data = param,
+    method = 'POST',
+  ) {
+    const response = await fetch(url, {
+      method: method, // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json',
+        // Authorization:
+        //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzYxZjgwZGFiZDAwMTc5ZDdmZjYiLCJzaWQiOiI1ZmQzMzY0MjgwZGFiZDAwMTc5ZDdmZjkiLCJpYXQiOjE2MDc2Nzc1MDYsImV4cCI6MTYwNzY4MTEwNn0.RnvvG68q1yWWaIVr777cLMJg-eNwugnc7x5ldqFuoNM',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      // body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+
+    return await response.json();
+  }
+  postData();
+
   location.reload();
 }

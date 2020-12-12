@@ -1,20 +1,20 @@
-const catigorie = [
-  'property',
-  'transport',
-  'work',
-  'electronics',
-  'business and services',
-  'recreation and sport',
-  'free',
-  'trade',
-];
+// const catigorie = [
+//   'property',
+//   'transport',
+//   'work',
+//   'electronics',
+//   'business and services',
+//   'recreation and sport',
+//   'free',
+//   'trade',
+// ];
 import catigoriesTmpl from '../../templates/catigories.hbs';
 
 const categoriesListContainer = document.querySelector('.js-categories-list');
 const catogoriesContainer = document.querySelector('.js-catigories');
 // const searchResoultContainer = document.querySelector('.search-resoult');
 // const searchModal = document.querySelector('[data-modal]');
-console.log(categoriesListContainer);
+// console.log(categoriesListContainer);
 let catigoriesQuery;
 
 categoriesListContainer.addEventListener('click', onCategoriesItem);
@@ -26,11 +26,11 @@ function onCategoriesItem(event) {
 
   catigoriesQuery = event.target.id;
 
-  console.log(catigoriesQuery);
+  // console.log(catigoriesQuery);
   const url = `https://callboard-backend.herokuapp.com/call/specific/${catigoriesQuery}`;
   toCatigoriesClick(url).then(data => {
     catogoriesContainer.innerHTML = catigoriesTmpl(data);
-    console.log(data);
+    // console.log(data);
     // toggleModal();
   });
 }
