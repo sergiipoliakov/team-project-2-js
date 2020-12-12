@@ -8,10 +8,9 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
 }
 
-.categories-item{
+.categories-item {
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -22,11 +21,11 @@
 
   padding-right: 42px;
 
-  &:first-child{
+  &:first-child {
     padding-left: 20px;
   }
 
-  &:last-child{
+  &:last-child {
     font-family: Montserrat;
     font-size: 12px;
     font-style: normal;
@@ -35,6 +34,9 @@
     letter-spacing: 0.03em;
     text-align: left;
 
-padding-right: 20px;
+    padding-right: 20px;
   }
+}
+.list-list {
+  list-style: none;
 }
