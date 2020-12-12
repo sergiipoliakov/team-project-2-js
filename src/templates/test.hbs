@@ -1,8 +1,13 @@
-<div>
-    <h1>test</h1>
-    <ul>
-        <li>{{name}}</li>
-        <li>{{age}}</li>
-        <li>3</li>
-    </ul>
-</div>
+{{#each this}}
+<ul class="card-list">
+    <li><a href="">
+            <img src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo">
+        </a></li>
+    <li>
+        <h3 class=" card-title">{{title}}</h3>
+    </li>
+    <li>
+        <p class="card-price">{{price}}</p>
+    </li>
+</ul>
+{{/each}}
