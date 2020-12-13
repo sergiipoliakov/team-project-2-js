@@ -1,5 +1,5 @@
 // const refs = {
-//   numberBtn: document.querySelector(`.button`),
+//   numberBtn: document.querySelector('.button'),
 // };
 
 // console.log(refs.numberBtn);

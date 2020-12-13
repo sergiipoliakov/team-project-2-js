@@ -14,7 +14,11 @@ const logoutBtn = document.querySelector('.js-logout-button');
 const myStorage = window.localStorage;
 
 let token = myStorage.getItem('Bearer');
+let id = myStorage.getItem('id');
+let sid = myStorage.getItem('sid');
 // console.log(token);
+// console.log(id);
+// console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
@@ -36,28 +40,41 @@ const formInputEmail = document.querySelector('#e-mail');
 const formInputPassword = document.querySelector('#password');
 const formRegistration = document.querySelector('[data-register-form]');
 const loginFormBtn = document.querySelector('#login');
-const registerFormBtn = document.querySelector('#register');
+const registerFormBtn = document.querySelector('#registerBtn');
 
 let registerFormQuery = {};
+let isOnRegisterFormBtnClick;
+let isLoginFormBtn;
 
 formRegistration.addEventListener('submit', onRegisterFormSubmit);
 
+registerFormBtn.addEventListener('click', onRegisterFormBtnClick);
+
+loginFormBtn.addEventListener('click', onLoginFormBtnClick);
+
+function onRegisterFormBtnClick(event) {
+  isOnRegisterFormBtnClick = event.target.classList.contains(
+    'register-form-button',
+  );
+}
+function onLoginFormBtnClick(event) {
+  isLoginFormBtn = event.target.classList.contains('login-form-button');
+}
+
 function onRegisterFormSubmit(event) {
   event.preventDefault();
-  // toggleModal();
 
-  const currentClick = event.currentTarget.nodeName;
-  // console.dir(currentClick);
+  let Token;
 
   registerFormQuery.email = formInputEmail.value;
   registerFormQuery.password = formInputPassword.value;
 
-  toLogin(registerFormQuery)
-    .then(data => {
-      // console.log(data.accessToken);
+  if (isLoginFormBtn) {
+    isLoginFormBtn = false;
 
+    toLogin(registerFormQuery).then(data => {
       const message = data.message;
-      // console.log(data.message);
+
       if (message) {
         return error({
           text: message,
@@ -66,27 +83,102 @@ function onRegisterFormSubmit(event) {
           delay: 2000,
         });
       }
-
-      const Token = data.accessToken;
+      Token = data.accessToken;
+      sid = data.sid;
 
       if (Token !== undefined) {
         localStorage.setItem('Bearer', Token);
-        location.reload();
-      } else if (Token === undefined) {
-        toRegistation(registerFormQuery).then(data => {
-          // console.log(data.accessToken);
-          const Token = data.accessToken;
 
-          if (Token !== undefined) {
-            localStorage.setItem('Bearer', Token);
-            location.reload();
-          }
-        });
+        if (id) {
+          localStorage.setItem('id', id);
+        }
+        if (sid) {
+          localStorage.setItem('sid', sid);
+        }
+
+        location.reload();
       }
-    })
-    .catch(error => {
-      // console.log(error);s
     });
+  }
+
+  if (isOnRegisterFormBtnClick) {
+    isOnRegisterFormBtnClick = false;
+
+    if (Token === undefined) {
+      toRegistation(registerFormQuery).then(data => {
+        const id = data.id;
+        const message = data.message;
+
+        // console.log(data);
+        // console.log(id);
+
+        // console.log(data.message);
+        if (message) {
+          return error({
+            text: message,
+            type: 'info',
+            animateSpeed: 'normal',
+            delay: 4000,
+          });
+        }
+
+        // localStorage.setItem('id', id);
+
+        // console.log(Token);
+        if (id !== undefined) {
+          error({
+            text: 'РЕГИСТРАЦИЯ УСПЕШНА! ТЕПЕРЬ НАЖМИ НА КНОПКУ "УВiЙТИ"',
+            type: 'info',
+            animateSpeed: 'normal',
+            delay: 5000,
+          });
+          if (id) {
+            localStorage.setItem('id', id);
+          }
+        }
+      });
+    }
+  }
+
+  // toLogin(registerFormQuery)
+  // .then(data => {
+  // console.log(data.accessToken);
+
+  // const message = data.message;
+  // console.log(data.message);
+  // if (message) {
+  //   return error({
+  //     text: message,
+  //     type: 'info',
+  //     animateSpeed: 'normal',
+  //     delay: 2000,
+  //   });
+  // }
+
+  // Token = data.accessToken;
+
+  // if (isOnRegisterFormBtnClick) {
+  //   console.log('click po reg');
+  //   if (Token !== undefined) {
+  //     localStorage.setItem('Bearer', Token);
+  //     location.reload();
+  //   }
+  //   else if (Token === undefined) {
+  //     toRegistation(registerFormQuery).then(data => {
+  //       // console.log(data.accessToken);
+  //       const Token = data.accessToken;
+
+  //       if (Token !== undefined) {
+  //         localStorage.setItem('Bearer', Token);
+  //         location.reload();
+  //       }
+  //     });
+  //   }
+  // }
+  // })
+  // .catch(error => {
+  // console.log(error);s
+  // });
 }
 
 const toLogin = function (param) {
@@ -140,6 +232,8 @@ const toRegistation = function (param) {
 
 function onLogout() {
   myStorage.removeItem('Bearer');
+  myStorage.removeItem('id');
+  myStorage.removeItem('sid');
 
   async function postData(
     url = 'https://callboard-backend.herokuapp.com/auth/logout',
