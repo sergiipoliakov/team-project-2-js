@@ -962,12 +962,25 @@ function toggleModal() {
 var refs = {
   openModalBtn: document.querySelector('[data-exit]'),
   closeModalBtn: document.querySelector('[data-modal-logout-close]'),
-  backdrop: document.querySelector('[data-modal-logout]')
+  backdrop: document.querySelector('[data-modal-logout]'),
+  cancelLogoutBtn: document.querySelector('[data-cancel]')
 };
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
+refs.cancelLogoutBtn.addEventListener('click', toggleModal);
+refs.backdrop.addEventListener('click', onBackDropClick);
 
 function toggleModal() {
+  refs.backdrop.classList.toggle('is-hidden');
+}
+
+function onBackDropClick(event) {
+  var isonBackDropClick = event.target.classList.contains('js-backdrop-logout'); // console.log(isonBackDropClick);
+
+  if (!isonBackDropClick) {
+    return;
+  }
+
   refs.backdrop.classList.toggle('is-hidden');
 }
 },{}],"../node_modules/@pnotify/core/dist/BrightTheme.css":[function(require,module,exports) {
@@ -1008,7 +1021,11 @@ var refs = {
 var loginRegisterBtn = document.querySelector('.off');
 var logoutBtn = document.querySelector('.js-logout-button');
 var myStorage = window.localStorage;
-var token = myStorage.getItem('Bearer'); // console.log(token);
+var token = myStorage.getItem('Bearer');
+var id = myStorage.getItem('id');
+var sid = myStorage.getItem('sid'); // console.log(token);
+// console.log(id);
+// console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
@@ -1029,48 +1046,132 @@ var formInputEmail = document.querySelector('#e-mail');
 var formInputPassword = document.querySelector('#password');
 var formRegistration = document.querySelector('[data-register-form]');
 var loginFormBtn = document.querySelector('#login');
-var registerFormBtn = document.querySelector('#register');
+var registerFormBtn = document.querySelector('#registerBtn');
 var registerFormQuery = {};
+var isOnRegisterFormBtnClick;
+var isLoginFormBtn;
 formRegistration.addEventListener('submit', onRegisterFormSubmit);
+registerFormBtn.addEventListener('click', onRegisterFormBtnClick);
+loginFormBtn.addEventListener('click', onLoginFormBtnClick);
+
+function onRegisterFormBtnClick(event) {
+  isOnRegisterFormBtnClick = event.target.classList.contains('register-form-button');
+}
+
+function onLoginFormBtnClick(event) {
+  isLoginFormBtn = event.target.classList.contains('login-form-button');
+}
 
 function onRegisterFormSubmit(event) {
-  event.preventDefault(); // toggleModal();
-
-  var currentClick = event.currentTarget.nodeName; // console.dir(currentClick);
-
+  event.preventDefault();
+  var Token;
   registerFormQuery.email = formInputEmail.value;
   registerFormQuery.password = formInputPassword.value;
-  toLogin(registerFormQuery).then(function (data) {
-    // console.log(data.accessToken);
-    var message = data.message; // console.log(data.message);
 
-    if (message) {
-      return (0, _core.error)({
-        text: message,
-        type: 'info',
-        animateSpeed: 'normal',
-        delay: 2000
-      });
-    }
+  if (isLoginFormBtn) {
+    isLoginFormBtn = false;
+    toLogin(registerFormQuery).then(function (data) {
+      var message = data.message;
 
-    var Token = data.accessToken;
+      if (message) {
+        return (0, _core.error)({
+          text: message,
+          type: 'info',
+          animateSpeed: 'normal',
+          delay: 2000
+        });
+      }
 
-    if (Token !== undefined) {
-      localStorage.setItem('Bearer', Token);
-      location.reload();
-    } else if (Token === undefined) {
+      Token = data.accessToken;
+      sid = data.sid;
+
+      if (Token !== undefined) {
+        localStorage.setItem('Bearer', Token);
+
+        if (id) {
+          localStorage.setItem('id', id);
+        }
+
+        if (sid) {
+          localStorage.setItem('sid', sid);
+        }
+
+        location.reload();
+      }
+    });
+  }
+
+  if (isOnRegisterFormBtnClick) {
+    isOnRegisterFormBtnClick = false;
+
+    if (Token === undefined) {
       toRegistation(registerFormQuery).then(function (data) {
-        // console.log(data.accessToken);
-        var Token = data.accessToken;
+        var id = data.id;
+        var message = data.message; // console.log(data);
+        // console.log(id);
+        // console.log(data.message);
 
-        if (Token !== undefined) {
-          localStorage.setItem('Bearer', Token);
-          location.reload();
+        if (message) {
+          return (0, _core.error)({
+            text: message,
+            type: 'info',
+            animateSpeed: 'normal',
+            delay: 4000
+          });
+        } // localStorage.setItem('id', id);
+        // console.log(Token);
+
+
+        if (id !== undefined) {
+          (0, _core.error)({
+            text: 'РЕГИСТРАЦИЯ УСПЕШНА! ТЕПЕРЬ НАЖМИ НА КНОПКУ "УВiЙТИ"',
+            type: 'info',
+            animateSpeed: 'normal',
+            delay: 5000
+          });
+
+          if (id) {
+            localStorage.setItem('id', id);
+          }
         }
       });
     }
-  }).catch(function (error) {// console.log(error);s
-  });
+  } // toLogin(registerFormQuery)
+  // .then(data => {
+  // console.log(data.accessToken);
+  // const message = data.message;
+  // console.log(data.message);
+  // if (message) {
+  //   return error({
+  //     text: message,
+  //     type: 'info',
+  //     animateSpeed: 'normal',
+  //     delay: 2000,
+  //   });
+  // }
+  // Token = data.accessToken;
+  // if (isOnRegisterFormBtnClick) {
+  //   console.log('click po reg');
+  //   if (Token !== undefined) {
+  //     localStorage.setItem('Bearer', Token);
+  //     location.reload();
+  //   }
+  //   else if (Token === undefined) {
+  //     toRegistation(registerFormQuery).then(data => {
+  //       // console.log(data.accessToken);
+  //       const Token = data.accessToken;
+  //       if (Token !== undefined) {
+  //         localStorage.setItem('Bearer', Token);
+  //         location.reload();
+  //       }
+  //     });
+  //   }
+  // }
+  // })
+  // .catch(error => {
+  // console.log(error);s
+  // });
+
 }
 
 var toLogin = function toLogin(param) {
@@ -1189,6 +1290,8 @@ var toRegistation = function toRegistation(param) {
 
 function onLogout() {
   myStorage.removeItem('Bearer');
+  myStorage.removeItem('id');
+  myStorage.removeItem('sid');
 
   function postData() {
     return _postData3.apply(this, arguments);
@@ -3393,7 +3496,7 @@ var user = {
 favoritesContainer.innerHTML = (0, _cardFavorites.default)(user);
 },{"../../templates/card-favorites.hbs":"templates/card-favorites.hbs"}],"js/header/pagination.js":[function(require,module,exports) {
 // const refs = {
-//   numberBtn: document.querySelector(`.button`),
+//   numberBtn: document.querySelector('.button'),
 // };
 // console.log(refs.numberBtn);
 // refs.numberBtn.addEventListener('click', onNumberBtn);
@@ -3972,7 +4075,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49832" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
