@@ -941,29 +941,34 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/header/add-bill.js":[function(require,module,exports) {
-// console.log('bill');
+console.log('bill');
 var refs = {
   openModalBillBtn: document.querySelector('[data-add-bill]'),
   //   openModalLoginBtn: document.querySelector('[data-login]'),
   closeModalBtn: document.querySelector('[data-modal-add-bill-close]'),
   backdrop: document.querySelector('[data-modal-add-bill]')
-}; // console.log(refs.backdrop);
-// console.log(refs.openModalBillBtn);
-// console.log(refs.closeModalBtn);
-
+};
+console.log(refs.backdrop);
+console.log(refs.openModalBillBtn);
+console.log(refs.closeModalBtn);
 refs.openModalBillBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal); // refs.openModalLoginBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
-  // console.log('eqweqw');
+  console.log('eqweqw');
   refs.backdrop.classList.toggle('is-hidden');
 }
+
+console.log('sergii2');
 },{}],"js/header/logout.js":[function(require,module,exports) {
 var refs = {
   openModalBtn: document.querySelector('[data-exit]'),
   closeModalBtn: document.querySelector('[data-modal-logout-close]'),
   backdrop: document.querySelector('[data-modal-logout]')
 };
+console.log(refs.backdrop);
+console.log(refs.openModalBtn);
+console.log(refs.closeModalBtn);
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -1008,7 +1013,8 @@ var refs = {
 var loginRegisterBtn = document.querySelector('.off');
 var logoutBtn = document.querySelector('.js-logout-button');
 var myStorage = window.localStorage;
-var token = myStorage.getItem('Bearer'); // console.log(token);
+var token = myStorage.getItem('Bearer');
+console.log(token);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
@@ -1036,13 +1042,14 @@ formRegistration.addEventListener('submit', onRegisterFormSubmit);
 function onRegisterFormSubmit(event) {
   event.preventDefault(); // toggleModal();
 
-  var currentClick = event.currentTarget.nodeName; // console.dir(currentClick);
-
+  var currentClick = event.currentTarget.nodeName;
+  console.dir(currentClick);
   registerFormQuery.email = formInputEmail.value;
   registerFormQuery.password = formInputPassword.value;
   toLogin(registerFormQuery).then(function (data) {
-    // console.log(data.accessToken);
-    var message = data.message; // console.log(data.message);
+    console.log(data.accessToken);
+    var message = data.message;
+    console.log(data.message);
 
     if (message) {
       return (0, _core.error)({
@@ -1060,7 +1067,7 @@ function onRegisterFormSubmit(event) {
       location.reload();
     } else if (Token === undefined) {
       toRegistation(registerFormQuery).then(function (data) {
-        // console.log(data.accessToken);
+        console.log(data.accessToken);
         var Token = data.accessToken;
 
         if (Token !== undefined) {
@@ -1069,7 +1076,8 @@ function onRegisterFormSubmit(event) {
         }
       });
     }
-  }).catch(function (error) {// console.log(error);s
+  }).catch(function (error) {
+    console.log(error);
   });
 }
 
@@ -1189,96 +1197,51 @@ var toRegistation = function toRegistation(param) {
 
 function onLogout() {
   myStorage.removeItem('Bearer');
-
-  function postData() {
-    return _postData3.apply(this, arguments);
-  }
-
-  function _postData3() {
-    _postData3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-      var url,
-          method,
-          response,
-          _args3 = arguments;
-      return regeneratorRuntime.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              url = _args3.length > 0 && _args3[0] !== undefined ? _args3[0] : 'https://callboard-backend.herokuapp.com/auth/logout';
-              method = _args3.length > 1 && _args3[1] !== undefined ? _args3[1] : 'POST';
-              _context3.next = 4;
-              return fetch(url, {
-                method: method,
-                // *GET, POST, PUT, DELETE, etc.
-                headers: {
-                  'Content-Type': 'application/json' // Authorization:
-                  //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzYxZjgwZGFiZDAwMTc5ZDdmZjYiLCJzaWQiOiI1ZmQzMzY0MjgwZGFiZDAwMTc5ZDdmZjkiLCJpYXQiOjE2MDc2Nzc1MDYsImV4cCI6MTYwNzY4MTEwNn0.RnvvG68q1yWWaIVr777cLMJg-eNwugnc7x5ldqFuoNM',
-
-                },
-                redirect: 'follow',
-                // manual, *follow, error
-                referrerPolicy: 'no-referrer' // no-referrer, *client
-                // body: JSON.stringify(data), // body data type must match "Content-Type" header
-
-              });
-
-            case 4:
-              response = _context3.sent;
-              _context3.next = 7;
-              return response.json();
-
-            case 7:
-              return _context3.abrupt("return", _context3.sent);
-
-            case 8:
-            case "end":
-              return _context3.stop();
-          }
-        }
-      }, _callee3);
-    }));
-    return _postData3.apply(this, arguments);
-  }
-
-  postData();
   location.reload();
 }
 },{"@pnotify/core/dist/BrightTheme.css":"../node_modules/@pnotify/core/dist/BrightTheme.css","@pnotify/core/dist/PNotify.css":"../node_modules/@pnotify/core/dist/PNotify.css","@pnotify/core":"../node_modules/@pnotify/core/dist/PNotify.js"}],"js/header/search-model-form.js":[function(require,module,exports) {
+console.log(555); // import './header-main';
+
 var refs = {
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   backdrop: document.querySelector('[data-modal]')
 };
+console.log(refs.backdrop);
+console.log(refs.openModalBtn);
+console.log(refs.closeModalBtn);
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
-refs.backdrop.addEventListener('click', onBackDropClick);
 
 function toggleModal() {
-  refs.backdrop.classList.toggle('is-hidden');
-}
-
-function onBackDropClick(event) {
-  var isonBackDropClick = event.target.classList.contains('js-backdrop');
-
-  if (!isonBackDropClick) {
-    return;
-  }
-
+  // console.log('eqweqw');
   refs.backdrop.classList.toggle('is-hidden');
 }
 },{}],"js/header/test-hbs.js":[function(require,module,exports) {
-// import testTmpl from '../../templates/test.hbs';
-// const testContainer = document.querySelector('.test-hbs');
-// console.log(testContainer);
-// console.log(123455);
-// // const testMarkup = testTmpl();
-// console.log();
-// const user = {
-//   name: 'join',
-//   age: '30',
+// // mport StartPageTmplt from '../../../templates/start_page.hbs';
+// // const startPageTmplt = StartPageTmplt();
+// console.log(StartPageTmplt);
+// // const startPageContainer = document.querySelector('.start-page');
+// const productsContainer = document.querySelector('.products');
+// const btnHeart = document.querySelector('.heart-button');
+// const btnFullscreen = document.querySelector('.fullscreen-button');
+// const productCard = document.querySelector('.product-card-123');
+// // console.log(startPageContainer);
+// console.log(productsContainer);
+// console.log(11001100);
+// const stPage = {
+//   name: 'manGoGO',
+//   age: '100500',
 // };
-// console.log();
-// testContainer.innerHTML = testTmpl(user);
+// // console.log();
+// productsContainer.innerHTML = StartPageTmplt(stPage);
+// function showBtn() {
+//   console.log('showBtn');
+//   btnHeart.classList.add('is-shown');
+//   btnFullscreen.classList.add('is-shown');
+// }
+// console.log(productCard);
+// productCard.addEventListener('hover', showBtn)(edited);
 },{}],"js/header/register.js":[function(require,module,exports) {
 
 },{}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
@@ -3326,49 +3289,49 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div class=\"container\">\n    <ul class=\"cards\">\n        <li class=\"foto\">" + alias4((helper = (helper = lookupProperty(helpers, "foto") || (depth0 != null ? lookupProperty(depth0, "foto") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<div>\n    <ul>\n        <li>" + alias4((helper = (helper = lookupProperty(helpers, "foto") || (depth0 != null ? lookupProperty(depth0, "foto") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "foto",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 3,
-          "column": 25
+          "column": 12
         },
         "end": {
           "line": 3,
-          "column": 33
+          "column": 20
         }
       }
-    }) : helper)) + "</li>\n        <li class=\"name\">" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</li>\n        <li>Рослина" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 4,
-          "column": 25
+          "column": 19
         },
         "end": {
           "line": 4,
-          "column": 33
+          "column": 27
         }
       }
-    }) : helper)) + "</li>\n        <li class=\"price\">" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</li>\n        <li>" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "price",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 5,
-          "column": 26
+          "column": 12
         },
         "end": {
           "line": 5,
-          "column": 35
+          "column": 21
         }
       }
-    }) : helper)) + " грн</li>\n    </ul>\n</div>";
+    }) : helper)) + "грн</li>\n    </ul>\n\n    <svg width=\"14\" height=\"12\" class=\"heart-like-icon \">\n        <use href=\"./images/sprite.svg#icon-heart\"></use>\n    </svg>\n\n</div>";
   },
   "useData": true
 });
@@ -3386,10 +3349,10 @@ var favoritesContainer = document.querySelector('.favorites-hbs');
 console.log();
 var user = {
   foto: 'foto',
-  name: 'Рослина монстера',
+  name: 'монстера',
   price: '30'
-}; // console.log();
-
+};
+console.log();
 favoritesContainer.innerHTML = (0, _cardFavorites.default)(user);
 },{"../../templates/card-favorites.hbs":"templates/card-favorites.hbs"}],"js/header/pagination.js":[function(require,module,exports) {
 // const refs = {
@@ -3511,12 +3474,6 @@ exports.default = _default;
 },{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/header/searchApiServis.js":[function(require,module,exports) {
 "use strict";
 
-require("@pnotify/core/dist/BrightTheme.css");
-
-require("@pnotify/core/dist/PNotify.css");
-
-var _core = require("@pnotify/core");
-
 var _test = _interopRequireDefault(require("../../templates/test.hbs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -3534,30 +3491,10 @@ searchFormEl.addEventListener('submit', onSearchFormInput);
 
 function onSearchFormInput(event) {
   event.preventDefault();
-  searchQuery = searchInputEl.value; // console.log(searchQuery);
-
+  searchQuery = searchInputEl.value;
+  console.log(searchQuery);
   var url = "https://callboard-backend.herokuapp.com/call/find?search=".concat(searchQuery);
   toSearch(url).then(function (data) {
-    var message = data.message;
-
-    if (message) {
-      return (0, _core.error)({
-        text: message,
-        type: 'info',
-        animateSpeed: 'normal',
-        delay: 2000
-      });
-    }
-
-    if (data.length === 0) {
-      return (0, _core.error)({
-        text: 'search" is not allowed to be empty',
-        type: 'info',
-        animateSpeed: 'normal',
-        delay: 2000
-      });
-    }
-
     searchResoultContainer.innerHTML = (0, _test.default)(data);
     toggleModal();
   });
@@ -3620,7 +3557,7 @@ var toSearch = function toSearch(param) {
 function toggleModal() {
   searchModal.classList.toggle('is-hidden');
 }
-},{"@pnotify/core/dist/BrightTheme.css":"../node_modules/@pnotify/core/dist/BrightTheme.css","@pnotify/core/dist/PNotify.css":"../node_modules/@pnotify/core/dist/PNotify.css","@pnotify/core":"../node_modules/@pnotify/core/dist/PNotify.js","../../templates/test.hbs":"templates/test.hbs"}],"js/header/header-main.js":[function(require,module,exports) {
+},{"../../templates/test.hbs":"templates/test.hbs"}],"js/header/header-main.js":[function(require,module,exports) {
 "use strict";
 
 require("./add-bill");
@@ -3713,12 +3650,12 @@ var _start_page = _interopRequireDefault(require("../../../templates/start_page.
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // const startPageTmplt = StartPageTmplt();
-// console.log(StartPageTmplt);
-// const startPageContainer = document.querySelector('.start-page');
-var productsContainer = document.querySelector('.products'); // console.log(startPageContainer);
-// console.log(productsContainer);
-// console.log(11001100);
+console.log(_start_page.default); // const startPageContainer = document.querySelector('.start-page');
 
+var productsContainer = document.querySelector('.products'); // console.log(startPageContainer);
+
+console.log(productsContainer);
+console.log(11001100);
 var stPage = {
   name: 'manGoGO',
   age: '100500'
@@ -3737,200 +3674,7 @@ productsContainer.innerHTML = (0, _start_page.default)(stPage); // import {
 // 	renderBaseMarkup();
 // }
 // export default MainPage;
-},{"../../../templates/start_page.hbs":"templates/start_page.hbs"}],"templates/catigories.hbs":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
-    var helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
-        alias2 = container.hooks.helperMissing,
-        alias3 = "function",
-        alias4 = container.escapeExpression,
-        lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return "<ul class=\"card-list\">\n    <li><a href=\"\">\n            <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "imageUrls",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 22
-        },
-        "end": {
-          "line": 4,
-          "column": 35
-        }
-      }
-    }) : helper)) + "\" data-sourse=\"\" width=\"295\" height=\"275\" alt=\"photo\">\n        </a></li>\n    <li>\n        <h3 class=\" card-title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 32
-        },
-        "end": {
-          "line": 7,
-          "column": 41
-        }
-      }
-    }) : helper)) + "</h3>\n    </li>\n    <li>\n        <p class=\"card-price\">" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "price",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 30
-        },
-        "end": {
-          "line": 10,
-          "column": 39
-        }
-      }
-    }) : helper)) + "</p>\n    </li>\n</ul>\n";
-  },
-  "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
-    var stack1,
-        lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return (stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
-      "name": "each",
-      "hash": {},
-      "fn": container.program(1, data, 0),
-      "inverse": container.noop,
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 13,
-          "column": 9
-        }
-      }
-    })) != null ? stack1 : "";
-  },
-  "useData": true
-});
-
-var _default = templateFunction;
-exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/main/catigoriesApi.js":[function(require,module,exports) {
-"use strict";
-
-var _catigories = _interopRequireDefault(require("../../templates/catigories.hbs"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-var categoriesListContainer = document.querySelector('.js-categories-list');
-var catogoriesContainer = document.querySelector('.js-catigories'); // const searchResoultContainer = document.querySelector('.search-resoult');
-// const searchModal = document.querySelector('[data-modal]');
-// console.log(categoriesListContainer);
-
-var catigoriesQuery;
-categoriesListContainer.addEventListener('click', onCategoriesItem);
-
-function onCategoriesItem(event) {
-  event.preventDefault(); // const currentCategory = event.target.id;
-
-  catigoriesQuery = event.target.id; // console.log(catigoriesQuery);
-
-  var url = "https://callboard-backend.herokuapp.com/call/specific/".concat(catigoriesQuery);
-  toCatigoriesClick(url).then(function (data) {
-    catogoriesContainer.innerHTML = (0, _catigories.default)(data); // console.log(data);
-    // toggleModal();
-  });
-}
-
-var toCatigoriesClick = function toCatigoriesClick(param) {
-  function postData() {
-    return _postData.apply(this, arguments);
-  }
-
-  function _postData() {
-    _postData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-      var url,
-          method,
-          response,
-          _args = arguments;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              url = _args.length > 0 && _args[0] !== undefined ? _args[0] : param;
-              method = _args.length > 1 && _args[1] !== undefined ? _args[1] : 'GET';
-              _context.next = 4;
-              return fetch(url, {
-                method: method,
-                // *GET, POST, PUT, DELETE, etc.
-                headers: {
-                  'Content-Type': 'application/json' // Authorization:
-                  //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzYxZjgwZGFiZDAwMTc5ZDdmZjYiLCJzaWQiOiI1ZmQzMzY0MjgwZGFiZDAwMTc5ZDdmZjkiLCJpYXQiOjE2MDc2Nzc1MDYsImV4cCI6MTYwNzY4MTEwNn0.RnvvG68q1yWWaIVr777cLMJg-eNwugnc7x5ldqFuoNM',
-
-                },
-                redirect: 'follow',
-                // manual, *follow, error
-                referrerPolicy: 'no-referrer' // no-referrer, *client
-                //   body: JSON.stringify(data), // body data type must match "Content-Type" header
-
-              });
-
-            case 4:
-              response = _context.sent;
-              _context.next = 7;
-              return response.json();
-
-            case 7:
-              return _context.abrupt("return", _context.sent);
-
-            case 8:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-    return _postData.apply(this, arguments);
-  }
-
-  return postData();
-}; // function toggleModal() {
-// searchModal.classList.toggle('is-hidden');
-// }
-},{"../../templates/catigories.hbs":"templates/catigories.hbs"}],"main.js":[function(require,module,exports) {
+},{"../../../templates/start_page.hbs":"templates/start_page.hbs"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
@@ -3942,9 +3686,7 @@ require("./js/header/header-main");
 require("./js/header/start-page/start-page");
 
 require("./js/header/pagination");
-
-require("./js/main/catigoriesApi");
-},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./sass/main.scss":"sass/main.scss","./js/header/header-main":"js/header/header-main.js","./js/header/start-page/start-page":"js/header/start-page/start-page.js","./js/header/pagination":"js/header/pagination.js","./js/main/catigoriesApi":"js/main/catigoriesApi.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./sass/main.scss":"sass/main.scss","./js/header/header-main":"js/header/header-main.js","./js/header/start-page/start-page":"js/header/start-page/start-page.js","./js/header/pagination":"js/header/pagination.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3972,7 +3714,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49832" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60653" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -4148,5 +3890,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/src.e31bb0bc.js.map
