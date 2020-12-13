@@ -33,7 +33,7 @@
 
 .work-button:focus {
     color: $primaryWhiteColor;;
-    background-color: #000000;
+    background-color: $text-color;
     border-style: none;
 }
 
