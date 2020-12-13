@@ -22,13 +22,16 @@
 }
 
 .categories-item {
-  // display: block;
-  // padding-top:27px ;
-  // padding-bottom: 26px;
-  // width: 247px;
-  // border: 1px solid #E2E3E5;
-  // background-color: #F5F6FB;
-  // padding-left: 34px;
+  @media screen and (max-width: 767px){
+    display: block;
+  padding-top:27px ;
+  padding-bottom: 26px;
+  width: 247px;
+  border: 1px solid #E2E3E5;
+  background-color: #F5F6FB;
+  padding-left: 34px;
+  }
+  
 
   &:last-child {
     display: none;
