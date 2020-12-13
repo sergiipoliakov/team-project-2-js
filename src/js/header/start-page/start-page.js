@@ -1,4 +1,4 @@
-import StartPageTmplt from '../../../templates/start-page.hbs';
+import StartPageTmplt from '../../../templates/start_page.hbs';
 import contOnSaleGood from '../../../templates/container-on-sale-good.hbs';
 // const startPageTmplt = StartPageTmplt();
 
@@ -17,17 +17,17 @@ console.log(productsContainer);
 console.log(11001100);
 
 const stPage = {
-	name: 'manGoGO',
-	age: '100500',
+  name: 'manGoGO',
+  age: '100500',
 };
 // console.log();
 productsContainer.innerHTML = StartPageTmplt(stPage);
 startPageContainer.innerHTML = contOnSaleGood(stPage);
 
 function showBtn() {
-	console.log('showBtn');
-	btnHeart.classList.add('is-shown');
-	btnFullscreen.classList.add('is-shown');
+  console.log('showBtn');
+  btnHeart.classList.add('is-shown');
+  btnFullscreen.classList.add('is-shown');
 }
 
 // console.log(productCard);
@@ -36,9 +36,6 @@ function showBtn() {
 // oneTwoThree.addEventListener('hover', showBtn)
 
 // productCard.addEventListener('hover', showBtn)
-
-
-
 
 // import {
 // 	headerItemRef,
