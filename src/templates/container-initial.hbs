@@ -1,0 +1,15 @@
+{{!-- !тут ще не робив змін, треба уточнити --}}
+{{#each this}}
+<div class="container cont-initial">
+	<button type="button" class="left-button" data-left>
+		<svg width="18" height="18" class="left-arrow-icon">
+			<use href="../images/sprite.svg#icon-chevron-left"></use>
+		</svg>
+	</button>
+	<span>
+		<h1>{{category}}</h1>
+	</span>
+	<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
+	</a>
+</div>
+{{/each}}
