@@ -1,13 +1,16 @@
 {{#each this}}
-<ul class="card-list">
-    <li><a href="">
+
+
+<ul class="cards">
+    <li class="foto"><a href="">
             <img src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo">
         </a></li>
-    <li>
+    <li class="name">
         <h3 class=" card-title">{{title}}</h3>
     </li>
-    <li>
+    <li class="price">
         <p class="card-price">{{price}}</p>
     </li>
 </ul>
+</div>
 {{/each}}
