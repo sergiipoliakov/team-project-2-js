@@ -1,5 +1,4 @@
 .logo {
-  // padding-left: 40px;
   font-family: Montserrat;
   font-weight: 700;
   font-size: 18px;
@@ -7,32 +6,38 @@
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  // margin: 0;
-  // padding: 0;
   text-decoration: none;
   color: black;
 }
+
+.logo_wrap {
+  margin-left: 66px;
+}
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   height: 70px;
-  border: 1px solid #e2e3e5;
-  @media screen and(min-width: 310px) and (max-width: 479px) {
-    width: 290px;
+  border-bottom: 1px solid $border-color;
+
+  @media screen and (min-width: $tablet-width) {
   }
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    width: 745 - 22px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1047 + 214px;
+  @media screen and (min-width: $desktop-width) {
   }
 }
 
-.make-order-button {
+.search-form {
+  margin-left: auto;
+  margin-right: 14px;
+  @media screen and (min-width: $tablet-width) {
+  }
+}
+
+.create-ad-btn {
+  display: none;
+
   background-color: $accentColor;
   color: $primaryWhiteColor;
   font-weight: 500;
@@ -42,21 +47,24 @@
   text-transform: uppercase;
   border: none;
 
-  @media screen and(min-width: 310px) and (max-width: 479px) {
-  }
-
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet-width) {
+    display: block;
     width: 180px;
     height: 70px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     width: 214px;
     height: 70px;
   }
 }
-.buttons {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+
+.auth {
+  display: none;
+}
+
+.menu_btn {
+  width: 70px;
+  height: 70px;
+  border-right: 1px solid $border-color;
 }

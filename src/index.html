@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css" />
-
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- header сайта но без навигации -->
     <include src="./partials/header.html"></include>
-
 
     <!-- навигация тут -->
     <include src="./partials/category_nav.html"></include>
@@ -22,21 +25,15 @@
     <!--  страничка результатов поика -->
     <include src="./partials/search-resoult.html"></include>
 
-
     <!-- модальное окно "избранное" -->
     <include src="./partials/favorites.html"></include>
     <div class="favorites-hbs"></div>
 
+    <!-- модальное окно поиска -->
+    <include src="./partials/search-modal.html"></include>
 
-<!-- модальное окно поиска -->
-	 <include src="./partials/search-modal.html"></include>
-	 
-
-
-	 <!-- start-page -->
+    <!-- start-page -->
     <include src="./partials/start-page.html"></include>
-
-    
 
     <!-- модальное окно регистрации -->
     <include src="./partials/authorisation.html"></include>
@@ -45,24 +42,16 @@
     <!-- модальное окно добавить обьявление -->
     <include src="./partials/add-bill-modal.html"></include>
 
-  
-
     <!-- выйти из аккаутна модальное окно -->
     <include src="./partials/exit-modal.html"></include>
-
-    
 
     <!-- <div class="test-hbs"></div> -->
 
     <include src="./partials/pagination.html"></include>
-    
+
     <include src="./partials/footer.html"></include>
 
-
-<!-- <script src="./js/header/header-main.js" type="module"></script> -->
-<script src="./main.js" type="module"></script>
-
-
-
-</body>
+    <!-- <script src="./js/header/header-main.js" type="module"></script> -->
+    <script src="./index.js"></script>
+  </body>
 </html>
