@@ -5,11 +5,13 @@ const favoritesContainer = document.querySelector('.favorites-hbs');
 console.log();
 
 const user = {
-  foto: 'foto',
-  name: 'Рослина монстера',
-  price: '30',
+	foto: 'foto',
+	name: 'монстера',
+	price: '30',
 };
 
-// console.log();
+const favoritesTmpl = FavoritesTmpl();
+
+console.log();
 
 favoritesContainer.innerHTML = FavoritesTmpl(user);

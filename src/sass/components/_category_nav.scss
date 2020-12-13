@@ -3,12 +3,10 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
-    width: 1261px;
+    max-width: 1259px;
     height: 69px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
-    padding-inline-start: 0;
   }
 }
 
@@ -41,17 +39,4 @@
 }
 .list-list {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.svg-suffix {
-  margin-right: 15px;
-
-  .catigories-container {
-    display: flex;
-  }
 }

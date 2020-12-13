@@ -1,17 +1,17 @@
-// import testTmpl from '../../templates/test.hbs';
+import testTmpl from '../../templates/test.hbs';
 
-// const testContainer = document.querySelector('.test-hbs');
+const testContainer = document.querySelector('.test-hbs');
 
-// console.log(testContainer);
-// console.log(123455);
-// // const testMarkup = testTmpl();
-// console.log();
+console.log(testContainer);
+console.log(123455);
+// const testMarkup = testTmpl();
+console.log();
 
-// const user = {
-//   name: 'join',
-//   age: '30',
-// };
+const user = {
+  name: 'join',
+  age: '30',
+};
 
-// console.log();
+console.log();
 
-// testContainer.innerHTML = testTmpl(user);
+testContainer.innerHTML = testTmpl(user);

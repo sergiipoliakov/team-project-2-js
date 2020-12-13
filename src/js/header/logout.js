@@ -4,6 +4,10 @@ const refs = {
   backdrop: document.querySelector('[data-modal-logout]'),
 };
 
+console.log(refs.backdrop);
+console.log(refs.openModalBtn);
+console.log(refs.closeModalBtn);
+
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
