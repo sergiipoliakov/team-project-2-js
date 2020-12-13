@@ -1,5 +1,11 @@
 .categories {
   display: none;
+  @media screen and (min-width: 768px){
+    display: inline-flex;
+    margin-right: 19px;
+    margin-left: 511px;
+  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
@@ -13,7 +19,16 @@
 }
 
 .categories-item {
-  font-family: Roboto;
+  @media screen and (min-width: 768px){
+    display: none;
+    &:last-child{
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    display: flex;
+    font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -37,6 +52,8 @@
     text-align: left;
 
     padding-right: 20px;
+  }
+  
   }
 }
 .list-list {
