@@ -30,12 +30,13 @@
   border: 1px solid #E2E3E5;
   background-color: #F5F6FB;
   padding-left: 34px;
+
+  // &:last-child {
+  //     display: none;
+  //   }
   }
   
-
-  &:last-child {
-    display: none;
-  }
+  
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -67,7 +68,6 @@
       line-height: 15px;
       letter-spacing: 0.03em;
       text-align: left;
-
       padding-right: 20px;
     }
   }
@@ -87,5 +87,11 @@ a {
   .catigories-container {
     display: flex;
     background-color: F5F6FB;
+  }
+}
+
+.clean-filters {
+  @media screen and (max-width: 767px){
+    display: none;
   }
 }
