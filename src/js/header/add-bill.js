@@ -23,22 +23,54 @@ const addTelefonInputEl = document.querySelector('#telefon');
 
 let formData = {};
 
-console.log(addBillFormEl);
-console.log(addFileInputEl);
+const myStorage = window.localStorage;
+
+let token = myStorage.getItem('Bearer');
+// let id = myStorage.getItem(‘id’);
+// let sid = myStorage.getItem(‘sid’);
+console.log(token);
 
 addBillFormEl.addEventListener('submit', takeFormData);
 
-//   const formData = Object.fromEntries(new FormData(e.target).entries());
-//   console.log(formData);
-// });
 function takeFormData(event) {
   event.preventDefault();
+
   formData.title = nameBillInputEl.value;
   formData.file = addFileInputEl.value;
   formData.description = addAboutBillInputEl.value;
   formData.category = addCategoryInputEl.value;
   formData.price = addPriceInputEl.value;
   formData.phone = addTelefonInputEl.value;
-
-  console.log(formData);
+  const url = `https://callboard-backend.herokuapp.com/call/${formData.title}`;
+  const body = formData;
+  toAddBill(url, body, token).then(data => {
+    console.log(`Bearer ${token}`);
+    console.log(data);
+  });
 }
+
+const toAddBill = function (URL, BODY, TOKEN1) {
+  async function postData(
+    url = URL,
+    data = BODY,
+    method = 'PATCH',
+    token1 = TOKEN1,
+  ) {
+    console.log(token1);
+    const response = await fetch(url, {
+      method: method, // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token1}`,
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+
+    return await response.json();
+
+    // parses JSON response into native JavaScript objects
+  }
+  return postData();
+};
