@@ -44,6 +44,10 @@
 }
 
 .my-cabinet-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @extend %focus-hover-style;
 }
 
@@ -129,6 +133,12 @@
   }
 }
 
+@media screen and (max-width: $tablet-min) {
+  .my-cabinet {
+    display: none;
+  }
+}
+
 @media screen and (max-width: $desktop) and (min-width: $tablet-min) {
   .my-cabinet {
     display: block;
@@ -140,5 +150,35 @@
   }
   .exit-btn {
     display: none;
+  }
+}
+
+.exit-btn {
+  width: 60px;
+  height: 70px;
+  margin-left: 18px;
+  border-left: 1px solid $border-color;
+
+  @extend %focus-hover-style;
+}
+
+@media screen and (min-width: $desktop) {
+  .my-cabinet {
+    display: flex;
+    order: 3;
+  }
+
+  .text-my-cabinet {
+    margin-left: 11px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
   }
 }
