@@ -1,39 +1,17 @@
-// ! breakpoints
-// $mobile: 320px;
-// $mobile-max: 767px;
-// $tablet-min: 768px;
-// $tablet-max: 1279px;
-// $desktop: 1280px;
-
-// %container {
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	padding: 0;
-// 	// padding-left: 15px;
-// 	// padding-right: 15px;
-// 	outline: 1px solid red;
-
-// 	@media screen and (min-width: $mobile) {
-// 		width: $mobile;
-// 		padding-left: 15px;
-// 		padding-right: 15px;
-// 	}
-// 	@media screen and (min-width: $tablet-min) {
-// 		width: $tablet-min;
-// 		padding-left: 22px;
-// 		padding-right: 22px;
-// 	}
-// 	@media screen and (min-width: $desktop) {
-// 		width: $desktop;
-// 		padding-left: 20px;
-// 		padding-right: 20px;
-// 	}
-// }
-
 .centred-flex {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+}
+
+.material-icons {
+	@include centeredFlex;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 // .cont-on-sale {
@@ -57,33 +35,29 @@
 // }
 
 .heart-button {
-	// display: none;
+	display: none;
 	position: absolute;
 	top: 19px;
 	right: 17px;
 	// display: block;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 0;
 	margin: 0;
-	// background-color: transparent;
+	background-color: transparent;
+	color: white;
 	border: none;
 	cursor: pointer;
 }
 
 .fullscreen-button {
-	// display: none;
+	display: none;
 	position: absolute;
 	bottom: 16px;
 	right: 15px;
 	// display: block;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 0;
 	margin: 0;
-	// background-color: transparent;
+	background-color: transparent;
+	color: white;
 	border: none;
 	cursor: pointer;
 }
@@ -106,16 +80,14 @@
 .sale-title {
 	@extend %category-title;
 	padding: 0;
-	margin-bottom: 0;
+	// margin-bottom: 0;
 	// margin-left: 28px;
-	margin-right: 20px;
+	// margin-right: 20px;
 }
 
 .different-title {
 	@extend %category-title;
 	padding: 0;
-	margin-bottom: 0;
-	margin-left: 28px;
 	margin-right: 10px;
 }
 
@@ -139,16 +111,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	// justify-content: center;
-	align-items: baseline;
+	align-items: center;
 }
 
 .left-button-st-p {
 	display: none;
-
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	border-color: rgb(221, 224, 32);
+	border: none;
 	// position: absolute;
 	// top: 0;
 	// left: 0;
@@ -165,17 +136,19 @@
 	&:hover,
 	&:focus {
 		background-color: $accentColor;
+		color: $primaryWhiteColor;
 	}
 }
 
 .right-button-st-p {
 	// outline: 1px solid black;
-	display: none;
+	// display: none;
 	margin-left: auto;
 
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
+	border: none;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -185,17 +158,15 @@
 	&:hover,
 	&:focus {
 		background-color: $accentColor;
+		color: $primaryWhiteColor;
 	}
 }
 
-.sale-title {
-	margin-right: 20px;
+.devider {
+	color: #e2e3e5;
+	margin: 0 10px 0 10px;
 }
 
-.different-title {
-	margin-right: 20px;
-}
-
-.icon-vector-1 {
-	margin-right: 20px;
+.cards:not(:first-child) {
+	margin-left: 20px;
 }
