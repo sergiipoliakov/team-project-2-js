@@ -1,36 +1,26 @@
 {{#each this}}
-<li class="">
-	<div class="product-card-123">
-		{{!-- <p style="background-color: red;">1-th child of class="product-card-123"</p> --}}
-		<div class="product-card__img-container">
-			<img class="product__image" src="{{imageUrls}}" alt="" />
+<li class="cards">
+	{{!-- <p style="background-color: red;">1-th child of class="product-card-123"</p> --}}
+	<div class="foto product-card__img-container">
+		<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-			<button class="heart-button">
-				<svg width="16" height="16" class="">
-					<use href="../images/sprite.svg/#icon-heart-pr-white"></use>
-				</svg>
-			</button>
+		<button class="heart-button">
+			<span class="material-icons">
+				favorite_border
+			</span>
+		</button>
 
-			<button class="fullscreen-button">
-				<svg width="20" height="20" class="">
-					<use href="../images/sprite.svg#icon-fullscreen"></use>
-				</svg>
-			</button>
+		<button class="fullscreen-button">
+			<span class="material-icons">
+				fullscreen
+			</span>
+		</button>
 
-		</div>
-
-		<p class="product-name-title">{{title}}</p>
-		<p class="old-price">{{oldPrice}}</p>
-		<p class="price">{{price}}</p>
 	</div>
+
+	<p class="product-name-title name">{{title}}</p>
+	<p class="old-price">{{oldPrice}}</p>
+	<p class="price">{{price}}</p>
+
 </li>
 {{/each}}
-
-<div>
-	<h1 class="one-two-three">testStPage</h1>
-	<ul>
-		<li>{{name}}</li>
-		<li>{{age}}</li>
-		<li>400</li>
-	</ul>
-</div>
