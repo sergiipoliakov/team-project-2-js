@@ -8,7 +8,7 @@ const refs = {
   backdrop: document.querySelector('[data-modal-register]'),
 };
 
-const loginRegisterBtn = document.querySelector('.off');
+const loginRegisterBtn = document.querySelector('#login');
 const logoutBtn = document.querySelector('.js-logout-button');
 
 const myStorage = window.localStorage;
