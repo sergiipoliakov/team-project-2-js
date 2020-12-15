@@ -51,5 +51,8 @@
 <symbol id="icon-Vector-1" viewBox="0 0 2 32">
 <path fill="none" stroke="#e2e3e5" style="stroke: var(--color1, #e2e3e5)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.6" d="M0.8 0v32"></path>
 </symbol>
+<symbol id="icon-menu" viewBox="0 0 16 10">
+<path d="M0.5 10H15.5V8.33333H0.5V10ZM0.5 5.83333H15.5V4.16667H0.5V5.83333ZM0.5 0V1.66667H15.5V0H0.5Z" fill="black"/>
+</symbol>
 </defs>
 </svg>
