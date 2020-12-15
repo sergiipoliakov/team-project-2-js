@@ -4,37 +4,136 @@
             <h2>Додати оголошення</h2>
 
         
-                <form class="bill-form js-bill-form"  autocomplete="on">
+                <form class="-bill-form js-add-form"  autocomplete="on">
 
-                <label class="bill-form-field">
+
+                    <div class="-form-items-wrapper">
+                        <div class="-add-form__item">
+                            <label class="-add-form__label" for="form-name">Назва товару</label>
+                            <div class="input-wrapper">
+                                <input id="nameBill"   value="qwert" type="text" name="title" class="add-form__name _req _name input" />
+                                <div class="add-form__error-message">
+                                    Введіть коректну назву товару
+                                </div>
+                            </div>
+                        </div>
+
+                <!-- <label class="-bill-form-field">
                     <span class="modal-form-label">Назва товару</span>
-                    <input type="text" name="name" class="register-form-input"  placeholder="" id="nameBill">
-                </label>
+                    <input type="text" name="name" class="register-form-input _req"  placeholder="" id="nameBill">
+                </label> -->
+
+                <div class="add-form__item">
+                    <label class="modal-form-label">Фото</label>
+                    <div class="input-wrapper">
+                        
+                        <ul class="image-preview__add  _req">
+
+                            <li class="image-preview__item">
+                                
+                                </li>
+                                <li>
+                                    <div class="choose-image">
+                                    
+                                        <input accept=".jpg" type="file" name="file" class="choose-image__input _add-image" id="file" />
+                                    </div>
+                                <div class="image-button">+</div>
+                            </li>
+                        </ul>
+                        <div class="add-form__error-message">
+                            Потрібно добавити від 1-го до 5-ти фото
+                        </div>
+                    </div>
+                </div>
                
-                <label class="bill-form-field">
+                <!-- <label class="bill-form-field">
                 <span class="modal-form-label">фото</span>
                   <input name="myFile" type="file" id="file" multiple>
-                </label>
+                </label> -->
+
+                <div class="-add-form__item">
+                    <label class="-modal-form-label" for="form-description">Опис товару</label>
+                    <div class="input-wrapper">
+                        <textarea name="description" id="form-description"  value="qwerwewewqweqweqweqweqweqeqweqwet" 
+                            class="add-form__description _description _req input" id="aboutBill"></textarea>
+                        <div class="add-form__error-message">
+                            Коректний опис товару - мінімум 30 символів
+                        </div>
+                    </div>
+                </div>
               
-                <label class="bill-form-field">
+                <!-- <label class="bill-form-field">
                     <span class="modal-form-label">Опис товару</span>
                     <input type="text" name="name" class="register-form-input" value="cati-bear" placeholder="" id="aboutBill">
-                </label>
+                </label> -->
+
+
+        <div class="-add-form__item">
+            <div class="-add-form__label">Категорія товару</div>
+            <div class="select-wrapper input-wrapper">
+                    <select class="form-control input-sm  _category _req input" name="catigory"  id="category">//id="sel3">
+                        <option value="category" class="select-option select-option-first">
+                        </option>
+                        <option>Нерухомість</option>
+                        <option>Транспорт</option>
+                        <option value="work">Робота</option>
+                        <option>Електроніка</option>
+                        <option>Бізнес та послуги</option>
+                        <option>Відпочинок і спорт</option>
+                        <option value="for-free">Віддам безкоштовно</option>
+                        <option>Обмін</option>
+                    </select>
+                <!-- <select name="product-category" class="add-form__select _category _req input">
+                    <option value="category" class="select-option select-option-first">
+                        Категорія
+                    </option>
+                </select> -->
+                <div class="add-form__error-message">Виберіть категорію</div>
+            </div>
+        </div>
               
-                <label class="bill-form-field">
+                <!-- <label class="bill-form-field">
                     <span class="modal-form-label">Категорія товару</span>
                     <input type="text" name="name" class="register-form-input" value="trade" placeholder="" id="category">
-                </label>
+                </label> -->
+
+
+        <div class="-add-form__item">
+            <label class="-add-form__label" for="form-price">Ціна</label>
+            <div class="input-wrapper">
+                <input type="text" id="price" name="price"  value="0"data-source="price"
+                    class="add-form__product-price _price _req input" autocomplete="off" minlength="1" maxlength="16"
+                    placeholder="0.00 грн" />
+                <div class="-add-form__error-message">
+                    Введіть коректну ціну товару
+                </div>
+                <div class="-add-form__error-message error-price">
+                    Ціна для цїєї категорії має бути 0
+                </div>
+            </div>
+        </div>
                
-                <label class="bill-form-field">
+                <!-- <label class="bill-form-field">
                     <span class="modal-form-label">Ціна</span>
                     <input type="tel" name="name" class=""  value="123" placeholder="0.00 грн" id="price">
-                </label>
+                </label> -->
+
+                <div class="-add-form__item">
+                    <label class="-add-form__label" for="form-phone">Телефон</label>
+                    <div class="input-wrapper">
+                        <input id="telefon" type="tel" name="phone" data-source="phone" value="+380960792310"
+                            class="add-form__product-telephone-number _phone _req input" placeholder="+38(0--) --- -- --" />
+                        <div class="add-form__error-message">Введіть номер телефону</div>
+                    </div>
+                </div>
+                </div>
                 
-                <label class="bill-form-field">
+                <!-- <label class="bill-form-field">
                     <span class="modal-form-label">Телефон</span>
                     <input type="tel" name="name" class="" value="+380960792323" placeholder="telefon" id="telefon">
-                </label>
+                </label> -->
+
+                
                 
 
                 <button type="submit" class="bill-form-button">додати</button>
