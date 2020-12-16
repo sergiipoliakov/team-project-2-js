@@ -1,25 +1,25 @@
-{{!-- ! треба уточнити --}}
-{{#each this}}
-<div class="container cont-initial">
-	<div class="header-onsale-cont">
-
-		<button type="button" class="left-button-st-p" data-left>
+{{!-- {{#each this}} --}}
+<div class="container-{{this}}">
+	<div>
+		<button type="button" class="left-button" data-left>
 			<span class="material-icons">
 				chevron_left
 			</span>
 		</button>
-
-		<h1 class="category-title">{{category}}</h1>
-
-		<a class="link show-all" href="./category-chosen.html"><span class="show-all">Дивитися всі</span>
+		<span>
+			<h1 class="cont-name-{{this}}">{{category}}</h1>
+		</span>
+		<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
 		</a>
-
-		<button type="button" class="right-button-st-p" data-right>
+		<button type="button" class="left-button" data-left>
 			<span class="material-icons">
 				chevron_right
 			</span>
 		</button>
+	</div>
 
+	<div>
+		<ul class='cont-initial-{{this}}'></ul>
 	</div>
 </div>
-{{/each}}
+{{!-- {{/each}} --}}
