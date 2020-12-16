@@ -1,24 +1,42 @@
 import catigoriesTmplStPg from '../../../templates/start_page.hbs';
 import contOnSaleGood from '../../../templates/container-on-sale-good.hbs';
 
+// console.log(catigoriesTmplStPg);
+// console.log(contOnSaleGood);
+
 const categoriesListContainer = document.querySelector('.js-categories-list');
 const catogoriesContainer = document.querySelector('.js-catigories');
+// const catogoriesContainer = document.querySelector('.my-st-page-ctgrs-container');
+// console.log(categoriesListContainer);
+// console.log(catogoriesContainer);
 
 const startPageContainer = document.querySelector('.start-page');
 const btnHeart = document.querySelector('.heart-button');
 const btnFullscreen = document.querySelector('.fullscreen-button');
 const cardItem = document.querySelector('.cards');
 
+console.log(startPageContainer);
+console.log(btnHeart);
+console.log(btnFullscreen);
+console.log(cardItem);
+
 // add container-on-sale-good.hbs to start-page.html
 startPageContainer.innerHTML = contOnSaleGood();
 
-// hover on crd => show btns
-// cardItem.addEventListener('hover', showBtn);
-// function showBtn() {
-// 	console.log('showBtn');
-// 	btnHeart.classList.add('is-shown');
-// 	btnFullscreen.classList.add('is-shown');
-// }
+//hover on .cards => show btns
+function showBtn() {
+	console.log('btnHeart:', btnHeart);
+	btnHeart.classList.add('is-shown');
+	btnFullscreen.classList.add('is-shown');
+}
+
+function hideBtn() {
+	btnHeart.classList.remove('is-shown');
+	btnFullscreen.classList.remove('is-shown');
+}
+
+cardItem.addEventListener('mouseenter', showBtn);
+cardItem.addEventListener('mouseleave', hideBtn);
 
 /// --- 
 let catigoriesQuery;

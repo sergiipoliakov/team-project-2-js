@@ -1,15 +1,25 @@
-{{!-- !тут ще не робив змін, треба уточнити --}}
+{{!-- ! треба уточнити --}}
 {{#each this}}
 <div class="container cont-initial">
-	<button type="button" class="left-button-st-p" data-left>
-		<span class="material-icons">
-			chevron_left
-		</span>
-	</button>
-	<span>
-		<h1>{{category}}</h1>
-	</span>
-	<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
-	</a>
+	<div class="header-onsale-cont">
+
+		<button type="button" class="left-button-st-p" data-left>
+			<span class="material-icons">
+				chevron_left
+			</span>
+		</button>
+
+		<h1 class="category-title">{{category}}</h1>
+
+		<a class="link show-all" href="./category-chosen.html"><span class="show-all">Дивитися всі</span>
+		</a>
+
+		<button type="button" class="right-button-st-p" data-right>
+			<span class="material-icons">
+				chevron_right
+			</span>
+		</button>
+
+	</div>
 </div>
 {{/each}}
