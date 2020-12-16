@@ -19,10 +19,10 @@ let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
 // console.log(sid);
-console.log(token);
+// console.log(token);
 // console.log(id);
 const phone = document.querySelector('._phone');
-console.log(phone);
+// console.log(phone);
 
 addBillFormEl.addEventListener('submit', takeFormData);
 
@@ -56,34 +56,13 @@ async function takeFormData(event) {
         formData.append('price', `${element.value}`);
       }
     }
-    console.log(formData.get('file'));
-    console.log(formData.get('title'));
-    console.log(formData.get('description'));
-    console.log(formData.get('phone'));
-    console.log(formData.get('category'));
-    console.log(formData.get('price'));
+    // console.log(formData.get('file'));
+    // console.log(formData.get('title'));
+    // console.log(formData.get('description'));
+    // console.log(formData.get('phone'));
+    // console.log(formData.get('category'));
+    // console.log(formData.get('price'));
 
-    // var myHeaders = new Headers();
-    // myHeaders.append('accept', 'application/json');
-    // myHeaders.append('Content-Type', 'multipart/form-data');
-    // myHeaders.append('Authorization', `Bearer ${token}`);
-
-    // var requestOptions = {
-    //   method: 'POST',
-    //   headers: myHeaders,
-    //   body: formData,
-    //   redirect: 'follow',
-    // };
-
-    // var requestOptions = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'multipart/form-data',
-    //     Authorization: `Bearer ${token}`,
-    //   },
-    //   body: formData,
-    //   redirect: 'follow',
-    // };
     let config = {
       method: 'post',
       url: 'https://callboard-backend.herokuapp.com/call',
