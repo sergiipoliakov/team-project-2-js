@@ -8,7 +8,7 @@ const refs = {
   backdrop: document.querySelector('[data-modal-register]'),
 };
 
-const loginRegisterBtn = document.querySelector('.off');
+const loginRegisterBtn = document.querySelector('#login');
 const logoutBtn = document.querySelector('.js-logout-button');
 
 const myStorage = window.localStorage;
@@ -16,15 +16,17 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-// console.log(token);
-// console.log(id);
-// console.log(sid);
+console.log(token);
+console.log(id);
+console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
-  document.getElementById('exit.btn').hidden = false;
+  document.querySelector('.auth').classList.add('is-hidden');
+  document.getElementById('exit.btn').classList.remove('is-hidden');
 } else if (!token) {
-  document.getElementById('exit.btn').hidden = true;
+  document.getElementById('exit.btn').classList.add('is-hidden');
+  document.querySelector('.auth').classList.remove('is-hidden');
 }
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
@@ -109,10 +111,10 @@ function onRegisterFormSubmit(event) {
         const id = data.id;
         const message = data.message;
 
-        // console.log(data);
-        // console.log(id);
+        console.log(data);
+        console.log(id);
 
-        // console.log(data.message);
+        console.log(data.message);
         if (message) {
           return error({
             text: message,
