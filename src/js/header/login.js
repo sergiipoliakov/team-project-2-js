@@ -16,9 +16,9 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-console.log(token);
-console.log(id);
-console.log(sid);
+// console.log(token);
+// console.log(id);
+// console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';

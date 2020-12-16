@@ -2,7 +2,7 @@ import FavoritesTmpl from '../../templates/card-favorites.hbs';
 
 const favoritesContainer = document.querySelector('.favorites-hbs');
 
-console.log();
+// console.log(favoritesContainer);
 
 const user = {
   foto: 'foto',
@@ -12,4 +12,4 @@ const user = {
 
 // console.log();
 
-favoritesContainer.innerHTML = FavoritesTmpl(user);
+// favoritesContainer.innerHTML = FavoritesTmpl(user);
