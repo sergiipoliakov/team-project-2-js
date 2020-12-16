@@ -157,10 +157,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  // width: 78px;
-  // height: 50px;
+  border: 1px solid blue;
+  // width: 100%;
+  // height: 100%;
+  width: 100px;
+  height: 100px;
   // opacity: 0;
   // font-size: 0;
 }
@@ -206,11 +207,12 @@
   box-sizing: border-box;
 }
 
-// .modal-add-bill {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+.modal-add-bill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 //   background-color: #fff;
 
