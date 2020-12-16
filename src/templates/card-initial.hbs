@@ -1,0 +1,27 @@
+{{#each this}}
+<li class="">
+	<div class="product-card-123">
+		{{!-- <p style="background-color: red;">1-th child of class="product-card-123"</p> --}}
+		<div class="product-card__img-container">
+			<img class="product__image" src="{{imageUrls}}" alt="" />
+
+			<button class="heart-button">
+				<span class="material-icons">
+					favorite_border
+				</span>
+			</button>
+
+			<button class="fullscreen-button">
+				<span class="material-icons">
+					fullscreen
+				</span>
+			</button>
+
+		</div>
+
+		<p class="product-name-title">{{title}}</p>
+		<p class="old-price">{{oldPrice}}</p>
+		<p class="price">{{price}}</p>
+	</div>
+</li>
+{{/each}}

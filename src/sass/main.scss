@@ -2,6 +2,12 @@
 @import './utils/mixins';
 @import './utils/variables';
 @import './utils/placeholders';
+@import './base/base-styles';
+
 @import './components/module';
 @import './components/pagination';
 @import './components/module-autoriz';
+
+.is-hidden {
+  display: none;
+}

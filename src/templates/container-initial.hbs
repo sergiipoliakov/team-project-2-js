@@ -1,15 +1,25 @@
-{{!-- !тут ще не робив змін, треба уточнити --}}
-{{#each this}}
-<div class="container cont-initial">
-	<button type="button" class="left-button-st-p" data-left>
-		<span class="material-icons">
-			chevron_left
+{{!-- {{#each this}} --}}
+<div class="container-{{this}}">
+	<div>
+		<button type="button" class="left-button" data-left>
+			<span class="material-icons">
+				chevron_left
+			</span>
+		</button>
+		<span>
+			<h1 class="cont-name-{{this}}">{{category}}</h1>
 		</span>
-	</button>
-	<span>
-		<h1>{{category}}</h1>
-	</span>
-	<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
-	</a>
+		<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
+		</a>
+		<button type="button" class="left-button" data-left>
+			<span class="material-icons">
+				chevron_right
+			</span>
+		</button>
+	</div>
+
+	<div>
+		<ul class='cont-initial-{{this}}'></ul>
+	</div>
 </div>
-{{/each}}
+{{!-- {{/each}} --}}
