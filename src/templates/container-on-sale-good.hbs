@@ -1,0 +1,67 @@
+<div class="cont-on-sale container">
+	<div class="header-onsale-cont">
+
+		<button type="button" class="left-button-st-p" data-left>
+			<span class="material-icons">
+				chevron_left
+			</span>
+		</button>
+
+		<span>
+			<h1 class="sale-title">Розпродаж</h1>
+		</span>
+
+
+		<span class="devider">|</span>
+
+		<span class="">
+			<h1 class="different-title">Piзне</h1>
+		</span>
+
+		<a class="link show-all" href="./category-chosen.html"><span class="show-all">Дивитися всі</span>
+		</a>
+
+		<button type="button" class="right-button-st-p" data-right>
+			<span class="material-icons">
+				chevron_right
+			</span>
+		</button>
+
+	</div>
+
+	{{!-- <ul class="my-st-page-ctgrs-container"></ul> --}}
+	<ul class="catigories-container cards-container js-catigories">
+		{{!-- {{#each this}} --}}
+		<li class="cards">
+			{{!-- <p style="background-color: red;">1-th child of class="cards"</p> --}}
+			<div class="foto product-card__img-container">
+				<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
+
+				<button class="heart-button">
+					<span class="material-icons">
+						favorite_border
+					</span>
+				</button>
+
+				<button class="fullscreen-button">
+					<span class="material-icons">
+						fullscreen
+					</span>
+				</button>
+
+			</div>
+
+			<div>
+				<h3 class="name-st-p">Назва товару{{title}}</h3>
+				<div class="price-cont">
+					<h3 class="old-price-st-p">1000 грн{{oldPrice}}</h3>
+					<h3 class="price-st-p">500 грн{{price}}</h3>
+				</div>
+			</div>
+
+
+		</li>
+		{{!-- {{/each}} --}}
+	</ul>
+
+</div>

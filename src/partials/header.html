@@ -1,50 +1,80 @@
-<div class="container">
-    <div class="header">
+<section id="remove-pl" class="container section-border js-header">
+  <div class="header">
+    <!-- Кнопка меню слева (мобилка) -->
+    <button type="button" class="menu-btn js-menu-open-btn">
+      <svg width="15px" height="10px">
+        <use href="./images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
 
-        <div class="search-form">
-            <button type="button" class="buttons" data-modal-open>
-                <svg width="24" height="24" aria-label="Переключатель модального окна">
-                    <use class="icon-search" href="./images/sprite.svg#icon-search-form"></use>
-                </svg>
-            </button>
-
-        </div>
-        <div class="logo">
-            <a href="./index.html" class="logo">LOGO</a>
-        </div>
-        <div class="my-cabinet">
-            <svg width="24" height="24" aria-label="Переключатель мобильного меню">
-                <use class="icon-search" href="./images/sprite.svg#icon-my-cabinet"></use>
-            </svg>
-
-            <a href="">мiй кабинет</a>
-
-            <button type="button" class="exit-button" data-exit>
-                <svg width="24" height="24" aria-label="Переключатель мобильного меню">
-                    <use class="icon-search" href="./images/sprite.svg#icon-exit"></use>
-                </svg>
-            </button>
-
-
-
-        </div>
-
-        <ul>
-            <li>
-                <button type="button" class="registration" data-register>Регесртрация</button>
-            </li>
-            <li>
-                <button type="button" class="login" data-login>Увийти</button>
-
-            </li>
-        </ul>
-
-        <div class="make-order">
-            <button type="button" class="make-order-button" data-add-bill>Сворити оголошеня</button>
-        </div>
-
+    <!-- Лого -->
+    <div class="logo-wrap">
+      <a href="./index.html" class="logo">LOGO</a>
     </div>
-</div>
 
-<!-- модальное окно поиска -->
+    <!-- Спрятанный блок планшет/мобилка -->
+    <div class="menu-hidden-part is-hidden">
+      <span class="hidden-part-element">Мої оголошення</span>
+      <span class="hidden-part-element">Обране</span>
+    </div>
 
+    <!-- Кнопка поиска  -->
+    <div class="search-form">
+      <button type="button" class="search-btn" data-modal-open>
+        <svg width="24" height="24" aria-label="Переключатель модального окна">
+          <use
+            class="icon-search"
+            href="./images/sprite.svg#icon-search-form"
+          ></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Блок мой кабинет, кнопка выход -->
+    <div class="my-cabinet" id="exit.btn">
+
+      <button class="my-cabinet-btn js-my-cabinet-btn">
+      <button class="my-cabinet-btn">
+
+        <svg
+          class="icon-cabinet"
+          width="20"
+          height="21"
+          aria-label="Мой кабинет"
+        >
+          <use href="./images/sprite.svg#icon-my-cabinet"></use>
+        </svg>
+        <span class="text-my-cabinet">Мiй кабінет</span>
+       
+      </button>
+
+      <ul>
+        <li><a href="" class="js-myBill" data="myBill" id="myBill">мои оголошеня</a></li>
+        <li><a href="" class="js-myFavorite" data="myFavorite" id="myFavorite">обране</a></li>
+      </ul>
+
+      <!-- Кнопка выход -->
+      <button type="button" class="exit-btn js-exit-button" data-exit>
+        <svg width="20" height="20" aria-label="Кнопка выход">
+          <use class="icon-exit" href="./images/sprite.svg#icon-exit"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Блок авторизации, регистрация/вход -->
+    <div class="auth">
+      <button type="button" class="registration-btn" data-register>
+        Реєстрація
+      </button>
+      <span class="slash">/</span>
+      <button type="button" class="login-btn">Увійти</button>
+    </div>
+
+    <!-- Кнопка создания объявления -->
+    <div class="create-ad">
+      <button type="button" class="create-ad-btn" data-add-bill>
+        Створити оголошення!
+      </button>
+    </div>
+  </div>
+</section>
