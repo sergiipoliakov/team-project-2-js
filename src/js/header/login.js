@@ -8,7 +8,7 @@ const refs = {
   backdrop: document.querySelector('[data-modal-register]'),
 };
 
-const loginRegisterBtn = document.querySelector('.off');
+const loginRegisterBtn = document.querySelector('#login');
 const logoutBtn = document.querySelector('.js-logout-button');
 
 const myStorage = window.localStorage;
@@ -22,9 +22,11 @@ let sid = myStorage.getItem('sid');
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
-  document.getElementById('exit.btn').hidden = false;
+  document.querySelector('.auth').classList.add('is-hidden');
+  document.getElementById('exit.btn').classList.remove('is-hidden');
 } else if (!token) {
-  document.getElementById('exit.btn').hidden = true;
+  document.getElementById('exit.btn').classList.add('is-hidden');
+  document.querySelector('.auth').classList.remove('is-hidden');
 }
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);
