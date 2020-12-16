@@ -2,7 +2,7 @@ import GoodsTmpl from '../../templates/card-my-goods.hbs';
 
 const goodsContainer = document.querySelector('.my-goods-hbs');
 
-console.log();
+// console.log(goodsContainer);
 
 const user = {
   foto: 'foto',
@@ -12,4 +12,4 @@ const user = {
 
 // console.log();
 
-goodsContainer.innerHTML = GoodsTmpl(user);
+// goodsContainer.innerHTML = GoodsTmpl(user);
