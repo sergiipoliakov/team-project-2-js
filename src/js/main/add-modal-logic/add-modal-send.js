@@ -90,7 +90,7 @@ async function takeFormData(event) {
       headers: {
         accept: 'application/json',
         'Content-Type': 'multipart/form-data',
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQyNDVhMjAwMzE5MzAwMTdlOTE1MWQiLCJzaWQiOiI1ZmQ5YThiOWQzOThkZTAwMTdjNWRkYTkiLCJpYXQiOjE2MDgxMDAwMjUsImV4cCI6MTYwODEwMzYyNX0.jt4wN6qZNGaZ7987wpFEtONJy0Tzys_sbyX4FtTRIac`,
+        Authorization: `Bearer ${token}`,
         //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQ3Y2VhZWMyOThhMjAwMTc5YzhjYzAiLCJzaWQiOiI1ZmQ5MmMyMmNjZWZlZTAwMTc1M2ZiNzIiLCJpYXQiOjE2MDgwNjgxMzAsImV4cCI6MTYwODA3MTczMH0.I20tV29tq6tHg_XIPcDt1JW21Xmy3Un_kn64p6rMk_w',
       },
       data: formData,

@@ -16,9 +16,9 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-// console.log(token);
-// console.log(id);
-// console.log(sid);
+console.log(token);
+console.log(id);
+console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
@@ -111,10 +111,10 @@ function onRegisterFormSubmit(event) {
         const id = data.id;
         const message = data.message;
 
-        // console.log(data);
-        // console.log(id);
+        console.log(data);
+        console.log(id);
 
-        // console.log(data.message);
+        console.log(data.message);
         if (message) {
           return error({
             text: message,
