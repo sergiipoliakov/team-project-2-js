@@ -242,6 +242,7 @@ function formAddError(input) {
 function formRemoveError(input) {
   input.parentElement.classList.remove('_error');
   input.classList.remove('_error');
+  input.nextElementSibling.classList.remove('visible');
 }
 function nameTest(element) {
   console.log(element.value.length);
