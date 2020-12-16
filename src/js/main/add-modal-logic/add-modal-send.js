@@ -31,42 +31,49 @@ async function takeFormData(event) {
 
   let errorsForm = formValidate(addBillFormEl);
 
-  let formData = new FormData(addBillFormEl);
-  //   formData.append('file', formImage.files[0]);
+  let formData = new FormData();
+  formData.append('file', formImage.files[0]);
   //   console.log(formData.get('file'));
   //   console.log(formData.get('file'));
 
   if (errorsForm === 0) {
     console.log('нет ошики');
 
-    // let formReq = addBillFormEl.querySelectorAll('._req');
-    // for (let i = 0; i < formReq.length; i += 1) {
-    //   const element = formReq[i];
+    let formReq = addBillFormEl.querySelectorAll('._req');
+    for (let i = 0; i < formReq.length; i += 1) {
+      const element = formReq[i];
 
-    //   if (element.classList.contains('_name')) {
-    //     formData.append('title', `${element.value}`);
-    //   } else if (element.classList.contains('_description')) {
-    //     formData.append('description', `${element.value}`);
-    //   } else if (element.classList.contains('_phone')) {
-    //     formData.append('phone', `${element.value}`);
-    //   } else if (element.classList.contains('_category')) {
-    //     let value = element.options[element.selectedIndex].value;
-    //     formData.append('category', `${value}`);
-    //   } else if (element.classList.contains('_price')) {
-    //     formData.append('price', `${element.value}`);
-    //   }
-    // }
-    var myHeaders = new Headers();
-    myHeaders.append('accept', 'application/json');
-    myHeaders.append('Content-Type', 'multipart/form-data');
-    myHeaders.append('Authorization', `Bearer ${token}`);
+      if (element.classList.contains('_name')) {
+        formData.append('title', `${element.value}`);
+      } else if (element.classList.contains('_description')) {
+        formData.append('description', `${element.value}`);
+      } else if (element.classList.contains('_phone')) {
+        formData.append('phone', `${element.value}`);
+      } else if (element.classList.contains('_category')) {
+        let value = element.options[element.selectedIndex].value;
+        formData.append('category', `${value}`);
+      } else if (element.classList.contains('_price')) {
+        formData.append('price', `${element.value}`);
+      }
+    }
+    console.log(formData.get('file'));
+    console.log(formData.get('title'));
+    console.log(formData.get('description'));
+    console.log(formData.get('phone'));
+    console.log(formData.get('category'));
+    console.log(formData.get('price'));
 
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: formData,
-      redirect: 'follow',
-    };
+    // var myHeaders = new Headers();
+    // myHeaders.append('accept', 'application/json');
+    // myHeaders.append('Content-Type', 'multipart/form-data');
+    // myHeaders.append('Authorization', `Bearer ${token}`);
+
+    // var requestOptions = {
+    //   method: 'POST',
+    //   headers: myHeaders,
+    //   body: formData,
+    //   redirect: 'follow',
+    // };
 
     // var requestOptions = {
     //   method: 'POST',
@@ -77,16 +84,35 @@ async function takeFormData(event) {
     //   body: formData,
     //   redirect: 'follow',
     // };
+    let config = {
+      method: 'post',
+      url: 'https://callboard-backend.herokuapp.com/call',
+      headers: {
+        accept: 'application/json',
+        'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQyNDVhMjAwMzE5MzAwMTdlOTE1MWQiLCJzaWQiOiI1ZmQ5YThiOWQzOThkZTAwMTdjNWRkYTkiLCJpYXQiOjE2MDgxMDAwMjUsImV4cCI6MTYwODEwMzYyNX0.jt4wN6qZNGaZ7987wpFEtONJy0Tzys_sbyX4FtTRIac`,
+        //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQ3Y2VhZWMyOThhMjAwMTc5YzhjYzAiLCJzaWQiOiI1ZmQ5MmMyMmNjZWZlZTAwMTc1M2ZiNzIiLCJpYXQiOjE2MDgwNjgxMzAsImV4cCI6MTYwODA3MTczMH0.I20tV29tq6tHg_XIPcDt1JW21Xmy3Un_kn64p6rMk_w',
+      },
+      data: formData,
+    };
 
-    fetch('https://callboard-backend.herokuapp.com/call', requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
       })
-      .catch(error => console.log('error', error));
-  } else {
-    console.log('есть ошибки');
-    return;
+      .catch(function (error) {
+        console.log(error);
+      });
+
+    //     fetch('https://callboard-backend.herokuapp.com/call', requestOptions)
+    //       .then(response => response.json())
+    //       .then(result => {
+    //         console.log(result);
+    //       })
+    //       .catch(error => console.log('error', error));
+    //   } else {
+    //     console.log('есть ошибки');
+    //     return;
   }
 
   //   formData.append('photo', photo);
