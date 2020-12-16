@@ -11,6 +11,28 @@
   border: none;
   cursor: pointer;
 }
+.input-wrapper._error {
+  box-shadow: 0 0 15px red;
+}
+.add-form__error-message {
+  display: none;
+}
+.add-form__error-message.visible {
+  display: block;
+
+  box-shadow: 0 0 15px red;
+}
+
+.image-preview__add {
+  display: flex;
+  margin-left: 5px;
+}
+.image-preview__item {
+  border: 2px solid red;
+  width: 84px;
+  height: 50px;
+  margin-left: 5px;
+}
 
 .modal-add-bill {
   position: absolute;
