@@ -6,5 +6,5 @@ import './js/header/pagination';
 import './js/main/catigoriesApi';
 import './js/main/add-modal-logic/main-add-modal';
 import './js/my-cabinet/main-myCabinet';
-import './js/header/render-categories-taras';
+// import './js/header/render-categories-taras';
 // import './js/pagination/main';
