@@ -5,7 +5,7 @@ import { routers } from './router';
 let auth = true;
 let startState = true;
 
-// let navbarNav = document.querySelector('.pagination');
+// let navbarNav = document.querySelector('.navbar-nav');
 
 
 function updatePage (e) {
