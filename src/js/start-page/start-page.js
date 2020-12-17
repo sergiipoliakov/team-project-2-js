@@ -35,8 +35,8 @@ function hideBtn() {
   btnFullscreen.classList.remove('is-shown');
 }
 
-cardItem.addEventListener('mouseenter', showBtn);
-cardItem.addEventListener('mouseleave', hideBtn);
+// cardItem.addEventListener('mouseenter', showBtn);
+// cardItem.addEventListener('mouseleave', hideBtn);
 
 /// ---
 let catigoriesQuery;
