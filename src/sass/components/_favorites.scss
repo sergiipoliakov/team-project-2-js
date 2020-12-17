@@ -13,7 +13,7 @@
 
 .left-button {
 	//outline: 1px solid black;
-	display: none;
+	// display: none;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -25,6 +25,7 @@
 	@media screen and (min-width: $tablet-min) {
 		display: block;
 		margin-right: 20px;
+		// ! this margins have container
 	}
 	@media screen and (min-width: $desktop) {
 		// display: block;
