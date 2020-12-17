@@ -12,10 +12,11 @@ import CardsInitialTpl from '../../templates/card-initial.hbs';
 
 let refMainContainer = document.querySelector('.main-containet');
 const refPaginationStartCategories = document.querySelector('.all-button');
-console.log(refPaginationStartCategories);
+// console.log(refPaginationStartCategories);
 refPaginationStartCategories.addEventListener('click', mainPagination)
 var currentCategory;
 let currentPageButton = 1;
+var initBtn = document.getElementById("init-btn");
 
 const categoryNames = {
     sales1: "РОЗПРОДАЖ", 
@@ -31,13 +32,18 @@ const categoryNames = {
 }
 
 function mainPagination(event) {
-    // event.preventDefault();
+    // if (event.target.className = 'work-button' && event.target.innerText !== 1) {
+    //     return
+    // }
        
     if (event.target.className = 'work-button') {
+        event.preventDefault();
+        initBtn.classList.remove("active");
+        // console.log(event.target.innerText !== 1);
         clearCategoryContainer()
         currentPageButton = event.target.innerText;
         renderCategories();
-        console.log(currentPageButton);
+        // console.log(currentPageButton);
     }
 }
 
@@ -94,7 +100,7 @@ function renderCategories() {
                 currentCategory = element;
                 RenderContainersByPage(element);
                 fillNameOfContainers(element);
-                renderCardsToCategories(data[element])
+                // renderCardsToCategories(data[element])
                        
         })
     })
