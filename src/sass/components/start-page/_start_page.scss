@@ -8,11 +8,11 @@
 	@include centeredFlex;
 }
 
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+// ul {
+// 	list-style: none;
+// 	margin: 0;
+// 	padding: 0;
+// }
 
 // .cont-on-sale {
 // 	// @extend %container;
@@ -33,22 +33,23 @@ ul {
 .product-card__img-container {
 	width: 290px;
 	height: 275px;
-	position: relative;
+	// position: relative;
 	background-color: rgb(100, 173, 131);
 }
 
-// .product-card-123 {
-// 	z-index: 100000;
+// .buttons-container {
+// 	@include centeredFlex;
 // }
 
 .heart-button {
 	// display: none;
-	position: absolute;
-	top: 19px;
-	right: 17px;
-	// display: block;
+	// position: absolute;
+	// top: 19px;
+	// right: 17px;
+	margin-right: 17px;
+	margin-left: auto;
+	display: block;
 	padding: 0;
-	margin: 0;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -56,14 +57,14 @@ ul {
 }
 
 .fullscreen-button {
-	display: none;
-	position: absolute;
-	bottom: 16px;
-	right: 15px;
-	// display: block;
+	// display: none;
+	margin-right: 17px;
+	margin-left: auto;
+	margin-top: 65%;
+	margin-bottom: 16%;
+	display: block;
 	padding: 0;
-	margin: 0;
-	background-color: transparent;
+	// background-color: transparent;
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -118,7 +119,7 @@ ul {
 }
 
 .header-onsale-cont {
-	position: relative;
+	// position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	// justify-content: center;
@@ -161,7 +162,7 @@ ul {
 	height: 30px;
 	border-radius: 50%;
 	border: none;
-	position: absolute;
+	// position: absolute;
 	top: 0;
 	right: 0;
 	@media screen and (min-width: $tablet-min) {
