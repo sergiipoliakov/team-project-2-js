@@ -16,17 +16,19 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-console.log(token);
-console.log(id);
-console.log(sid);
+// console.log(token);
+// console.log(id);
+// console.log(sid);
 
 if (token) {
   loginRegisterBtn.innerHTML = '';
+  document.querySelector('.menu-auth').classList.add('is-hidden');
   document.querySelector('.auth').classList.add('is-hidden');
   document.getElementById('exit.btn').classList.remove('is-hidden');
 } else if (!token) {
   document.getElementById('exit.btn').classList.add('is-hidden');
   document.querySelector('.auth').classList.remove('is-hidden');
+  document.querySelector('.menu-auth').classList.remove('is-hidden');
 }
 
 refs.openModalRegisteBtn.addEventListener('click', toggleModal);

@@ -5,9 +5,13 @@
 @import './base/base-styles';
 
 @import './components/module';
+@import './components/modal/menuModal';
 @import './components/pagination';
 @import './components/module-autoriz';
 
 .is-hidden {
   display: none;
+}
+.my-cabinet-flex {
+  display: flex;
 }

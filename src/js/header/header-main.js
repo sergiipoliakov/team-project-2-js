@@ -3,6 +3,11 @@ import './login';
 import './search-model-form';
 import './test-hbs';
 import './register';
-import './card-favorites';
+
+// import '../my-cabinet/card-favorites';
+
+import './menuBtn';
+// import './card-favorites';
+
 import './pagination';
 import './searchApiServis';

@@ -1,5 +1,5 @@
-import catigoriesTmplStPg from '../../../templates/start_page.hbs';
-import contOnSaleGood from '../../../templates/container-on-sale-good.hbs';
+import catigoriesTmplStPg from '../../templates/start_page.hbs';
+import contOnSaleGood from '../../templates/container-on-sale-good.hbs';
 
 // console.log(catigoriesTmplStPg);
 // console.log(contOnSaleGood);
