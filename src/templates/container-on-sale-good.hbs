@@ -8,17 +8,17 @@
 		</button>
 
 		<span>
-			<h1 class="sale-title">Розпродаж</h1>
+			<h1 class="category-title">Розпродаж</h1>
 		</span>
 
 
 		<span class="devider">|</span>
 
 		<span class="">
-			<h1 class="different-title">Piзне</h1>
+			<h1 class="category-title title-second-word">Piзне</h1>
 		</span>
 
-		<a class="link show-all" href="./category-chosen.html"><span class="show-all">Дивитися всі</span>
+		<a class="link show-all" href="./category-chosen.html"><span class="">Дивитися всі</span>
 		</a>
 
 		<button type="button" class="right-button-st-p" data-right>
@@ -29,25 +29,29 @@
 
 	</div>
 
-	{{!-- <ul class="my-st-page-ctgrs-container"></ul> --}}
-	<ul class="catigories-container cards-container js-catigories">
-		{{!-- {{#each this}} --}}
+	{{!-- <ul class="my-st-page-cards-container"></ul> --}}
+	<ul class="catigories-container js-catigories">
+		{{#each this}}
+
 		<li class="cards">
-			{{!-- <p style="background-color: red;">1-th child of class="cards"</p> --}}
+			{{!-- <p style="background-color: red; margin: 0;">1-th child of class="cards"</p> --}}
 			<div class="foto product-card__img-container">
 				<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-				<button class="heart-button">
-					<span class="material-icons">
-						favorite_border
-					</span>
-				</button>
+				{{!-- <div class="buttons-container"> --}}
+					<button class="heart-button">
+						<span class="material-icons">
+							favorite_border
+						</span>
+					</button>
 
-				<button class="fullscreen-button">
-					<span class="material-icons">
-						fullscreen
-					</span>
-				</button>
+					<button class="fullscreen-button">
+						<span class="material-icons">
+							fullscreen
+						</span>
+					</button>
+					{{!--
+				</div> --}}
 
 			</div>
 
@@ -61,7 +65,8 @@
 
 
 		</li>
-		{{!-- {{/each}} --}}
-	</ul>
 
+		{{/each}}
+	</ul>
+	{{!-- </ul> --}}
 </div>
