@@ -26,7 +26,7 @@ async function fetchMyCabinet() {
 
   await axios(config)
     .then(function (response) {
-      // console.log(response);
+      console.log(response);
       const myGoods = response.data.favourites;
 
       goodsContainer.innerHTML = myGoodsTmpl(myGoods);
