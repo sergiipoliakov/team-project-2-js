@@ -9,14 +9,18 @@ import CardsInitialTpl from '../../templates/card-initial.hbs';
 
 
 
-
-let refMainContainer = document.querySelector('.main-containet');
+// const refChosenCategory = document.querySelector(.main-containet)
+export let refMainContainer = document.querySelector('.main-containet');
 const refPaginationStartCategories = document.querySelector('.all-button');
-// console.log(refPaginationStartCategories);
-refPaginationStartCategories.addEventListener('click', mainPagination)
 var currentCategory;
 let currentPageButton = 1;
 var initBtn = document.getElementById("init-btn");
+
+refPaginationStartCategories.addEventListener('click', mainPagination);
+refMainContainer.addEventListener('click', renderChosenCategory);
+// console.log(refPaginationStartCategories);
+
+
 
 const categoryNames = {
     sales1: "РОЗПРОДАЖ", 
@@ -67,6 +71,10 @@ function renderCardsToCategories(category) {
         refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
 }
 
+function renderChosenCategories(category) {
+    refMainContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(category))
+}
+
 function fetchCategories() {
     
     const option = {
@@ -79,6 +87,27 @@ function fetchCategories() {
           },
     }
     const url = `https://callboard-backend.herokuapp.com/call?page=${currentPageButton}`;
+    
+    const response = fetch(url, option).then(response => response.json()).then(data =>
+    {
+       return data;
+    });
+    return response;
+};
+
+function fetchChosenCategory(category) {
+    
+    const option = {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+               Authorization:
+        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzYxZjgwZGFiZDAwMTc5ZDdmZjYiLCJzaWQiOiI1ZmQzMzY0MjgwZGFiZDAwMTc5ZDdmZjkiLCJpYXQiOjE2MDc2Nzc1MDYsImV4cCI6MTYwNzY4MTEwNn0.RnvvG68q1yWWaIVr777cLMJg-eNwugnc7x5ldqFuoNM',
+       
+          },
+    }
+    // const url = `https://callboard-backend.herokuapp.com/call?page=${currentPageButton}`;
+    const url = `https://callboard-backend.herokuapp.com/call/specific/${category}`;
     
     const response = fetch(url, option).then(response => response.json()).then(data =>
     {
@@ -104,6 +133,20 @@ function renderCategories() {
                        
         })
     })
+}
+
+function renderChosenCategory(event) {
+    
+    const elem = event.target;
+    if (!elem.classList.contains("current-page")) return
+    event.preventDefault();
+    let value = elem.getAttribute('data-category');
+    clearCategoryContainer();
+    // fetchChosenCategory(value);
+     fetchChosenCategory(value).then(renderChosenCategories);
+    console.log(value);
+    // e.preventDefault();
+   
 }
 
 renderCategories();

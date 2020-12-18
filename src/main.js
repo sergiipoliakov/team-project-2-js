@@ -14,4 +14,5 @@ import './js/routes/update-page';
 import './js/routes/search';
 import './js/routes/category';
 import './js/routes/main-pages';
+import './js/routes/renderAllByCategory'; 
 import './js/main/edit-modal.logic.js/open-edit-modal';
