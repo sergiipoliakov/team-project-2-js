@@ -1,33 +1,34 @@
 {{#each this}}
 <li class="cards">
-    {{!-- <p style="background-color: red; margin: 0;">1-th child of class="cards"</p> --}}
-    <div class="product-card__img-container">
-        <img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-        {{!-- <div class="buttons-container"> --}}
-            <button class="heart-button">
-                <span class="material-icons">
-                    favorite_border
-                </span>
-            </button>
+	{{!-- <p style="background-color: red; margin: 0;">1-th child of class="cards"</p> --}}
+	<div class="product-card__img-container">
+		<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-            <button class="fullscreen-button">
-                <span class="material-icons">
-                    fullscreen
-                </span>
-            </button>
-            {{!--
-        </div> --}}
+		{{!-- <div class="buttons-container"> --}}
+			<button class="heart-button">
+				<span class="material-icons">
+					favorite_border
+				</span>
+			</button>
 
-    </div>
+			<button class="fullscreen-button">
+				<span class="material-icons">
+					fullscreen
+				</span>
+			</button>
+			{{!--
+		</div> --}}
 
-    <div class="cards__text-cont">
-        <h3 class="name-st-p">Назва товару{{title}}</h3>
-        <div class="price-cont">
-            <h3 class="old-price-st-p on-margin-right">1000 грн{{oldPrice}}</h3>
-            <h3 class="price-st-p">500 грн{{price}}</h3>
-        </div>
-    </div>
+	</div>
+
+	<div class="cards__text-cont">
+		<h3 class="name-st-p">Назва товару{{title}}</h3>
+		<div class="price-cont">
+			<h3 class="old-price-st-p on-margin-right">1000 грн{{oldPrice}}</h3>
+			<h3 class="price-st-p">500 грн{{price}}</h3>
+		</div>
+	</div>
 
 
 </li>
@@ -36,22 +37,22 @@
 //by Volodymyr U.
 {{!-- {{#each this}} --}}
 {{!-- <div class="container product">
-    <ul class="cards">
-        <li class="foto">{{foto}}
-            <img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
+	<ul class="cards">
+		<li class="foto">{{foto}}
+			<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
 
-            <span class="material-icons">
-                favorite_border
-            </span>
-            <span class="material-icons">
-                fullscreen
-            </span>
-        </li>
-        <li class="name">{{title}}</li>
-        <h3 class="old-price-st-p">1000 грн{{oldPrice}}</h3>
-        <h3 class="price-st-p">500 грн{{price}}</h3>
-    </ul>
+			<span class="material-icons">
+				favorite_border
+			</span>
+			<span class="material-icons">
+				fullscreen
+			</span>
+		</li>
+		<li class="name">{{title}}</li>
+		<h3 class="old-price-st-p">1000 грн{{oldPrice}}</h3>
+		<h3 class="price-st-p">500 грн{{price}}</h3>
+	</ul>
 </div> --}}
 {{!-- {{/each}} --}}
 
@@ -60,31 +61,29 @@
 // by Serhii P.
 {{!-- {{#each this}} --}}
 {{!-- <li class="cards">
-    {{!-- <p style="background-color: red;">1-th child of class="cards"</p> --}}
-    <div class="foto product-card__img-container">
-        <img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
+	{{!-- <p style="background-color: red;">1-th child of class="cards"</p> --}}
+	<div class="foto product-card__img-container">
+		<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-        <button class="heart-button">
-            <span class="material-icons">
-                favorite_border
-            </span>
-        </button>
+		<button class="heart-button">
+			<span class="material-icons">
+				favorite_border
+			</span>
+		</button>
 
-        <button class="fullscreen-button">
-            <span class="material-icons">
-                fullscreen
-            </span>
-        </button>
+		<button class="fullscreen-button">
+			<span class="material-icons">
+				fullscreen
+			</span>
+		</button>
 
-    </div>
+	</div>
 
-    <div>
-        <h3 class="name-st-p">Назва товару{{title}}</h3>
-        <div class="price-cont">
-            <h3 class="old-price-st-p">1000 грн{{oldPrice}}</h3>
-            <h3 class="price-st-p">500 грн{{price}}</h3>
-        </div>
-    </div>
+	<div>
+		<h3 class="name-st-p">Назва товару{{title}}</h3>
+		<div class="price-cont">
+			<h3 class="old-price-st-p">1000 грн{{oldPrice}}</h3>
+			<h3 class="price-st-p">500 грн{{price}}</h3>
+		</div>
+	</div>
 
-</li> --}}
-{{!-- {{/each}} --}}
