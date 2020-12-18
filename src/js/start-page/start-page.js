@@ -14,8 +14,9 @@ const startPageContainer = document.querySelector('.start-page');
 const btnHeart = document.querySelector('.heart-button');
 const btnFullscreen = document.querySelector('.fullscreen-button');
 const cardItem = document.querySelector('.cards');
+// const oldPrice = document.querySelector('.old-price-st-p');
 
-console.log(startPageContainer);
+// console.log(startPageContainer);
 console.log(btnHeart);
 console.log(btnFullscreen);
 console.log(cardItem);
@@ -34,6 +35,14 @@ function hideBtn() {
 	btnHeart.classList.remove('is-shown');
 	btnFullscreen.classList.remove('is-shown');
 }
+
+// onOldPriceMarginRight();
+
+// function onOldPriceMarginRight {
+// 	if (oldPrice.innerHTML !== '') {
+// 		oldPrice.classList.add('on-margin-right');
+// 	}
+// }
 
 // cardItem.addEventListener('mouseenter', showBtn);
 // cardItem.addEventListener('mouseleave', hideBtn);
