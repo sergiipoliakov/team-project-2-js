@@ -1,7 +1,8 @@
+{{!-- {{#each this}} --}}
 <div class="container-{{this}} container container-st-p">
 	<div class="header-onsale-cont">
 
-		<button type="button" class="left-button" data-left>
+		<button type="button" class="left-button-st-p" data-left>
 			<span class="material-icons">
 				chevron_left
 			</span>
@@ -10,8 +11,12 @@
 		<span>
 			<h1 class="cont-name-{{this}} category-title">{{category}}</h1>
 		</span>
+		{{!-- <span class="devider">|</span>
 
-		<a class="link" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
+		<span class="">
+			<h1 class="cont-name-{{this}} category-title title-second-word">{{category}}</h1>
+		</span> --}}
+		<a class="link show-all" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
 		</a>
 
 		<button type="button" class="right-button-st-p" data-right>
@@ -26,3 +31,4 @@
 		<ul class='cont-initial-{{this}} catigories-container js-catigories'></ul>
 	</div>
 </div>
+{{!-- {{/each}} --}}
