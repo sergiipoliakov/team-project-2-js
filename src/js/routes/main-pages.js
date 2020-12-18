@@ -1,16 +1,13 @@
-// import { updateState, updatedContent } from './rout-main'
+import { updateState, updatedContent } from './rout-main'
 
-// const listCategories = document.querySelector('.all-button');
+const listPages = document.querySelector('.all-button');
+const mainPagination = (e) => {
+    const elem = e.target;
+    if (!elem.classList.contains("work-button")) return
+    e.preventDefault();
+    let value = elem.getAttribute('data-category');
+    updateState(`${value}`);
+    updatedContent();
+  }
 
-// const searchCategories = (e) => {
-//     const elem = e.target;
-//     if (!elem.classList.contains("main-btn")) return
-//     // console.log(elem.classList.contains("category-it"));
-//     e.preventDefault();
-//     let value = elem.getAttribute('data-attribute');
-//     updateState(`/page${value}`);
-//     updatedContent();
-//     console.log(value);
-// }
-
-// listCategories.addEventListener('click', searchCategories)
+listPages.addEventListener('click', mainPagination)

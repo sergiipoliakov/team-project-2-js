@@ -1,11 +1,11 @@
-import { fun6, fun7, fun8 } from './update-page' 
+import { fun1, fun6, fun7, fun8 } from './update-page' 
 
 export const routers = [
-    // {
-    //     path:'/',
-    //     component: fun1,
-    //     meta: { auth: false}
-    // },
+    {
+        path:'/',
+        component: fun1,
+        meta: { auth: false}
+    },
     // {
     //     path:'/page1',
     //     component: fun2,

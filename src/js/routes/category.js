@@ -10,7 +10,8 @@ const searchCategories = (e) => {
     let value = elem.getAttribute('data-category');
     updateState(`/category?value=${value}`);
     updatedContent();
-    console.log(value);
+    // console.log(history.state);
+    // console.log(value);
 }
 
 listCategories.addEventListener('click', searchCategories)

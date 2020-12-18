@@ -13,4 +13,4 @@ import './js/routes/rout-main';
 import './js/routes/update-page';
 import './js/routes/search';
 import './js/routes/category';
-// import './js/routes/main-pages';
+import './js/routes/main-pages';
