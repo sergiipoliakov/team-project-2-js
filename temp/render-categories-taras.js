@@ -58,7 +58,7 @@ function clearCategoryContainer() {
 function fillNameOfContainers(name) {
     let refNameCardContainer = document.querySelector(`.cont-name-${name}`);
     if (name === 'sales') {
-        refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line'>|</span>" +  categoryNames["sales2"] )
+        refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line'>|</span>" +  categoryNames["sales1"] )
     }
     else {
         refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames[name])
@@ -129,7 +129,7 @@ function renderCategories() {
                 currentCategory = element;
                 RenderContainersByPage(element);
                 fillNameOfContainers(element);
-                renderCardsToCategories(data[element])
+                // renderCardsToCategories(data[element])
                        
         })
     })
