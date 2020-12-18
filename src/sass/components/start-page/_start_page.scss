@@ -8,11 +8,11 @@
 	@include centeredFlex;
 }
 
-// ul {
-// 	list-style: none;
-// 	margin: 0;
-// 	padding: 0;
-// }
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
 // .cont-on-sale {
 // 	// @extend %container;
@@ -24,32 +24,31 @@
 // }
 
 .category-title {
-	@extend %category-title
+	padding: 0;
 	// margin-bottom: 0;
 	// margin-left: 28px;
-	// margin-right: 20px;;
+	// margin-right: 20px;
 }
 
 .product-card__img-container {
 	width: 290px;
 	height: 275px;
-	// position: relative;
+	position: relative;
 	background-color: rgb(100, 173, 131);
 }
 
-// .buttons-container {
-// 	@include centeredFlex;
+// .product-card-123 {
+// 	z-index: 100000;
 // }
 
 .heart-button {
 	// display: none;
-	// position: absolute;
-	// top: 19px;
-	// right: 17px;
-	margin-right: 17px;
-	margin-left: auto;
-	display: block;
+	position: absolute;
+	top: 19px;
+	right: 17px;
+	// display: block;
 	padding: 0;
+	margin: 0;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -57,14 +56,14 @@
 }
 
 .fullscreen-button {
-	// display: none;
-	margin-right: 17px;
-	margin-left: auto;
-	margin-top: 65%;
-	margin-bottom: 16%;
-	display: block;
+	display: none;
+	position: absolute;
+	bottom: 16px;
+	right: 15px;
+	// display: block;
 	padding: 0;
-	// background-color: transparent;
+	margin: 0;
+	background-color: transparent;
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -83,11 +82,23 @@
 
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
+}
+
+.sale-title {
+	@extend %category-title;
 	padding: 0;
+	// margin-bottom: 0;
+	// margin-left: 28px;
+	// margin-right: 20px;
+}
+
+.different-title {
+	@extend %category-title;
+	padding: 0;
+	margin-right: 10px;
 }
 
 .show-all {
-	margin-left: 10px;
 	font-family: Montserrat;
 	font-weight: normal;
 	font-size: 12px;
@@ -106,14 +117,11 @@
 	padding-top: 10px;
 }
 
-// .container-st-p {
-
-// }
-
 .header-onsale-cont {
-	// position: relative;
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	// justify-content: center;
 	align-items: center;
 	margin-bottom: 10px;
 }
@@ -153,9 +161,9 @@
 	height: 30px;
 	border-radius: 50%;
 	border: none;
-	// position: absolute;
-	// top: 0;
-	// right: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
 	@media screen and (min-width: $tablet-min) {
 		display: block;
 	}

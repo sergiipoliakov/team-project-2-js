@@ -1,24 +1,20 @@
-{{!-- {{#each this}} --}}
-
+{{#each this}}
 <li class="cards">
-	{{!-- <p style="background-color: red; margin: 0;">1-th child of class="cards"</p> --}}
+	<p style="background-color: red;">1-th child of class="cards"</p>
 	<div class="foto product-card__img-container">
 		<img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
 
-		{{!-- <div class="buttons-container"> --}}
-			<button class="heart-button">
-				<span class="material-icons">
-					favorite_border
-				</span>
-			</button>
+		<button class="heart-button">
+			<span class="material-icons">
+				favorite_border
+			</span>
+		</button>
 
-			<button class="fullscreen-button">
-				<span class="material-icons">
-					fullscreen
-				</span>
-			</button>
-			{{!--
-		</div> --}}
+		<button class="fullscreen-button">
+			<span class="material-icons">
+				fullscreen
+			</span>
+		</button>
 
 	</div>
 
@@ -30,7 +26,5 @@
 		</div>
 	</div>
 
-
 </li>
-
-{{!-- {{/each}} --}}
+{{/each}}
