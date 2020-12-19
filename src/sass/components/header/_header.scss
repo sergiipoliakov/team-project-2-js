@@ -50,6 +50,10 @@
   justify-content: center;
 
   @extend %focus-hover-style;
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding: 15px;
+  }
 }
 
 .create-ad-btn {
@@ -183,4 +187,29 @@
 
     color: #000000;
   }
+}
+
+.hidden-ads-favorites {
+  display: none;
+  width: 152px;
+  height: 94px;
+  // padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 400px;
+  background-color: $container-color;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: $tablet-min) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 206px;
+  }
+}
+
+.hidden-link {
+  display: inline-block;
+  padding: 20px 0 0 20px;
 }

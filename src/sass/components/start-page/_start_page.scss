@@ -15,6 +15,7 @@ ul {
 }
 
 .category-title {
+// <<<<<<< card-hover-v-1
 	@extend %category-title;
 }
 
@@ -43,6 +44,38 @@ ul {
 	object-fit: cover;
 	// height: auto;
 	// max-width: 100%;
+// =======
+//   @extend %category-title
+// 	// margin: 0;
+
+// 	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// }
+
+// .product-card__img-container-st-p {
+//   // width: 290px;
+//   min-width: 290px;
+//   height: 275px;
+//   // height: auto;
+//   max-width: 100%;
+//   // overflow: hidden;
+//   // background-color: $primaryWhiteColor;
+//   background-color: gray;
+//   @media screen and (min-width: $tablet-min) {
+//     min-width: 352px;
+//   }
+//   @media screen and (min-width: $desktop) {
+//     min-width: 295px;
+//   }
+// }
+
+// .product-card__img {
+//   // float: left;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   // height: auto;
+//   // max-width: 100%;
+//>>>>>>> main
 }
 
 // img {
@@ -99,6 +132,7 @@ ul {
 	// margin-right: 17px;
 	color: white;
 	// border-bottom: 2px solid $primaryWhiteColor;
+
 }
 
 .fullscreen-button {
@@ -199,6 +233,7 @@ ul {
 	position: relative;
 	width: inherit;
 	height: inherit;
+
 }
 
 .left-button-st-p {
@@ -274,6 +309,7 @@ ul {
 	font-size: 16px;
 	width: 14px;
 	height: 14px;
+
 }
 
 .material-icons.md-18 {
@@ -295,10 +331,11 @@ ul {
 }
 
 .cards-st-p:not(:first-child) {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .cards-st-p {
+// <<<<<<< card-hover-v-1
 	// position: relative;
 	width: 290px;
 	height: 350px;
@@ -325,6 +362,34 @@ ul {
 	font-size: 12px;
 	// overflow: hidden;
 	// overflow-wrap: break-word;
+// =======
+//   position: relative;
+//   width: 290px;
+//   height: 350px;
+//   @media screen and (min-width: $tablet-min) {
+//     width: 352px;
+//   }
+//   @media screen and (min-width: $desktop) {
+//     width: 295px;
+//   }
+// }
+
+// .name-st-p {
+//   // font-family: roboto;
+//   // color: black;
+//   // font-weight: normal;
+//   // font-size: 12px;
+//   // line-height: 1.25px;
+//   letter-spacing: 0.07em;
+//   // text-transform: uppercase;
+//   margin: 0;
+//   padding-left: 20px;
+//   // padding-top: 20px;
+//   font-weight: normal;
+//   font-size: 12px;
+//   // overflow: hidden;
+//   // overflow-wrap: break-word;
+// >>>>>>> main
 }
 
 .old-price-st-p {
@@ -372,9 +437,10 @@ ul {
 
 	// z-index: ;
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .backdrop-st-p.is-hidden {
-	opacity: 0;
-	pointer-events: none;
-	visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
