@@ -12,8 +12,11 @@
 {{#each this}}
 <li class="cards">
     {{!-- <p style="background-color: red;">1-th child of class="cards"</p> --}}
-    <div class="foto product-card__img-container">
-        <img class="product__image" src="{{imageUrls}}" data-sourse="" width="295" height="275" alt="photo" />
+    <div class="foto product-card__img-container" data-category="{{category}}" data-description="{{description}}"
+        data-phone="{{phone}}" data-userID="{{userId}}" data-id="{{_id}}" data-title="{{title}}"
+        data-images="{{imageUrls}}" data-price="{{price}}">
+        {{#each imageUrls}} <img class=" product__image" src="{{this}}" data-sourse="" width="295" height="275"
+            alt="photo" />{{/each}}
 
         <button class="heart-button">
             <span class="material-icons">
