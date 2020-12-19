@@ -1,19 +1,29 @@
-const menuBtnOpenModal = document.querySelector('.js-menu-open-btn');
+const menuBtnOpenModalMobile = document.querySelector('.js-menu-btn-mobile');
+const menuBtnOpenModalTablet = document.querySelector('.js-menu-btn-tablet');
 const menuBackdrop = document.getElementById('menu-backdrop');
 const menuCloseBtn = document.querySelector('.js-menu-close-btn');
-const showLinksMobile = document.querySelector('[data-show-links]');
-const hiddenPart = document.querySelector('.menu-hidden-part');
-const showLinksTablet = document.querySelector('.js-my-cabinet-btn');
+const btnShowLinksMenu = document.querySelector('[data-show-links]');
+const menuHiddenFavorites = document.querySelector(
+  '.menu-hidden-ads-favorites',
+);
+const hiddenFavorites = document.querySelector('.hidden-ads-favorites');
 
-menuBtnOpenModal.addEventListener('click', onOpenMenuModal);
+const btnShowLinksHeader = document.querySelector('.js-my-cabinet-btn');
+
+menuBtnOpenModalMobile.addEventListener('click', onOpenMenuModal);
+menuBtnOpenModalTablet.addEventListener('click', onOpenMenuModal);
 menuCloseBtn.addEventListener('click', onOpenMenuModal);
-showLinksMobile.addEventListener('click', onShowLinks);
-showLinksTablet.addEventListener('click', onShowLinks);
+btnShowLinksMenu.addEventListener('click', onShowMenuAdsFavourites);
+btnShowLinksHeader.addEventListener('click', onShowAdsFavourites);
 
 function onOpenMenuModal() {
   menuBackdrop.classList.toggle('is-hidden');
 }
 
-function onShowLinks() {
-  hiddenPart.classList.toggle('is-hidden');
+function onShowMenuAdsFavourites() {
+  menuHiddenFavorites.classList.toggle('is-hidden');
+}
+
+function onShowAdsFavourites() {
+  hiddenFavorites.classList.toggle('is-hidden');
 }
