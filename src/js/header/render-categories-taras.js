@@ -58,7 +58,7 @@ function clearCategoryContainer() {
 function fillNameOfContainers(name) {
     let refNameCardContainer = document.querySelector(`.cont-name-${name}`);
     if (name === 'sales') {
-        refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line'>|</span>" +  categoryNames["sales2"] )
+        refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line devider'>|</span>" +  categoryNames["sales2"] )
     }
     else {
         refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames[name])
@@ -66,9 +66,22 @@ function fillNameOfContainers(name) {
 }
 
 function renderCardsToCategories(category) {
-        const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
-        var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
-        refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+        // const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
+	var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
+	refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+	
+    if (currentCategory === "sales") {
+        var refCardOnSaleCont = document.querySelectorAll('.container-sales .old-price-st-p.is-hidden');
+        refCardOnSaleCont.forEach(el => {
+            var refCardOnSale = document.querySelector('.container-sales .old-price-st-p.is-hidden');
+            refCardOnSale.classList.remove("is-hidden")
+        })
+        var refСontainerOnSale = document.querySelector('.container-sales .header-onsale-cont');
+        refСontainerOnSale.classList.remove("header-onsale-cont");
+        refСontainerOnSale.classList.add("header-onsale-cont-on-sale");
+	}
+	
+		
 }
 
 function renderChosenCategories(category) {
