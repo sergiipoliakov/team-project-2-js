@@ -1,16 +1,16 @@
 import { updateState, updatedContent } from './rout-main'
 
-let search = document.querySelector('#searchInput');
-let btn = document.querySelector('#btn');
-
-let searchProduct = (e) => {
-    e.preventDefault();
-    let value = search.value;
+let searchInput = document.querySelector('#searchInput');
+let btnSearchMod = document.querySelector('#btnSearchMod');
+// console.log(btnSearchMod);
+let searchProductMod = (e) => {
+    // e.preventDefault();
+    let value = searchInput.value;
     if (!value) return
     updateState(`/search?value=${value}`);
     updatedContent()
 }
 
-btn.addEventListener('click', searchProduct)
+btnSearchMod.addEventListener('click', searchProductMod)
 
 
