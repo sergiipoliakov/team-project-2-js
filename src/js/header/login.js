@@ -25,7 +25,9 @@ if (token) {
   document.querySelector('.menu-auth').classList.add('is-hidden');
   document.querySelector('.auth').classList.add('is-hidden');
   document.getElementById('exit.btn').classList.remove('is-hidden');
+  document.getElementById('menu-exit.btn').classList.remove('is-hidden');
 } else if (!token) {
+  document.getElementById('menu-exit.btn').classList.add('is-hidden');
   document.getElementById('exit.btn').classList.add('is-hidden');
   document.querySelector('.auth').classList.remove('is-hidden');
   document.querySelector('.menu-auth').classList.remove('is-hidden');

@@ -23,7 +23,7 @@
       </svg>
 
       <!-- Кнопка, текст мой кабинет -->
-      <div class="menu-my-cabinet" id="exit.btn">
+      <div class="menu-my-cabinet" id="menu-exit.btn">
         <button class="my-cabinet-btn" data-show-links>
           <span class="menu-text-my-cabinet">Мiй кабінет</span>
           <svg class="menu-icon-arrow" width="10" height="6">
@@ -39,9 +39,21 @@
         </button>
 
         <!-- Спрятанный блок планшет/мобилка -->
-        <div class="menu-hidden-part is-hidden">
-          <span class="hidden-part-element">Мої оголошення</span>
-          <span class="hidden-part-element">Обране</span>
+        <div class="menu-hidden-ads-favorites is-hidden">
+          <a
+            href=""
+            class="menu-hidden-link js-myBill"
+            data="myBill"
+            id="myBill"
+            >Мої оголошення</a
+          >
+          <a
+            href=""
+            class="menu-hidden-link js-myFavorite"
+            data="myFavorite"
+            id="myFavorite"
+            >Обране</a
+          >
         </div>
       </div>
 
