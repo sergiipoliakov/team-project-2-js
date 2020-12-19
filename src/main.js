@@ -15,6 +15,6 @@ import './js/routes/search';
 import './js/routes/category';
 import './js/routes/main-pages';
 import './js/routes/renderAllByCategory';
-// import './js/main/edit-modal.logic.js/open-edit-modal';
-// import './js/main/edit-modal.logic.js/open-edit-modal'; //sergii
-// import './js/main/edit-modal.logic.js/send-edit'; //sergii
+
+import './js/main/edit-modal.logic.js/open-edit-modal'; //sergii
+import './js/main/edit-modal.logic.js/send-edit'; //sergii

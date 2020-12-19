@@ -30,6 +30,10 @@ async function formEditSend(event) {
 
   // const cardID = '5fde627764501b0017308fb3';
 
+  //  const cardId = document
+  //     .querySelector('.js-product-card')
+  //     .getAttribute('data-id');
+
   let errorsForm = formValidate(addBillFormEl);
 
   let formData = new FormData();
