@@ -2,7 +2,7 @@
 <div class="container-{{this}} container container-st-p">
 	<div class="header-onsale-cont">
 
-		<button type="button" class="left-button" data-left>
+		<button type="button" class="left-button-st-p swiper-button-prev" data-left>
 			<span class="material-icons">
 				chevron_left
 			</span>
@@ -11,12 +11,15 @@
 		<span>
 			<h1 class="cont-name-{{this}} category-title">{{category}}</h1>
 		</span>
+		{{!-- <span class="devider">|</span>
 
-		<a class="link" href=""><span class="current-page" data-category="{{this}}">Дивитися
-				всі</span>
+		<span class="">
+			<h1 class="cont-name-{{this}} category-title title-second-word">{{category}}</h1>
+		</span> --}}
+		<a class="link show-all" href="../category-chosen.html"><span class="current-page">Дивитися всі</span>
 		</a>
 
-		<button type="button" class="right-button-st-p" data-right>
+		<button type="button" class="right-button-st-p swiper-button-next" data-right>
 			<span class="material-icons">
 				chevron_right
 			</span>
@@ -24,8 +27,8 @@
 
 	</div>
 
-	<div>
-		<ul class='cont-initial-{{this}} catigories-container js-catigories'></ul>
+	<div class="swiper-{{this}} swiper-container">
+		<ul class='cont-initial-{{this}} catigories-container js-catigories swiper-wrapper'></ul>
 	</div>
 </div>
 {{!-- {{/each}} --}}
