@@ -26,7 +26,7 @@ ul {
 .category-title {
 	@extend %category-title
 	// margin: 0;
-	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 }
 
 .product-card__img-container-st-p {
@@ -211,6 +211,9 @@ ul {
 		background-color: $accentColor;
 		color: $primaryWhiteColor;
 	}
+}
+.cards__icons {
+	color: $primaryWhiteColor;
 }
 
 .right-button-st-p {
