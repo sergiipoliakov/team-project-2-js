@@ -56,6 +56,7 @@ function clearCategoryContainer() {
 }
 
 function fillNameOfContainers(name) {
+// <<<<<<< cards-v-1
 	let refNameCardContainer = document.querySelector(`.cont-name-${name}`);
 	if (name === 'sales') {
 		refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line devider'>|</span>" + categoryNames["sales2"])
@@ -69,6 +70,34 @@ function renderCardsToCategories(category) {
 	const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
 	var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
 	refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+// =======
+//     let refNameCardContainer = document.querySelector(`.cont-name-${name}`);
+//     if (name === 'sales') {
+//         refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames["sales1"] + "<span class ='vert-line devider'>|</span>" +  categoryNames["sales2"] )
+//     }
+//     else {
+//         refNameCardContainer.insertAdjacentHTML('beforeend', categoryNames[name])
+//     }
+// }
+
+// function renderCardsToCategories(category) {
+//         // const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
+// 	var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
+// 	refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+	
+//     if (currentCategory === "sales") {
+//         var refCardOnSaleCont = document.querySelectorAll('.container-sales .old-price-st-p.is-hidden');
+//         refCardOnSaleCont.forEach(el => {
+//             var refCardOnSale = document.querySelector('.container-sales .old-price-st-p.is-hidden');
+//             refCardOnSale.classList.remove("is-hidden")
+//         })
+//         var refСontainerOnSale = document.querySelector('.container-sales .header-onsale-cont');
+//         refСontainerOnSale.classList.remove("header-onsale-cont");
+//         refСontainerOnSale.classList.add("header-onsale-cont-on-sale");
+// 	}
+	
+		
+// >>>>>>> main
 }
 
 function renderChosenCategories(category) {
