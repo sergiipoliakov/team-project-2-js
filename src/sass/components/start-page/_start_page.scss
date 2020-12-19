@@ -26,7 +26,7 @@ ul {
 .category-title {
 	@extend %category-title
 	// margin: 0;
-	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 }
 
 .product-card__img-container-st-p {
@@ -94,6 +94,9 @@ ul {
 	color: white;
 	border: none;
 	cursor: pointer;
+}
+.create-button {
+	color: white;
 }
 
 .fullscreen-button {
@@ -212,10 +215,9 @@ ul {
 		color: $primaryWhiteColor;
 	}
 }
-.cards__icons {
-	color: $primaryWhiteColor;
-}
-
+// .cards__icons {
+// 	color: $primaryWhiteColor;
+// }
 .right-button-st-p {
 	// outline: 1px solid black;
 	display: none;
