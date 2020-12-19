@@ -26,7 +26,7 @@ ul {
 .category-title {
 	@extend %category-title
 	// margin: 0;
-	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;
+	// margin-left: 28px;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 }
 
 .product-card__img-container-st-p {
@@ -36,9 +36,14 @@ ul {
 	// height: auto;
 	max-width: 100%;
 	// overflow: hidden;
-	// position: relative;
 	// background-color: $primaryWhiteColor;
 	background-color: gray;
+	@media screen and (min-width: $tablet-min) {
+		min-width: 352px;
+	}
+	@media screen and (min-width: $desktop) {
+		min-width: 295px;
+	}
 }
 
 .product-card__img {
@@ -247,20 +252,9 @@ ul {
 }
 
 .cards-st-p {
-	// list-style: none;
+	position: relative;
 	width: 290px;
 	height: 350px;
-	// margin: 0px;
-	// margin-bottom: 20px;
-	// padding-left: 0px;
-	// /*background-color: burlywood;*/
-
-	// box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-	// border-radius: 0px 0px 4px 4px;
-
-	// &:not(:first-child) {
-	// 	margin-left: 20px;
-	// }
 	@media screen and (min-width: $tablet-min) {
 		width: 352px;
 	}
@@ -319,20 +313,20 @@ ul {
 	flex-direction: row;
 }
 
-// .backdrop{
-//     position: fixed;
-//     top: 0px;
-//     left: 0px;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 1;
-//     background-color: rgba(0, 0, 0, 0.5);
+.backdrop-st-p {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	// width: 100%;
+	// height: 100%;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.7);
 
-//     z-index: 999;
-//     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-// }
-// .backdrop.is-hidden{
-//     opacity: 0;
-//     pointer-events: none;
-//    visibility: hidden;
-// }
+	z-index: 999;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-st-p.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
