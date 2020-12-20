@@ -6,10 +6,12 @@
 import containerInitialTpl from '../../templates/container-initial.hbs';
 import CardsInitialTpl from '../../templates/card-initial.hbs';
 import Swiper from 'swiper/bundle';
+import { changeTplSet, renderOtionalCont} from '../main/catigoriesApi'
+
 // import {onSlider} from '../slider/slider'
 // import CardsOnSaleTpl from '../../templates/card-onsale.hbs';
 
-
+// console.log(`WORKING OF FUNCTION" ${ renderOtionalCont}`);
 
 // const refChosenCategory = document.querySelector(.main-containet)
 export let refMainContainer = document.querySelector('.main-containet');
@@ -17,6 +19,7 @@ const refPaginationStartCategories = document.querySelector('.all-button');
 var currentCategory;
 let currentPageButton = 1;
 var initBtn = document.getElementById("init-btn");
+let SaleBoxContent;
 
 refPaginationStartCategories.addEventListener('click', mainPagination);
 refMainContainer.addEventListener('click', renderChosenCategory);
@@ -53,9 +56,17 @@ function mainPagination(event) {
     }
 }
 
-function clearCategoryContainer() {
+// function clearCategoryContainer() {
+//    refMainContainer.innerHTML = ''; 
+// }
+
+export const clearCategoryContainer = () => {
    refMainContainer.innerHTML = ''; 
 }
+
+
+
+
 
 function fillNameOfContainers(name) {
     let refNameCardContainer = document.querySelector(`.cont-name-${name}`);
@@ -67,13 +78,8 @@ function fillNameOfContainers(name) {
     }
 }
 
-function renderCardsToCategories(category) {
-        // const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
-	var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
-	refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
-    onSlider(currentCategory);
-    if (currentCategory === "sales") {
-        var refCardOnSaleCont = document.querySelectorAll('.container-sales .old-price-st-p.is-hidden');
+function renderSalesCards() {
+    var refCardOnSaleCont = document.querySelectorAll('.container-sales .old-price-st-p.is-hidden');
         refCardOnSaleCont.forEach(el => {
             var refCardOnSale = document.querySelector('.container-sales .old-price-st-p.is-hidden');
             refCardOnSale.classList.remove("is-hidden")
@@ -84,6 +90,15 @@ function renderCardsToCategories(category) {
         var refСontainerOnSale2 = document.querySelector('.container-sales .catigories-container');
         refСontainerOnSale2.classList.remove("catigories-container");
         refСontainerOnSale2.classList.add("catigories-container-on-sale");
+}
+
+function renderCardsToCategories(category) {
+        // const refOnSaleCardContainer = document.querySelector('.cont-initial-sales');
+	var refCurretnCategory = document.querySelector(`.cont-initial-${currentCategory}`)
+	refCurretnCategory.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+    onSlider(currentCategory);
+    if (currentCategory === "sales") {
+        renderSalesCards()
     }
     
 	
@@ -91,7 +106,14 @@ function renderCardsToCategories(category) {
 }
 
 function renderChosenCategories(category) {
-    refMainContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(category))
+    const refOptUlContainer = document.querySelector('.optContUl');
+    if (category === "sales") {
+        refOptUlContainer.insertAdjacentHTML('beforeend', SaleBoxContent);
+    }
+    else{
+    refOptUlContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(category));
+    }
+    changeTplSet();
 }
 
 function fetchCategories() {
@@ -160,10 +182,23 @@ function renderChosenCategory(event) {
     if (!elem.classList.contains("current-page")) return
     event.preventDefault();
     let value = elem.getAttribute('data-category');
-    clearCategoryContainer();
-    // fetchChosenCategory(value);
-     fetchChosenCategory(value).then(renderChosenCategories);
+    if (value === "sales") {
+        const refSaleBoxContent = document.querySelector('.cont-initial-sales');
+        SaleBoxContent = refSaleBoxContent.innerHTML;
+        // renderChosenCategories(value);
+    }
     console.log(value);
+    clearCategoryContainer();
+    renderOtionalCont();
+    if (value === "sales") {
+        renderChosenCategories(value);
+    }
+    // fetchChosenCategory(value);
+    else{
+        fetchChosenCategory(value).then(renderChosenCategories);
+        }
+    // console.log(value);
+    // changeTplSet();
     // e.preventDefault();
    
 }

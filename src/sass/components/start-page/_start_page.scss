@@ -449,3 +449,16 @@ ul {
 //   pointer-events: none;
 //   visibility: hidden;
 // }
+
+.optContUl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.optCategCard {
+  margin-right: 20px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
