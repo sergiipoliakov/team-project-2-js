@@ -109,7 +109,7 @@ function formValidate(form) {
         });
         //   пенетифай для шибки поля name
       }
-    } else if (input.classList.contains('_description')) {
+    } else if (input.classList.contains('_descriptionEdit')) {
       if (descriptionTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -139,7 +139,7 @@ function formValidate(form) {
         formAddError(input);
         errorData += 1;
       }
-    } else if (input.classList.contains('_price')) {
+    } else if (input.classList.contains('_priceEdit')) {
       if (priceTest(input)) {
         formAddError(input);
         errorData += 1;
