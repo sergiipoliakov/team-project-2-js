@@ -255,20 +255,20 @@ function uploadFile(file) {
   height="50";alt="" />
   </li>`,
     );
-    imageList.addEventListener('click', e => {
-      console.dir(imageList.children[2]);
-      console.log('event', e);
+    // imageList.addEventListener('click', e => {
+    //   console.dir(imageList.children[2]);
+    //   console.log('event', e);
 
-      imageList.children[2].innerHTML = '';
-      // imageList.children[3].innerHTML = '';
-      // imageList.children[4].innerHTML = '';
-      console.log(formImage.files);
+    //   imageList.children[2].innerHTML = '';
+    //   // imageList.children[3].innerHTML = '';
+    //   // imageList.children[4].innerHTML = '';
+    //   console.log(formImage.files);
 
-      formImage.files = formImage.files.defaultValue;
-      console.log(formImage.files);
+    //   formImage.files = formImage.files.defaultValue;
+    //   console.log(formImage.files);
 
-      // file.value = file.defaultValue;
-    });
+    //   // file.value = file.defaultValue;
+    // });
   };
   reader.onerror = function (e) {
     error({
