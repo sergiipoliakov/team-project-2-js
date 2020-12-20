@@ -158,6 +158,7 @@ function fetchChosenCategory(category) {
 };
 
 function RenderContainersByPage(element) {
+            document.getElementById('myCabinetDiv').hidden = true;
             refMainContainer.insertAdjacentHTML('beforeend', containerInitialTpl(element))
  }
 

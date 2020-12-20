@@ -56,9 +56,6 @@ function onCategoriesItem(event) {
     // const refOptContainer = document.querySelector('optCont');
     // refOptContainer.classList.remove('')
 
-    
-    
-
     // catogoriesContainer.innerHTML = catigoriesTmpl(data);
     refOptUlContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(data));
 
@@ -70,7 +67,8 @@ function onCategoriesItem(event) {
 }
 
 const toCatigoriesClick = function (param) {
-  async function postData(url = param, method = 'GET') {
+  document.getElementById('myCabinetDiv').hidden = true;
+    async function postData(url = param, method = 'GET') {
     const response = await fetch(url, {
       method: method, // *GET, POST, PUT, DELETE, etc.
       headers: {
