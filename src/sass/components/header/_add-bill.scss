@@ -61,6 +61,9 @@ color: #000000;
     padding-right: 105px;
   }
 }
+
+//time
+/*
 .input-wrapper._error {
   box-shadow: 0 0 15px red;
 }
@@ -73,7 +76,7 @@ color: #000000;
 
   box-shadow: 0 0 15px red;
 }
-
+*/
 .add-form__title {
   font-family: $main-font;
   font-style: normal;
@@ -417,10 +420,10 @@ button[type=submit]:hover {
 }
 //VALIDATHIA//
 small{
-  /*visibility: hidden;
-  position: absolute;
+ /* visibility: hidden;
+  position: absolute;*/
   bottom: 0px;
-  left: 0px;*/
+  left: 0px;
   color: red;
     margin-left: 0px;
     text-decoration:underline;
