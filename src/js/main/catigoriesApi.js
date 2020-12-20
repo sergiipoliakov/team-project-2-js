@@ -26,8 +26,17 @@ let catigoriesQuery;
 
 categoriesListContainer.addEventListener('click', onCategoriesItem);
 
-function renderOtionalCont() {
+export const renderOtionalCont =()=> {
   refMainContainer.innerHTML = optionalContainerMain; 
+}
+
+export const changeTplSet = () => {
+  var refCardOptCont = document.querySelectorAll('.optContUl .swiper-slide');
+          refCardOptCont.forEach(el => {
+          var refCardForOtp = document.querySelector('.optContUl .swiper-slide');
+          refCardForOtp.classList.remove('swiper-slide');
+          refCardForOtp.classList.add('optCategCard');
+        })
 }
 
 function onCategoriesItem(event) {
@@ -53,14 +62,7 @@ function onCategoriesItem(event) {
     // catogoriesContainer.innerHTML = catigoriesTmpl(data);
     refOptUlContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(data));
 
-    var refCardOptCont = document.querySelectorAll('.optContUl .swiper-slide');
-    // console.log(refCardOptCont);
-        refCardOptCont.forEach(el => {
-            var refCardForOtp = document.querySelector('.optContUl .swiper-slide');
-          refCardForOtp.classList.remove('swiper-slide');
-          refCardForOtp.classList.add('optCategCard');
-          
-        })
+    changeTplSet();
     
     // console.log(data);
     // toggleModal();
