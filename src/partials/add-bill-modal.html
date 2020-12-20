@@ -3,17 +3,25 @@
         <div class="modal-add-bill">
             <div class="add-modal__content">
 
+<button class="buttons add-bill-close-button close-button" data-modal-add-bill-close>
+    <svg width="24" height="24" class="close-button-icon ">
+        <use href="./images/sprite.svg#icon-close-black"></use>
+    </svg>
+</button>
+
+
             <h2>Додати оголошення</h2>
 
         
-                <form class="bill-form js-add-form"  autocomplete="on">
+                <form class="bill-form js-add-form" id="form">
 
-
+ <!--autocomplete="on"-->
                     <div class="form-items-wrapper">
                         <div class="add-form__item">
                             <label class="add-form__label" for="form-name">Назва товару</label>
                             <div class="input-wrapper">
                                 <input id="nameBill"   value="qwert" type="text" name="title" class="add-form__name _req _name input" />
+                                <small id="name-small" class=""></small>
                                 <div class="add-form__error-message">
                                     Введіть коректну назву товару
                                 </div>
@@ -58,7 +66,9 @@
                     <div class="input-wrapper">
                         <input name="description" id="form-description"  value="qwerwewewqweqweqweqweqweqeqweqwet" 
                             class="add-form__description _description _req input" id="aboutBill"></input>
-                        <div class="add-form__error-message">
+                    <small id="small-textarea" class=""></small>
+                    </div>
+                            <div class="add-form__error-message">
                             Коректний опис товару - мінімум 30 символів
                         </div>
                     </div>
@@ -85,6 +95,7 @@
                         <option  name="category" value="free">Віддам безкоштовно</option>
                         <option name="category" value="trade">Обмін</option>
                     </select>
+                    <small id="small-option" class=""></small>
                 <!-- <select name="product-category" class="add-form__select _category _req input">
                     <option value="category" class="select-option select-option-first">
                         Категорія
@@ -139,15 +150,17 @@
 
                 
                 
-
-                <button type="submit" class="bill-form-button form-button__wrapper">додати</button>
+            <div class="row">
+                <button type="submit" class="bill-form-button form-button__wrapper validateBtn">додати</button>
+            </div>
             </form>
 
-            <button class="buttons add-bill-close-button close-button" data-modal-add-bill-close>
-                <svg width="24" height="24" class="close-button-icon ">
-                    <use href="./images/sprite.svg#icon-close-black"></use>
-                </svg>
-            </button>
+
+
+
+
+
+            
             </div>
 
         </div>
