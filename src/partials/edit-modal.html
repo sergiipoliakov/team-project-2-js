@@ -1,19 +1,20 @@
 <div class="container">
     <div class=" backdrop is-hidden" data-modal-edit-bill>
         <div class="modal-add-bill">
+            <div class="add-modal__content">
             <h2>роддогуватыи оголошення</h2>
 
 
-            <form class="-bill-form js-edit-form" autocomplete="on">
+            <form class="add-form js-edit-form" autocomplete="on">
 
 
-                <div class="-form-items-wrapper">
-                    <div class="-edit-form__item">
-                        <label class="-edit-form__label" for="form-name">Назва товару</label>
+                <div class="form-items-wrapper">
+                    <div class="add-form__item">
+                        <label class="add-form__label" for="form-name">Назва товару</label>
                         <div class="input-wrapper">
                             <input id="nameEdit" value="qwert" type="text" name="titleEdit"
-                                class="edit-form__name _req _name input" />
-                            <div class="edit-form__error-message">
+                                class="add-form__name _req _name input" />
+                            <div class="add-form__error-message">
                                 Введіть коректну назву товару
                             </div>
                         </div>
@@ -24,11 +25,11 @@
                     <input type="text" name="name" class="register-form-input _req"  placeholder="" id="nameBill">
                 </label> -->
 
-                    <div class="edit-form__item">
-                        <label class="-modal-form-label">Фото</label>
+                    <div class="add-form__item">
+                        <label class="modal-form-label">Фото</label>
                         <div class="input-wrapper">
 
-                            <ul class="image-preview__edit  _req">
+                            <ul class="image-preview__edit  _req image-preview__add">
 
                                 <li class="image-preview__item">
 
@@ -42,7 +43,7 @@
                                     <div class="image-button">+</div>
                                 </li>
                             </ul>
-                            <div class="edit-form__error-message">
+                            <div class="add-form__error-message">
                                 Потрібно добавити від 1-го до 5-ти фото
                             </div>
                         </div>
@@ -53,12 +54,12 @@
                   <input name="myFile" type="file" id="file" multiple>
                 </label> -->
 
-                    <div class="-edit-form__item">
-                        <label class="-modal-form-label" for="form-description">Опис товару</label>
+                    <div class="add-form__item">
+                        <label class="modal-form-label" for="form-description">Опис товару</label>
                         <div class="input-wrapper">
-                            <textarea name="description" id="form-descriptionEdit" value="qwerwewewqweqweqweqweqweqeqweqwet"
-                                class="edit-form__description _description _req input" id="aboutEdit"></textarea>
-                            <div class="edit-form__error-message">
+                            <textarea name="description" id="form-descriptionEdit" value="qwerwewewqweqweqweqweqwqwqeqeweweweweeqeqweqwet"
+                                class="add-form__description _descriptionEdit _req input" id="aboutEdit"></textarea>
+                            <div class="add-form__error-message">
                                 Коректний опис товару - мінімум 30 символів
                             </div>
                         </div>
@@ -70,8 +71,8 @@
                 </label> -->
 
 
-                    <div class="-edit-form__item">
-                        <div class="-edit-form__label">Категорія товару</div>
+                    <div class="add-form__item">
+                        <div class="add-form__label">Категорія товару</div>
                         <div class="select-wrapper input-wrapper">
                             <select class="form-control input-sm  _category _req input" name="category" id="categoryEdit">//id="sel3">
                                 <option class="select-option select-option-first">
@@ -90,7 +91,7 @@
                         Категорія
                     </option>
                 </select> -->
-                            <div class="edit-form__error-message">Виберіть категорію</div>
+                            <div class="add-form__error-message">Виберіть категорію</div>
                         </div>
                     </div>
 
@@ -100,16 +101,16 @@
                 </label> -->
 
 
-                    <div class="-edit-form__item">
-                        <label class="-edit-form__label" for="form-price">Ціна</label>
+                    <div class="add-form__item">
+                        <label class="add-form__label" for="form-price">Ціна</label>
                         <div class="input-wrapper">
                             <input type="text" id="priceEdit" name="price"  data-source="price"
-                                class="edit-form__product-price _price _req input" autocomplete="off" minlength="1"
+                                class="edit-form__product-price _priceEdit _req input" autocomplete="off" minlength="1"
                                 maxlength="16" placeholder="0.00 грн" />
-                            <div class="-edit-form__error-message">
+                            <div class="add-form__error-message">
                                 Введіть коректну ціну товару
                             </div>
-                            <div class="-edit-form__error-message error-price">
+                            <div class="add-form__error-message error-price">
                                 Ціна для цїєї категорії має бути 0
                             </div>
                         </div>
@@ -120,14 +121,22 @@
                     <input type="tel" name="name" class=""  value="123" placeholder="0.00 грн" id="price">
                 </label> -->
 
-                    <div class="-edit-form__item">
-                        <label class="-edit-form__label" for="form-phone">Телефон</label>
+                    <div class="add-form__item">
+                        <label class="add-form__label" for="form-phone">Телефон</label>
                         <div class="input-wrapper">
                             <input id="telefonEdit" type="tel" name="phone" data-source="phone" value="+380960792310"
-                                class="edit-form__product-telephone-number _phone _req input"
+                                class="add-form__product-telephone-number _phone _req input"
                                 placeholder="+38(0--) --- -- --" />
-                            <div class="edit-form__error-message">Введіть номер телефону</div>
+                            <div class="add-form__error-message">Введіть номер телефону</div>
                         </div>
+                    </div>
+
+                    <div class="add-form__item js-delete-add">
+                        <a href="#" class="delete-advert ">
+                            <svg class="delete-icon">
+                                <use href="./images/sprite.svg#icon-file-1"></use>
+                            </svg>
+                            Видалити оголошення</a>
                     </div>
                 </div>
 
@@ -142,11 +151,12 @@
                 <button type="submit" class="bill-form-button">додати</button>
             </form>
 
-            <button class="buttons edit-bill-close-button close-button" data-modal-add-edit-close>
+            <button class="buttons add-bill-close-button close-button" data-modal-add-edit-close>
                 <svg width="24" height="24" class="close-button-icon ">
                     <use href="./images/sprite.svg#icon-close-black"></use>
                 </svg>
             </button>
+            </div>
 
         </div>
     </div>

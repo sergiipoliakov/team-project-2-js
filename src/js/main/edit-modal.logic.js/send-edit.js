@@ -2,9 +2,6 @@ import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 import { error } from '@pnotify/core';
 
-import imgAtributes from './open-edit-modal';
-console.log(imgAtributes);
-
 const addBillFormEl = document.querySelector('.js-edit-form');
 const imageList = document.querySelector('.image-preview__edit');
 const formImage = document.querySelector('#fileEdit');
@@ -16,19 +13,23 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-console.log(sid);
-console.log(token);
-console.log(id);
+// console.log(sid);
+// console.log(token);
+// console.log(id);
 
 addBillFormEl.addEventListener('submit', formEditSend);
 
 async function formEditSend(event) {
   event.preventDefault();
 
-  const cardID = '5fd9b4b5d398de0017c5ddbc';
+  // const cardID = '5fd9b4b5d398de0017c5ddbc';
   // const cardID = '5fd9aab9d398de0017c5ddad';
 
   // const cardID = '5fde627764501b0017308fb3';
+
+  const cardId = document
+    .querySelector('.js-product-card')
+    .getAttribute('data-id');
 
   let errorsForm = formValidate(addBillFormEl);
 
@@ -66,7 +67,7 @@ async function formEditSend(event) {
 
     let config = {
       method: 'PATCH',
-      url: `https://callboard-backend.herokuapp.com/call/${cardID}`,
+      url: `https://callboard-backend.herokuapp.com/call/${cardId}`,
       headers: {
         accept: 'application/json',
         'Content-Type': 'multipart/form-data',
@@ -105,7 +106,7 @@ function formValidate(form) {
         });
         //   пенетифай для шибки поля name
       }
-    } else if (input.classList.contains('_description')) {
+    } else if (input.classList.contains('_descriptionEdit')) {
       if (descriptionTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -135,7 +136,7 @@ function formValidate(form) {
         formAddError(input);
         errorData += 1;
       }
-    } else if (input.classList.contains('_price')) {
+    } else if (input.classList.contains('_priceEdit')) {
       if (priceTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -254,6 +255,20 @@ function uploadFile(file) {
   height="50";alt="" />
   </li>`,
     );
+    imageList.addEventListener('click', e => {
+      console.dir(imageList.children[2]);
+      console.log('event', e);
+
+      imageList.children[2].innerHTML = '';
+      // imageList.children[3].innerHTML = '';
+      // imageList.children[4].innerHTML = '';
+      console.log(formImage.files);
+
+      formImage.files = formImage.files.defaultValue;
+      console.log(formImage.files);
+
+      // file.value = file.defaultValue;
+    });
   };
   reader.onerror = function (e) {
     error({

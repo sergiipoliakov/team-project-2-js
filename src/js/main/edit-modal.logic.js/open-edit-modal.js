@@ -4,35 +4,38 @@ const refs = {
   modalFavorites: document.querySelector('.modal-favorites'),
   myCard: document.querySelector('.my-goods-hbs'),
 };
+const imageList = document.querySelector('.image-preview__item');
 
 // console.log(refs.openModalEditBtn);
-// console.log(refs.closeModalBtn);
-// console.log(refs.backdrop);
+console.log(refs.closeModalBtn);
+console.log(imageList);
 // console.log(refs.modalFavorites);
 // console.log(refs.myCard);
 
 refs.myCard.addEventListener('click', openEditModal);
 
+refs.closeModalBtn.addEventListener('click', closeEditAddForm);
+
+function closeEditAddForm() {
+  refs.backdrop.classList.add('is-hidden');
+  imageList.append = ' ';
+}
+
 function openEditModal(e) {
-  console.log(e.target.id);
+  console.dir(e.target.id);
+  console.dir(e.target.id === 'openEditModal');
 
-  if (!e.target.id === 'openEditModal') {
-    return;
+  if (e.target.id === 'openEditModal') {
+    refs.backdrop.classList.remove('is-hidden');
+    imageList.append = '';
   }
-  let atrubutes = {};
+  let cardAtrubutes = {};
 
-  refs.backdrop.classList.toggle('is-hidden');
   const openModalEditBtn = document.querySelector('.js-create-button');
-  openModalEditBtn.addEventListener('click', toggleModal);
-
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  function toggleModal() {
-    refs.backdrop.classList.toggle('is-hidden');
-  }
 
   const addBillFormEl = document.querySelector('.js-edit-form');
 
-  const imgAtributes = getAtributs(atrubutes);
+  const imgAtributes = getAtributs(cardAtrubutes);
 
   console.log('img', imgAtributes);
   setValuesToFormEdit(imgAtributes);
