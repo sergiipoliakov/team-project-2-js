@@ -34,20 +34,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  /* height: 100%;*/
+ /* height: 100%;*/
   overflow: auto;
   background-color: #fff;
   color: #000;
   padding: 20px;
   overflow: auto;
   font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.02em;
 
-  color: #000000;
+color: #000000;
 
   @media screen and (min-width: 768px) {
     // width: 724px;
@@ -61,6 +61,9 @@
     padding-right: 105px;
   }
 }
+
+//time
+/*
 .input-wrapper._error {
   box-shadow: 0 0 15px red;
 }
@@ -73,7 +76,7 @@
 
   box-shadow: 0 0 15px red;
 }
-
+*/
 .add-form__title {
   font-family: $main-font;
   font-style: normal;
@@ -187,8 +190,8 @@
   opacity: 0;
 
   @media screen and (min-width: 768px) {
-    // top: 18%;
-    // left: 316px;
+   // top: 18%;
+   // left: 316px;
     border: 1px solid blue;
     // width: 100%;
     // height: 100%;
@@ -380,56 +383,63 @@
 //   }
 // }
 
-button[type='submit'] {
-  background-color: #ff6b09;
+
+button[type=submit] {
+  background-color: #FF6B09;
   color: white;
-  padding: 24px 49px;
+  padding:  24px 49px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 50%;
-  margin-right: 50%;
+  margin-right: 50%; 
+
+
 }
-@media screen and (max-width: 723px) {
-  button[type='submit'] {
-    padding: 25px 60px;
-    margin-left: 0%;
-  }
+@media screen and (max-width: 723px){
+ button[type=submit]   {
+     padding:  25px 60px;
+     margin-left: 0%;
+    
+    }
 }
-@media screen and (max-width: 480px) {
-  button[type='submit'] {
-    padding: 20px 58px;
-    margin-left: 0px;
-  }
+@media screen and (max-width: 480px){
+ button[type=submit]   {
+     padding:  20px 58px;
+     margin-left: 0px;
+    }
 }
 
-button[type='submit']:hover {
+button[type=submit]:hover {
   background-color: #ac6638;
 }
 .row:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
-//VALIDATHIA//
-small {
-  /*visibility: hidden;
-  position: absolute;
+/*VALIDATHIA*/
+small{
+ /* visibility: hidden;
+  position: absolute;*/
   bottom: 0px;
-  left: 0px;*/
+  left: 0px;
   color: red;
-  margin-left: 0px;
-  text-decoration: underline;
+    margin-left: 0px;
+    text-decoration:underline;
+
 }
 
 .error {
   box-shadow: 1px 1px 1px 2px red;
-  background-color: rgb(243, 202, 210);
+    background-color: rgb(243, 202, 210);
   visibility: visible;
+
 }
 
 .success {
   visibility: visible;
   box-shadow: 2px 2px 2px 2px rgb(19, 77, 36);
-  background-color: #ffffff;
+    background-color: #ffffff;
+
 }

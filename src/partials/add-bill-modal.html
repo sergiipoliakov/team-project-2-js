@@ -19,13 +19,13 @@
                     <div class="form-items-wrapper">
                         <div class="add-form__item">
                             <label class="add-form__label" for="form-name">Назва товару</label>
-                            <div class="input-wrapper">
+                            <div class="input-wrapperA">
                                 <input id="nameBill" value="" type="text" name="title"
                                     class="add-form__name _req _name input" />
                                 <small id="name-small" class=""></small>
-                                <div class="add-form__error-message">
+                                <!--<div class="add-form__error-message">
                                     Введіть коректну назву товару
-                                </div>
+                                </div>-->
                             </div>
                         </div>
 
@@ -36,7 +36,7 @@
 
                         <div class="add-form__item">
                             <label class="modal-form-label">Фото</label>
-                            <div class="input-wrapper">
+                            <div class="input-wrapperA">
 
                                 <ul class="image-preview__add  _req">
 
@@ -52,9 +52,9 @@
                                         <div class="image-button">+</div>
                                     </li>
                                 </ul>
-                                <div class="add-form__error-message">
-                                    Потрібно добавити від 1-го до 5-ти фото
-                                </div>
+                                <!--    <div class="add-form__error-message">
+                            Потрібно добавити від 1-го до 5-ти фото
+                        </div>-->
                             </div>
                         </div>
 
@@ -65,15 +65,17 @@
 
                         <div class="add-form__item">
                             <label class="modal-form-label" for="form-description">Опис товару</label>
-                            <div class="input-wrapper">
+                            <div class="input-wrapperA">
                                 <input name="description" id="form-description" id="aboutBill"
                                     placeholder="данний товар...."
-                                    class="add-form__description _description _req input"></input>
+                                    class="add-form__description _description _req input ">
+                                </input>
                                 <small id="small-textarea" class=""></small>
                             </div>
-                            <div class="add-form__error-message">
-                                Коректний опис товару - мінімум 30 символів
-                            </div>
+
+                            <!-- <div class="add-form__error-message">
+                            Коректний опис товару - мінімум 30 символів
+                        </div>-->
                         </div>
                     </div>
 
@@ -104,8 +106,8 @@
                     <option value="category" class="select-option select-option-first">
                         Категорія
                     </option>
-                </select> -->
-                            <div class="add-form__error-message">Виберіть категорію</div>
+                </select> 
+                <div class="add-form__error-message">Виберіть категорію</div>-->
                         </div>
 
 
@@ -120,15 +122,16 @@
                     <div class="add-form__item">
                         <label class="add-form__label" for="form-price">Ціна</label>
                         <div class="input-wrapper">
-                            <input type="text" id="price" name="price" value="0" data-source="price"
+                            <input type="text" id="price" name="price" value="" data-source="price"
                                 class="add-form__product-price _price _req input" autocomplete="off" minlength="1"
                                 maxlength="16" placeholder="0.00 грн" />
-                            <div class="add-form__error-message">
-                                Введіть коректну ціну товару
-                            </div>
-                            <div class="add-form__error-message error-price">
-                                Ціна для цїєї категорії має бути 0
-                            </div>
+                            <small id="small-price" class=""></small>
+                            <!--   <div class="add-form__error-message">
+                    Введіть коректну ціну товару
+                </div>
+              <div class="add-form__error-message error-price">
+                    Ціна для цїєї категорії має бути 0
+                </div>-->
                         </div>
                     </div>
 
@@ -140,10 +143,11 @@
                     <div class="add-form__item">
                         <label class="add-form__label" for="form-phone">Телефон</label>
                         <div class="input-wrapper">
-                            <input id="telefon" type="tel" name="phone" data-source="phone" value="+380960792310"
+                            <input id="telefon" type="tel" name="phone" data-source="phone" value=""
                                 class="add-form__product-telephone-number _phone _req input"
                                 placeholder="+38(0--) --- -- --" />
-                            <div class="add-form__error-message">Введіть номер телефону</div>
+                            <small id="small-tel" class=""></small>
+                            <!--   <div class="add-form__error-message">Введіть номер телефону</div>-->
                         </div>
                     </div>
 
