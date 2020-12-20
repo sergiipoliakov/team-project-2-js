@@ -13,6 +13,7 @@
 }
 .modal-add-bill {
   position: fixed;
+
   min-height: 100%;
 
   width: 290px;
@@ -145,11 +146,17 @@
 .input {
   width: 100%;
   // flex-grow: 1;
-  width: 440px;
+  // width: 440px;
 
   padding: 20px;
   border: 1px solid #bbbbbb;
   resize: vertical;
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 440px;
+  }
 }
 
 .image-preview__add {
@@ -248,16 +255,38 @@
   padding-bottom: 2px;
   margin-right: 10px;
 }
+
 .bill-form-button {
   position: absolute;
-  bottom: 44%;
-  left: 36%;
+  bottom: 33%;
+  left: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 210px;
   height: 60px;
   border: 1px solid $main-text-color;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 42%;
+    left: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    height: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    bottom: 42%;
+    left: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 60px;
+  }
 }
 .bill-form-button:hover {
   background-color: $accentColor;
@@ -273,6 +302,44 @@
     padding: 25px;
     width: 266px;
     margin-right: 20px;
+  }
+}
+
+.edit-form-button {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 60px;
+  border: 1px solid $main-text-color;
+
+  .bill-form-button:hover {
+    background-color: $accentColor;
+    color: $primaryWhiteColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 37%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    height: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    bottom: 38%;
+    left: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 60px;
   }
 }
 // .form-items-wrapper {
