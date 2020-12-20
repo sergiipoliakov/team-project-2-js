@@ -171,26 +171,28 @@
   grid-template-columns: 1fr 1fr 1fr;
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 458px;
   }
 }
 .choose-image__input {
-  position: absolute;
+  position: relative;
+  opacity: 0;
 
   @media screen and (min-width: 768px) {
-    top: 18%;
-    left: 316px;
+   // top: 18%;
+   // left: 316px;
     border: 1px solid blue;
     // width: 100%;
     // height: 100%;
     width: 76px;
     height: 48px;
-    opacity: 0;
+    //opacity: 0;
     // font-size: 0;
   }
 }
 .image-preview__item {
-  position: relative;
-  width: 75px;
+  position: absolute;
+  width: 78px;
   height: 45px;
   display: flex;
   align-items: center;
@@ -201,7 +203,7 @@
     max-height: 100%;
   }
   @media screen and (min-width: 768px) {
-    width: 85px;
+    width: 84px;
     height: 50px;
   }
 }
@@ -210,11 +212,13 @@
   font-size: 22px;
   color: #bbbbbb;
 }
-.select-wrapper {
+
+/*.select-wrapper {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 100%;//???
 }
+
 .select-wrapper:after {
   content: '▼';
   padding: 0 8px;
@@ -229,7 +233,7 @@
   pointer-events: none;
   box-sizing: border-box;
 }
-
+*/
 .modal-add-bill {
   position: absolute;
   top: 50%;
