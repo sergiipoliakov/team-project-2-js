@@ -2,10 +2,11 @@ import 'regenerator-runtime/runtime';
 import './sass/main.scss';
 import './js/header/header-main';
 import './js/start-page/start-page';
-import './js/header/pagination';
+// import './js/header/pagination';
 import './js/main/catigoriesApi';
 import './js/main/add-modal-logic/main-add-modal';
-import './js/my-cabinet/main-myCabinet';
+import './js/my-cabinet/open-myCabunet';
+
 import './js/header/render-categories-taras';
 // import './js/pagination/main';
 import './js/routes/router';

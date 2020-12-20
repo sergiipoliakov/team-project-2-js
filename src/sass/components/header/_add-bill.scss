@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .close-button {
   position: absolute;
   top: 30px;
@@ -30,12 +34,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  /* height: 100%;*/
   overflow: auto;
   background-color: #fff;
   color: #000;
   padding: 20px;
   overflow: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  color: #000000;
 
   @media screen and (min-width: 768px) {
     // width: 724px;
@@ -167,26 +179,28 @@
   grid-template-columns: 1fr 1fr 1fr;
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 458px;
   }
 }
 .choose-image__input {
-  position: absolute;
+  position: relative;
+  opacity: 0;
 
   @media screen and (min-width: 768px) {
-    top: 18%;
-    left: 316px;
+    // top: 18%;
+    // left: 316px;
     border: 1px solid blue;
     // width: 100%;
     // height: 100%;
     width: 76px;
     height: 48px;
-    opacity: 0;
+    //opacity: 0;
     // font-size: 0;
   }
 }
 .image-preview__item {
-  position: relative;
-  width: 75px;
+  position: absolute;
+  width: 78px;
   height: 45px;
   display: flex;
   align-items: center;
@@ -197,7 +211,7 @@
     max-height: 100%;
   }
   @media screen and (min-width: 768px) {
-    width: 85px;
+    width: 84px;
     height: 50px;
   }
 }
@@ -206,11 +220,13 @@
   font-size: 22px;
   color: #bbbbbb;
 }
-.select-wrapper {
+
+/*.select-wrapper {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 100%;//???
 }
+
 .select-wrapper:after {
   content: '▼';
   padding: 0 8px;
@@ -225,7 +241,7 @@
   pointer-events: none;
   box-sizing: border-box;
 }
-
+*/
 .modal-add-bill {
   position: absolute;
   top: 50%;
@@ -255,7 +271,7 @@
   padding-bottom: 2px;
   margin-right: 10px;
 }
-
+/*
 .bill-form-button {
   position: absolute;
   bottom: 33%;
@@ -287,7 +303,7 @@
     width: 210px;
     height: 60px;
   }
-}
+}*/
 .bill-form-button:hover {
   background-color: $accentColor;
   color: $primaryWhiteColor;
@@ -363,3 +379,57 @@
 //     height: 698px;
 //   }
 // }
+
+button[type='submit'] {
+  background-color: #ff6b09;
+  color: white;
+  padding: 24px 49px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+@media screen and (max-width: 723px) {
+  button[type='submit'] {
+    padding: 25px 60px;
+    margin-left: 0%;
+  }
+}
+@media screen and (max-width: 480px) {
+  button[type='submit'] {
+    padding: 20px 58px;
+    margin-left: 0px;
+  }
+}
+
+button[type='submit']:hover {
+  background-color: #ac6638;
+}
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+//VALIDATHIA//
+small {
+  /*visibility: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;*/
+  color: red;
+  margin-left: 0px;
+  text-decoration: underline;
+}
+
+.error {
+  box-shadow: 1px 1px 1px 2px red;
+  background-color: rgb(243, 202, 210);
+  visibility: visible;
+}
+
+.success {
+  visibility: visible;
+  box-shadow: 2px 2px 2px 2px rgb(19, 77, 36);
+  background-color: #ffffff;
+}
