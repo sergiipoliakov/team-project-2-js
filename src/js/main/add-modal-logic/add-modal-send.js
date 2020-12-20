@@ -312,6 +312,28 @@ function uploadFile(file) {
   height="50";alt="" />
   </li>`,
     );
+    imageList.addEventListener('click', e => {
+      // console.dir(imageList.children.length);
+      // for (let elem of imageList.children) {
+      //   elem.innerHTML = '';
+      // }
+      // console.log('event', e);
+      // const elem = [
+      //   imageList.children[2],
+      //   imageList.children[3],
+      //   imageList.children[4],
+      // ];
+      // elem.forEach(oneImg => {
+      //   oneImg.innerHTML = '';
+      // });
+      // imageList.children[2].innerHTML = '';
+      // imageList.children[3].innerHTML = '';
+      // imageList.children[4].innerHTML = '';
+      // console.log(formImage.files);
+      // formImage.files = formImage.files.defaultValue;
+      // console.log(formImage.files);
+      // file.value = file.defaultValue;
+    });
   };
   reader.onerror = function (e) {
     error({

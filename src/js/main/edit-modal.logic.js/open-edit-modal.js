@@ -4,7 +4,7 @@ const refs = {
   modalFavorites: document.querySelector('.modal-favorites'),
   myCard: document.querySelector('.my-goods-hbs'),
 };
-const imageList = document.querySelector('.image-preview__item');
+const imageList = document.querySelector('.image-preview__edit');
 
 // console.log(refs.openModalEditBtn);
 console.log(refs.closeModalBtn);
@@ -17,17 +17,15 @@ refs.myCard.addEventListener('click', openEditModal);
 refs.closeModalBtn.addEventListener('click', closeEditAddForm);
 
 function closeEditAddForm() {
+  // const imageList = document.querySelector('.image-preview__item');
+  // console.dir(imageList.children[2]);
+  // imageList.children[2].innerHTML = '';
   refs.backdrop.classList.add('is-hidden');
-  imageList.append = ' ';
 }
 
 function openEditModal(e) {
-  console.dir(e.target.id);
-  console.dir(e.target.id === 'openEditModal');
-
   if (e.target.id === 'openEditModal') {
     refs.backdrop.classList.remove('is-hidden');
-    imageList.append = '';
   }
   let cardAtrubutes = {};
 
