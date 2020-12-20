@@ -53,9 +53,17 @@ function mainPagination(event) {
     }
 }
 
-function clearCategoryContainer() {
+// function clearCategoryContainer() {
+//    refMainContainer.innerHTML = ''; 
+// }
+
+export const clearCategoryContainer = () => {
    refMainContainer.innerHTML = ''; 
 }
+
+
+
+
 
 function fillNameOfContainers(name) {
     let refNameCardContainer = document.querySelector(`.cont-name-${name}`);

@@ -9,15 +9,26 @@
 //   'trade',
 // ];
 import catigoriesTmpl from '../../templates/catigories.hbs';
+import CardsInitialTpl from '../../templates/card-initial.hbs';
+import { clearCategoryContainer, refMainContainer } from '../header/render-categories-taras'
+import {optionalContainerMain} from '../refs/variables-refs'
+
+console.log(refMainContainer);
+console.log(optionalContainerMain);
 
 const categoriesListContainer = document.querySelector('.js-categories-list');
 const catogoriesContainer = document.querySelector('.js-catigories');
+
 // const searchResoultContainer = document.querySelector('.search-resoult');
 // const searchModal = document.querySelector('[data-modal]');
 // console.log(categoriesListContainer);
 let catigoriesQuery;
 
 categoriesListContainer.addEventListener('click', onCategoriesItem);
+
+function renderOtionalCont() {
+  refMainContainer.innerHTML = optionalContainerMain; 
+}
 
 function onCategoriesItem(event) {
   event.preventDefault();
@@ -29,7 +40,28 @@ function onCategoriesItem(event) {
   // console.log(catigoriesQuery);
   const url = `https://callboard-backend.herokuapp.com/call/specific/${catigoriesQuery}`;
   toCatigoriesClick(url).then(data => {
-    catogoriesContainer.innerHTML = catigoriesTmpl(data);
+    // console.log(clearCategoryContainer);
+    clearCategoryContainer();
+    renderOtionalCont();
+    const refOptUlContainer = document.querySelector('.optContUl');
+    // const refOptContainer = document.querySelector('optCont');
+    // refOptContainer.classList.remove('')
+
+    
+    
+
+    // catogoriesContainer.innerHTML = catigoriesTmpl(data);
+    refOptUlContainer.insertAdjacentHTML('beforeend', CardsInitialTpl(data));
+
+    var refCardOptCont = document.querySelectorAll('.optContUl .swiper-slide');
+    // console.log(refCardOptCont);
+        refCardOptCont.forEach(el => {
+            var refCardForOtp = document.querySelector('.optContUl .swiper-slide');
+          refCardForOtp.classList.remove('swiper-slide');
+          refCardForOtp.classList.add('optCategCard');
+          
+        })
+    
     // console.log(data);
     // toggleModal();
   });
