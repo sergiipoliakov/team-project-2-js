@@ -81,6 +81,9 @@ function renderCardsToCategories(category) {
         var refСontainerOnSale = document.querySelector('.container-sales .header-onsale-cont');
         refСontainerOnSale.classList.remove("header-onsale-cont");
         refСontainerOnSale.classList.add("header-onsale-cont-on-sale");
+        var refСontainerOnSale2 = document.querySelector('.container-sales .catigories-container');
+        refСontainerOnSale2.classList.remove("catigories-container");
+        refСontainerOnSale2.classList.add("catigories-container-on-sale");
     }
     
 	
