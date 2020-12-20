@@ -456,9 +456,24 @@ ul {
 }
 
 .optCategCard {
-  margin-right: 20px;
+  @media screen and (min-width: $tablet-min) {
+    width: 352px;
+    margin-right: 20px;
 
-  &:nth-child(4n) {
-    margin-right: 0;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 295px;
+    margin-right: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }
