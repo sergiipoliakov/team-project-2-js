@@ -13,6 +13,7 @@
 }
 .modal-add-bill {
   position: fixed;
+
   min-height: 100%;
 
   width: 290px;
@@ -103,15 +104,18 @@
   }
   @media screen and (min-width: 768px) {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
-    // justify-content: space-between;
+    justify-content: space-between;
+    // width: 440px;
 
     &:last-child {
       margin-bottom: 30px;
     }
   }
 }
+
+// можно раскоментировать
 // .add-form__error-message.error-price {
 //   display: none;
 // }
@@ -133,14 +137,26 @@
 // .input-wrapper {
 //   width: 100%;
 // }
+// .input-wrapper {
+//   background-color: green;
+//   margin: 0;
 
+//   padding: 0;
+// }
 .input {
   width: 100%;
   // flex-grow: 1;
-  // width: 50%;
+  // width: 440px;
+
   padding: 20px;
-  border: 1px solid #f5f6fb;
+  border: 1px solid #bbbbbb;
   resize: vertical;
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 440px;
+  }
 }
 
 .image-preview__add {
@@ -155,15 +171,18 @@
 }
 .choose-image__input {
   position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid blue;
-  // width: 100%;
-  // height: 100%;
-  width: 100px;
-  height: 100px;
-  // opacity: 0;
-  // font-size: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 18%;
+    left: 316px;
+    border: 1px solid blue;
+    // width: 100%;
+    // height: 100%;
+    width: 76px;
+    height: 48px;
+    opacity: 0;
+    // font-size: 0;
+  }
 }
 .image-preview__item {
   position: relative;
@@ -213,6 +232,120 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.delete-advert {
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    margin-left: 120px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 175px;
+  }
+}
+.delete-icon {
+  width: 13px;
+  height: 14px;
+  padding-bottom: 2px;
+  margin-right: 10px;
+}
+
+.bill-form-button {
+  position: absolute;
+  bottom: 33%;
+  left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 60px;
+  border: 1px solid $main-text-color;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 42%;
+    left: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    height: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    bottom: 42%;
+    left: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 60px;
+  }
+}
+.bill-form-button:hover {
+  background-color: $accentColor;
+  color: $primaryWhiteColor;
+}
+.edit-product-btn {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 25px;
+    width: 266px;
+    margin-right: 20px;
+  }
+}
+
+.edit-form-button {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 60px;
+  border: 1px solid $main-text-color;
+
+  .bill-form-button:hover {
+    background-color: $accentColor;
+    color: $primaryWhiteColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 37%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    height: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    bottom: 38%;
+    left: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 60px;
+  }
+}
+// .form-items-wrapper {
+//   justify-content: space-between;
+//   // justify-content: space-between;
+// }
 
 //   background-color: #fff;
 

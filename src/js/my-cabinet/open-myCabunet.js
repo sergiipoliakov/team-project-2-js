@@ -1,6 +1,7 @@
 import refs from './refs';
 import myGoodsTmpl from '../../templates/card-my-goods.hbs';
 import FavoritesTmpl from '../../templates/card-favorites.hbs';
+import { clearCategoryContainer } from '../header/render-categories-taras';
 
 const { openMyCabinetBtn, goodsContainer, favoritesContainer } = refs;
 
@@ -11,7 +12,9 @@ const token = localStorage.getItem('Bearer');
 document.getElementById('myCabinetDiv').hidden = true;
 
 async function fetchMyCabinet() {
+   clearCategoryContainer();
   document.getElementById('myCabinetDiv').hidden = false;
+ 
   let config = {
     method: 'GET',
     url: 'https://callboard-backend.herokuapp.com/call/own',

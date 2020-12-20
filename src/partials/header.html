@@ -22,14 +22,13 @@
     </div>
 
     <!-- Блок мой кабинет, кнопка выход -->
-    <div class="my-cabinet" id="exit.btn">
+    <div class="my-cabinet js-my-cabinet" id="exit.btn">
       <button class="my-cabinet-btn js-my-cabinet-btn">
         <svg class="icon-cabinet" width="20" height="21" aria-label="Мой кабинет">
           <use href="./images/sprite.svg#icon-my-cabinet"></use>
         </svg>
-        <span class="text-my-cabinet js-my-cabinet" data="myCabinet" id="myCabinet"
-          >Мiй кабінет</span
-        >
+
+        <span class="text-my-cabinet js-my-cabinet" data="myCabinet" id="myCabinet">Мiй кабінет</span>
       </button>
 
       <!-- Спрятанный блок планшет/десктоп (под хедером) -->
@@ -48,9 +47,12 @@
 
     <!-- Блок авторизации, регистрация/вход -->
     <div class="auth">
+
       <button type="button" class="registration-btn" data-register>Реєстрація</button>
       <span class="slash">/</span>
       <button type="button" class="login-btn">Увійти</button>
+
+    
     </div>
 
     <!-- Кнопка создания объявления -->

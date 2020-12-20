@@ -6,12 +6,12 @@
             <h2>Додати оголошення</h2>
 
         
-                <form class="-bill-form js-add-form"  autocomplete="on">
+                <form class="bill-form js-add-form"  autocomplete="on">
 
 
-                    <div class="-form-items-wrapper">
-                        <div class="-add-form__item">
-                            <label class="-add-form__label" for="form-name">Назва товару</label>
+                    <div class="form-items-wrapper">
+                        <div class="add-form__item">
+                            <label class="add-form__label" for="form-name">Назва товару</label>
                             <div class="input-wrapper">
                                 <input id="nameBill"   value="qwert" type="text" name="title" class="add-form__name _req _name input" />
                                 <div class="add-form__error-message">
@@ -53,8 +53,8 @@
                   <input name="myFile" type="file" id="file" multiple>
                 </label> -->
 
-                <div class="-add-form__item">
-                    <label class="-modal-form-label" for="form-description">Опис товару</label>
+                <div class="add-form__item">
+                    <label class="modal-form-label" for="form-description">Опис товару</label>
                     <div class="input-wrapper">
                         <input name="description" id="form-description"  value="qwerwewewqweqweqweqweqweqeqweqwet" 
                             class="add-form__description _description _req input" id="aboutBill"></input>
@@ -70,8 +70,8 @@
                 </label> -->
 
 
-        <div class="-add-form__item">
-            <div class="-add-form__label">Категорія товару</div>
+        <div class="add-form__item">
+            <div class="add-form__label">Категорія товару</div>
             <div class="select-wrapper input-wrapper">
                     <select class="form-control input-sm  _category _req input" name="category"  id="category">//id="sel3">
                         <option  class="select-option select-option-first">
@@ -92,6 +92,8 @@
                 </select> -->
                 <div class="add-form__error-message">Виберіть категорію</div>
             </div>
+            
+
         </div>
               
                 <!-- <label class="bill-form-field">
@@ -100,16 +102,16 @@
                 </label> -->
 
 
-        <div class="-add-form__item">
-            <label class="-add-form__label" for="form-price">Ціна</label>
+        <div class="add-form__item">
+            <label class="add-form__label" for="form-price">Ціна</label>
             <div class="input-wrapper">
                 <input type="text" id="price" name="price"  value="0"data-source="price"
                     class="add-form__product-price _price _req input" autocomplete="off" minlength="1" maxlength="16"
                     placeholder="0.00 грн" />
-                <div class="-add-form__error-message">
+                <div class="add-form__error-message">
                     Введіть коректну ціну товару
                 </div>
-                <div class="-add-form__error-message error-price">
+                <div class="add-form__error-message error-price">
                     Ціна для цїєї категорії має бути 0
                 </div>
             </div>
@@ -120,8 +122,8 @@
                     <input type="tel" name="name" class=""  value="123" placeholder="0.00 грн" id="price">
                 </label> -->
 
-                <div class="-add-form__item">
-                    <label class="-add-form__label" for="form-phone">Телефон</label>
+                <div class="add-form__item">
+                    <label class="add-form__label" for="form-phone">Телефон</label>
                     <div class="input-wrapper">
                         <input id="telefon" type="tel" name="phone" data-source="phone" value="+380960792310"
                             class="add-form__product-telephone-number _phone _req input" placeholder="+38(0--) --- -- --" />
@@ -138,7 +140,7 @@
                 
                 
 
-                <button type="submit" class="bill-form-button">додати</button>
+                <button type="submit" class="bill-form-button form-button__wrapper">додати</button>
             </form>
 
             <button class="buttons add-bill-close-button close-button" data-modal-add-bill-close>
