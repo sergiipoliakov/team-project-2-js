@@ -1,5 +1,6 @@
 .categories {
   display: none;
+
   @media screen and (min-width: $desktop) {
     width: 1200px;
     display: flex;
@@ -18,6 +19,17 @@
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    height: 70px;
+    padding: 26px 34px;
+    border-bottom: 1px solid $border-color;
+  }
 }
 
 .categories-item > a {

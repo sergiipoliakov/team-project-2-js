@@ -69,13 +69,13 @@
   border-bottom: 1px solid $border-color;
 }
 
-@media screen and (max-width: $tablet-max) {
-  .categories-item {
-    height: 70px;
-    padding: 26px 34px;
-    border-bottom: 1px solid $border-color;
-  }
-}
+// @media screen and (max-width: $tablet-max) {
+//   .categories-item {
+//     height: 70px;
+//     padding: 26px 34px;
+//     border-bottom: 1px solid $border-color;
+//   }
+// }
 
 .menu-auth {
   padding-left: 10px;
