@@ -7,8 +7,8 @@ const refs = {
 const imageList = document.querySelector('.image-preview__edit');
 
 // console.log(refs.openModalEditBtn);
-console.log(refs.closeModalBtn);
-console.log(imageList);
+// console.log(refs.closeModalBtn);
+// console.log(imageList);
 // console.log(refs.modalFavorites);
 // console.log(refs.myCard);
 
@@ -33,43 +33,34 @@ function openEditModal(e) {
 
   const addBillFormEl = document.querySelector('.js-edit-form');
 
-  const imgAtributes = getAtributs(cardAtrubutes);
+  const imgAtributes = getAtributs(cardAtrubutes, e);
 
   console.log('img', imgAtributes);
   setValuesToFormEdit(imgAtributes);
 }
-function getAtributs(atrubutes) {
-  atrubutes.title = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-title');
+function getAtributs(atrubutes, event) {
+  const isonBackDropClick = event.target.classList.contains('js-product-card');
+  console.log(isonBackDropClick);
+  if (isonBackDropClick) {
+    atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
 
-  atrubutes.description = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-description');
+    atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
 
-  atrubutes.phone = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-phone');
+    atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
 
-  atrubutes.category = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-category');
+    atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
 
-  atrubutes.id = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-id');
-  atrubutes.price = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-price');
+    atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
+    atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
+  }
 
-  // console.log(atrubutes);
+  console.log(atrubutes);
   return atrubutes;
 }
 
 function setValuesToFormEdit(imgAtributes) {
   document.querySelector('#nameEdit').value = imgAtributes.title;
-  document.querySelector('#form-descriptionEdit').value =
-    imgAtributes.description;
+  document.querySelector('#form-descriptionEdit').value = imgAtributes.description;
   document.querySelector('#priceEdit').value = imgAtributes.price;
   document.querySelector('#telefonEdit').value = imgAtributes.phone;
   console.log('inputValue', imgAtributes.title);
