@@ -17798,7 +17798,6 @@ var templateFunction = _handlebars.default.template({
         alias2 = container.hooks.helperMissing,
         alias3 = "function",
         alias4 = container.escapeExpression,
-        alias5 = container.lambda,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
         return parent[propertyName];
@@ -17807,21 +17806,91 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden-\">\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden-\">\n\n\n\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "imageUrls",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 52
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 65
         }
       }
-    }) : helper)) + "\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 30
+        },
+        "end": {
+          "line": 16,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 30
+        },
+        "end": {
+          "line": 19,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 30
+        },
+        "end": {
+          "line": 22,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 30
+        },
+        "end": {
+          "line": 25,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 30
+        },
+        "end": {
+          "line": 28,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -17835,7 +17904,7 @@ var templateFunction = _handlebars.default.template({
           "column": 56
         }
       }
-    }) : helper)) + "</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n            </div>\n\n            <h2 class=\"goods-modal__price\">" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n                <!--  -->\n                <!--  -->\n                <!--  -->\n            </div>\n\n            <h2 class=\"goods-modal__price\">" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "price",
       "hash": {},
       "data": data,
@@ -17849,21 +17918,35 @@ var templateFunction = _handlebars.default.template({
           "column": 52
         }
       }
-    }) : helper)) + "</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span>" + alias4((helper = (helper = lookupProperty(helpers, "phone") || (depth0 != null ? lookupProperty(depth0, "phone") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " uah</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span class=\"phone-title__span\">" + alias4((helper = (helper = lookupProperty(helpers, "phone") || (depth0 != null ? lookupProperty(depth0, "phone") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "phone",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 61,
-          "column": 34
+          "column": 60
         },
         "end": {
           "line": 61,
-          "column": 43
+          "column": 69
         }
       }
-    }) : helper)) + "</span>\n                            <span class=\"material-icons md-18 cards__icons\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text \">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text \">Поділитися</p>\n                        <span class=\"material-icons md-18 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum\n                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae\n                    nihil dolorem incidunt. Hic?</span>\n            </p>\n        </div>\n    </div>\n    <!-- </div> -->\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n</div>";
+    }) : helper)) + "</span>\n                            <span class=\"material-icons md-15 cards__icons icon-phone\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text like-share-text\">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text like-share-text\">Поділитися</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>" + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "description",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 22
+        },
+        "end": {
+          "line": 90,
+          "column": 37
+        }
+      }
+    }) : helper)) + "</span>\n            </p>\n        </div>\n\n    </div>\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n</div>";
   },
   "useData": true
 });
@@ -17885,7 +17968,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var templateFunction = _handlebars.default.template({
   "compiler": [8, ">= 4.3.0"],
   "main": function main(container, depth0, helpers, partials, data) {
-    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden-\">\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">Футболка спортивна</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n                <!--  -->\n                <!--  -->\n                <!--  -->\n            </div>\n\n            <h2 class=\"goods-modal__price\">200.00 uah</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span>+38 096 111 11 11</span>\n                            <span class=\"material-icons md-18 cards__icons\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text \">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text \">Поділитися</p>\n                        <span class=\"material-icons md-18 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum\n                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae\n                    nihil dolorem incidunt. Hic?</span>\n            </p>\n        </div>\n    </div>\n    <!-- </div> -->\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n</div>";
+    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden\">\n\n\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">Футболка спортивна</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n                <!--  -->\n                <!--  -->\n                <!--  -->\n            </div>\n\n            <h2 class=\"goods-modal__price\">200.00 uah</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span class=\"phone-title__span\">+38 000 000 00 00</span>\n                            <span class=\"material-icons md-15 cards__icons icon-phone\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text like-share-text\">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text like-share-text\">Поділитися</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum\n                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae\n                    nihil dolorem incidunt. Hic?</span>\n            </p>\n        </div>\n    </div>\n    <!-- </div> -->\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n\n\n</div>";
   },
   "useData": true
 });
@@ -18469,7 +18552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59696" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61686" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

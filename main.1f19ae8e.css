@@ -546,6 +546,7 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
 }
 .backdrop.is-hidden {
   pointer-events: none;
@@ -1949,7 +1950,6 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .card-modal__image-wraper {
-    position: absolute;
     top: 0;
     left: auto;
     right: auto;
@@ -2072,7 +2072,7 @@ ul {
 
 .card-modal__heading-wrapper {
   position: absolute;
-  top: 360px;
+  top: -367px;
 }
 @media screen and (min-width: 768px) {
   .card-modal__heading-wrapper {
@@ -2097,6 +2097,9 @@ ul {
 }
 .goods-modal__text .cont {
   display: block;
+}
+.goods-modal__text.like-share-text {
+  margin-right: 10px;
 }
 
 .goods-modal__title {
@@ -2133,7 +2136,7 @@ ul {
   align-items: center;
   width: 255px;
   height: 60px;
-  margin-bottom: 13px;
+  margin-bottom: 20px;
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -2211,10 +2214,16 @@ ul {
   color: #878686;
 }
 
+.icon-phone {
+  position: absolute;
+  top: 3px;
+  right: 40px;
+  display: block;
+  margin-left: 15px;
+}
+
 .phone-title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: relative;
   cursor: help;
   font-style: normal;
   font-weight: 300;
@@ -2227,7 +2236,7 @@ ul {
 .card-modal__like-share {
   display: flex;
   justify-content: space-between;
-  width: 217px;
+  width: 80%;
   margin-bottom: 40px;
   padding: 0px;
   color: #878686;
