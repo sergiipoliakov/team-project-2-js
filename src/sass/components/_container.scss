@@ -1,64 +1,83 @@
+// .container {
+// 	padding: 0 15px;
+// 	background-color: $container-color;
+// 	max-width: $mobile;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	outline: 1px solid yellowgreen;
+
+// 	@media screen and (min-width: $tablet-min) {
+// 		max-width: $tablet-min;
+// 		padding: 0 22px;
+// 	}
+
+// 	@media screen and (min-width: $desktop) {
+// 		max-width: $desktop;
+// 		padding-left: 20px;
+// 		padding-right: 20px;
+// 	}
+// }
+
+// .is-shown {
+// 	display: block;
+// }
+
+// .container-st-p {
+// 	padding: 0 15px;
+// 	background-color: $container-color;
+// 	max-width: $mobile;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	outline: 1px solid red;
+
+// 	@media screen and (min-width: $tablet-min) {
+// 		max-width: $tablet-min;
+// 		padding: 0 22px;
+// 	}
+
+// 	@media screen and (min-width: $desktop) {
+// 		max-width: $desktop;
+// 		padding-left: 20px;
+// 		padding-right: 20px;
+// 	}
+// }
+
+// !Резина
 .container {
-	padding: 0 15px;
-	background-color: $container-color;
-	max-width: $mobile;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0px auto;
+	width: 100%;
 	outline: 1px solid yellowgreen;
 
+	@media screen and (max-width: $mobile-max) {
+		padding: 0px 15px;
+	}
 	@media screen and (min-width: $tablet-min) {
-		max-width: $tablet-min;
-		padding: 0 22px;
-	}
-
-	@media screen and (min-width: $desktop) {
 		max-width: $desktop;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 0px 22px;
 	}
-}
-
-.is-shown {
-	display: block;
+	@media screen and (min-width: $desktop) {
+		max-width: $desktop-max;
+		padding: 0px 20px;
+	}
 }
 
 .container-st-p {
-	padding: 0 15px;
-	background-color: $container-color;
-	max-width: $mobile;
-	margin-left: auto;
-	margin-right: auto;
-	// outline: 1px solid red;
+	margin: 0px auto;
+	width: 100%;
+	outline: 1px solid red;
 
-	@media screen and (min-width: $tablet-min) {
-		max-width: $tablet-min;
-		padding: 0 22px;
+	@media screen and (max-width: $mobile-max) {
+		padding: 0px 15px;
 	}
-
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: $tablet-min) {
 		max-width: $desktop;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 0px 22px;
+	}
+	@media screen and (min-width: $desktop) {
+		max-width: $desktop-max;
+		padding: 0px 20px;
 	}
 }
-
-// !Резина
-// .container {
-// 	margin: 0px auto;
-// 	width: 100%;
-// 	outline: 1px solid red;
-
-// 	@media screen and (max-width: $mobile-max) {
-// 		padding: 0px 15px;
-// 	}
-// 	@media screen and (min-width: $tablet-min) {
-// 		max-width: $desktop;
-// 		padding: 0px 22px;
-// 	}
-// 	@media screen and (min-width: $desktop) {
-// 		padding: 0px 20px;
-// 	}
-// }
 
 // !Перший варіант
 // .container {
