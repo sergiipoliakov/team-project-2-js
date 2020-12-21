@@ -1137,9 +1137,6 @@ small {
   background-color: #ffffff;
 }
 
-.categories {
-  display: none;
-}
 @media screen and (min-width: 1280px) {
   .categories {
     width: 1200px;
@@ -1158,6 +1155,19 @@ small {
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1280px) {
+  .categories-item {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .categories-item {
+    height: 70px;
+    padding: 26px 34px;
+    border-bottom: 1px solid #e2e3e5;
+  }
 }
 
 .categories-item > a {

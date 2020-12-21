@@ -3530,31 +3530,143 @@ var templateFunction = _handlebars.default.template({
           "column": 89
         }
       }
-    }) : helper)) + "\">\n							favorite_border\n						</span>\n					</button>\n\n					<button class=\"create-button icons-container is-hidden\">\n						<span class=\"material-icons md-14 cards__icons\">\n							border_color\n						</span>\n					</button>\n\n					<button class=\"fullscreen-button icons-container\">\n						<span class=\"material-icons md-18 cards__icons\">\n							fullscreen\n						</span>\n					</button>\n				</div>\n\n			</div>\n\n\n		</div>\n\n		<div class=\"cards__text-cont\">\n			<h3 class=\"name-st-p\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\">\n							favorite_border\n						</span>\n					</button>\n\n					<button class=\"create-button icons-container is-hidden\">\n						<span class=\"material-icons md-14 cards__icons\">\n							border_color\n						</span>\n					</button>\n\n					<button class=\"fullscreen-button icons-container\">\n						<span class=\"material-icons md-18 cards__icons js-fullScreen\" data-category=\"" + alias4((helper = (helper = lookupProperty(helpers, "category") || (depth0 != null ? lookupProperty(depth0, "category") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "category",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 83
+        },
+        "end": {
+          "line": 29,
+          "column": 95
+        }
+      }
+    }) : helper)) + "\"\n							data-phone=\"" + alias4((helper = (helper = lookupProperty(helpers, "phone") || (depth0 != null ? lookupProperty(depth0, "phone") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "phone",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 19
+        },
+        "end": {
+          "line": 30,
+          "column": 28
+        }
+      }
+    }) : helper)) + "\" data-images=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 43
+        },
+        "end": {
+          "line": 30,
+          "column": 56
+        }
+      }
+    }) : helper)) + "\" data-price=\"" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "price",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 70
+        },
+        "end": {
+          "line": 30,
+          "column": 79
+        }
+      }
+    }) : helper)) + "\"\n							data-userID=\"" + alias4((helper = (helper = lookupProperty(helpers, "userId") || (depth0 != null ? lookupProperty(depth0, "userId") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "userId",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 20
+        },
+        "end": {
+          "line": 31,
+          "column": 30
+        }
+      }
+    }) : helper)) + "\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "_id") || (depth0 != null ? lookupProperty(depth0, "_id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "_id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 41
+        },
+        "end": {
+          "line": 31,
+          "column": 48
+        }
+      }
+    }) : helper)) + "\" data-description=\"" + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "description",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 68
+        },
+        "end": {
+          "line": 31,
+          "column": 83
+        }
+      }
+    }) : helper)) + "\"\n							data-title=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 32,
+          "column": 19
+        },
+        "end": {
+          "line": 32,
+          "column": 28
+        }
+      }
+    }) : helper)) + "\">\n							fullscreen\n						</span>\n					</button>\n				</div>\n\n			</div>\n\n\n		</div>\n\n		<div class=\"cards__text-cont\">\n			<h3 class=\"name-st-p\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 44,
           "column": 25
         },
         "end": {
-          "line": 41,
+          "line": 44,
           "column": 34
         }
       }
-    }) : helper)) + "</h3>\n			<div class=\"price-cont\">\n				<h3 class=\"old-price-st-p is-hidden\">" + alias4((helper = (helper = lookupProperty(helpers, "oldPrice") || (depth0 != null ? lookupProperty(depth0, "oldPrice") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " test test</h3>\n			<div class=\"price-cont\">\n				<h3 class=\"old-price-st-p is-hidden\">" + alias4((helper = (helper = lookupProperty(helpers, "oldPrice") || (depth0 != null ? lookupProperty(depth0, "oldPrice") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "oldPrice",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 46,
           "column": 41
         },
         "end": {
-          "line": 43,
+          "line": 46,
           "column": 53
         }
       }
@@ -3564,11 +3676,11 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 48,
           "column": 27
         },
         "end": {
-          "line": 45,
+          "line": 48,
           "column": 36
         }
       }
@@ -3597,7 +3709,7 @@ var templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 52,
+          "line": 55,
           "column": 9
         }
       }
@@ -16081,6 +16193,14 @@ var toCatigoriesClick = function toCatigoriesClick(param) {
 // searchModal.classList.toggle('is-hidden');
 // }
 },{"../../templates/catigories.hbs":"templates/catigories.hbs","../../templates/card-initial.hbs":"templates/card-initial.hbs","../header/render-categories-taras":"js/header/render-categories-taras.js","../refs/variables-refs":"js/refs/variables-refs.js"}],"js/main/add-modal-logic/add-modal-open-close.js":[function(require,module,exports) {
+"use strict";
+
+require("@pnotify/core/dist/BrightTheme.css");
+
+require("@pnotify/core/dist/PNotify.css");
+
+var _core = require("@pnotify/core");
+
 var refs = {
   openModalBillBtn: document.querySelector('[data-add-bill]'),
   closeModalBtn: document.querySelector('[data-modal-add-bill-close]'),
@@ -16090,7 +16210,19 @@ refs.openModalBillBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 refs.backdrop.addEventListener('click', onBackDropClick); // refs.openModalLoginBtn.addEventListener('click', toggleModal);
 
+var Token = localStorage.getItem('Bearer');
+
 function toggleModal() {
+  if (!Token) {
+    (0, _core.error)({
+      text: 'Авторизируйтесь!',
+      type: 'info',
+      animateSpeed: 'normal',
+      delay: 500
+    });
+    return;
+  }
+
   refs.backdrop.classList.toggle('is-hidden');
 }
 
@@ -16104,7 +16236,7 @@ function onBackDropClick(event) {
 
   refs.backdrop.classList.toggle('is-hidden');
 }
-},{}],"js/main/add-modal-logic/add-modal-send.js":[function(require,module,exports) {
+},{"@pnotify/core/dist/BrightTheme.css":"../node_modules/@pnotify/core/dist/BrightTheme.css","@pnotify/core/dist/PNotify.css":"../node_modules/@pnotify/core/dist/PNotify.css","@pnotify/core":"../node_modules/@pnotify/core/dist/PNotify.js"}],"js/main/add-modal-logic/add-modal-send.js":[function(require,module,exports) {
 "use strict";
 
 require("@pnotify/core/dist/BrightTheme.css");
@@ -16216,6 +16348,7 @@ function _takeFormData() {
               };
               axios(config).then(function (response) {
                 console.log(response.data);
+                location.reload();
               }).catch(function (error) {
                 console.log(error);
               }); //     fetch('https://callboard-backend.herokuapp.com/call', requestOptions)
@@ -16659,17 +16792,129 @@ var templateFunction = _handlebars.default.template({
           "column": 63
         }
       }
-    }) : helper)) + "\">\n							border_color\n						</span>\n					</button>\n\n					<button class=\"fullscreen-button js-create-button icons-container\">\n						<span class=\"material-icons md-18 cards__icons\">\n							fullscreen\n						</span>\n					</button>\n\n				</div>\n\n\n			</div>\n\n			<div class=\"cards__text-cont\">\n				<h3 class=\"name-st-p\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\">\n							border_color\n						</span>\n					</button>\n\n					<button class=\"fullscreen-button js-create-button icons-container\">\n						<span class=\"material-icons md-18 cards__icons js-fullScreen\" data-category=\"" + alias4((helper = (helper = lookupProperty(helpers, "category") || (depth0 != null ? lookupProperty(depth0, "category") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "category",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 83
+        },
+        "end": {
+          "line": 27,
+          "column": 95
+        }
+      }
+    }) : helper)) + "\"\n							data-phone=\"" + alias4((helper = (helper = lookupProperty(helpers, "phone") || (depth0 != null ? lookupProperty(depth0, "phone") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "phone",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 19
+        },
+        "end": {
+          "line": 28,
+          "column": 28
+        }
+      }
+    }) : helper)) + "\" data-images=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 43
+        },
+        "end": {
+          "line": 28,
+          "column": 56
+        }
+      }
+    }) : helper)) + "\" data-price=\"" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "price",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 70
+        },
+        "end": {
+          "line": 28,
+          "column": 79
+        }
+      }
+    }) : helper)) + "\"\n							data-userID=\"" + alias4((helper = (helper = lookupProperty(helpers, "userId") || (depth0 != null ? lookupProperty(depth0, "userId") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "userId",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 20
+        },
+        "end": {
+          "line": 29,
+          "column": 30
+        }
+      }
+    }) : helper)) + "\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "_id") || (depth0 != null ? lookupProperty(depth0, "_id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "_id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 41
+        },
+        "end": {
+          "line": 29,
+          "column": 48
+        }
+      }
+    }) : helper)) + "\" data-description=\"" + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "description",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 68
+        },
+        "end": {
+          "line": 29,
+          "column": 83
+        }
+      }
+    }) : helper)) + "\"\n							data-title=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 30,
+          "column": 19
+        },
+        "end": {
+          "line": 30,
+          "column": 28
+        }
+      }
+    }) : helper)) + "\">\n							fullscreen\n						</span>\n					</button>\n\n				</div>\n\n\n			</div>\n\n			<div class=\"cards__text-cont\">\n				<h3 class=\"name-st-p\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 41,
           "column": 26
         },
         "end": {
-          "line": 38,
+          "line": 41,
           "column": 35
         }
       }
@@ -16679,11 +16924,11 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 43,
           "column": 42
         },
         "end": {
-          "line": 40,
+          "line": 43,
           "column": 54
         }
       }
@@ -16693,11 +16938,11 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 45,
           "column": 28
         },
         "end": {
-          "line": 42,
+          "line": 45,
           "column": 37
         }
       }
@@ -16729,7 +16974,7 @@ var templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 50,
+          "line": 53,
           "column": 9
         }
       }
@@ -17521,23 +17766,212 @@ var viewAllFromCategory = function viewAllFromCategory(e) {
 
 _renderCategoriesTaras.refMainContainer.addEventListener('click', viewAllFromCategory);
 },{"./rout-main":"js/routes/rout-main.js","../header/render-categories-taras":"js/header/render-categories-taras.js"}],"js/main/modal_advert/modal_advert.js":[function(require,module,exports) {
-var btnGoodsSellersInfo = document.querySelector('.js-goodsSellersInfo');
-var goodsSellersInfoTitle = document.querySelector('.js-goodsSellersInfo-title');
-var underBtnInfo = document.querySelector('.js-goods-modal__button-underinfo');
-btnGoodsSellersInfo.addEventListener('click', showGoodsSellersInfo);
-btnGoodsSellersInfo.addEventListener('onemouseout', showGoodsSellersInfo);
+document.addEventListener('click', function (event) {
+  var btnGoodsSellersInfo = document.querySelector('.js-goodsSellersInfo'); //   const goodsSellersInfoTitle = document.querySelector('.js-goodsSellersInfo-title');
 
-function showGoodsSellersInfo() {
-  btnGoodsSellersInfo.classList.add('b-color-gray');
-  goodsSellersInfoTitle.classList.add('is-hidden');
-  underBtnInfo.classList.remove('is-hidden');
+  var underBtnInfo = document.querySelector('.js-goods-modal__button-underinfo');
+
+  if (event.target.classList.contains('js-goodsSellersInfo')) {
+    btnGoodsSellersInfo.classList.toggle('b-color-gray');
+    var goodsSellersInfoTitle = document.querySelector('.js-goodsSellersInfo-title'); // goodsSellersInfoTitle.classList.add('is-hidden');
+
+    underBtnInfo.classList.toggle('is-hidden'); // showGoodsSellersInfo();
+    // btnGoodsSellersInfo.addEventListener('click', hideGoodsSellersInfo);
+  }
+}); // function hideGoodsSellersInfo() {
+//   //   goodsSellersInfoTitle.classList.remove('is-hidden');
+//   underBtnInfo.classList.toggle('is-hidden');
+// }
+// const btnGoodsSellersInfo = document.querySelector('.js-goodsSellersInfo');
+// const goodsSellersInfoTitle = document.querySelector('.js-goodsSellersInfo-title');
+// const underBtnInfo = document.querySelector('.js-goods-modal__button-underinfo');
+// btnGoodsSellersInfo.addEventListener('click', showGoodsSellersInfo);
+// btnGoodsSellersInfo.addEventListener('onemouseout', showGoodsSellersInfo);
+// function showGoodsSellersInfo() {
+//   btnGoodsSellersInfo.classList.add('b-color-gray');
+//   goodsSellersInfoTitle.classList.add('is-hidden');
+//   underBtnInfo.classList.remove('is-hidden');
+// }
+// function hideGoodsSellersInfo() {
+//   goodsSellersInfoTitle.classList.remove('is-hidden');
+//   underBtnInfo.classList.add('is-hidden');
+// }
+},{}],"templates/adverdMurkup.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var templateFunction = _handlebars.default.template({
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    var helper,
+        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+        alias2 = container.hooks.helperMissing,
+        alias3 = "function",
+        alias4 = container.escapeExpression,
+        alias5 = container.lambda,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden-\">\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"" + alias4((helper = (helper = lookupProperty(helpers, "imageUrls") || (depth0 != null ? lookupProperty(depth0, "imageUrls") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "imageUrls",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 52
+        },
+        "end": {
+          "line": 12,
+          "column": 65
+        }
+      }
+    }) : helper)) + "\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"" + alias4(alias5(depth0, depth0)) + "\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 35,
+          "column": 47
+        },
+        "end": {
+          "line": 35,
+          "column": 56
+        }
+      }
+    }) : helper)) + "</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n            </div>\n\n            <h2 class=\"goods-modal__price\">" + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "price",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 43
+        },
+        "end": {
+          "line": 48,
+          "column": 52
+        }
+      }
+    }) : helper)) + "</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span>" + alias4((helper = (helper = lookupProperty(helpers, "phone") || (depth0 != null ? lookupProperty(depth0, "phone") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "phone",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 34
+        },
+        "end": {
+          "line": 61,
+          "column": 43
+        }
+      }
+    }) : helper)) + "</span>\n                            <span class=\"material-icons md-18 cards__icons\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text \">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text \">Поділитися</p>\n                        <span class=\"material-icons md-18 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum\n                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae\n                    nihil dolorem incidunt. Hic?</span>\n            </p>\n        </div>\n    </div>\n    <!-- </div> -->\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n</div>";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"templates/modal_advend.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var templateFunction = _handlebars.default.template({
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    return "<div class=\"backdrop- card-modal__overlay- backdrop-st-p- is-hidden-\">\n\n    <!-- <div class=\"card-modal__content modal-\"> -->\n    <div class=\"card-modal\">\n        <button class=\"card-modal__close-btn\" type=\"button\">\n            <span class=\"material-icons card-modal__icon-close\">close</span>\n        </button>\n\n        <div class=\"card-modal__image-wraper\">\n            <img class=\"card-modal__image-big\" src=\"\" alt=\"card-image\" />\n            <ul class=\"card-modal_tumbnails-list\">\n                <li class=\"card-modal__tumbnails-item is-selected\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n                <li class=\"card-modal__tumbnails-item\">\n                    <img src=\"\" alt=\"\" class=\"card-modal__image-tumbnail\" />\n                </li>\n            </ul>\n        </div>\n        <div class=\"card-modal__info-container\">\n\n            <div class=\"card-modal__heading-wrapper\">\n                <h2 class=\"goods-modal__title\">Футболка спортивна</h2>\n                <p class=\"goods-modal__text cont\">\n                    <span>Код товару |</span>\n                    <span class=\"goods-modal__code\">105-С</span>\n                </p>\n            </div>\n\n            <div class=\"goods-modal__mob-photo\">\n                <!--  -->\n                <!--  -->\n                <!--  -->\n            </div>\n\n            <h2 class=\"goods-modal__price\">200.00 uah</h2>\n            <div class=\"goods-modal__info\">\n                <ul class=\"js-button\"></ul>\n\n                <button class=\"js-goodsSellersInfo\"><span class=\"js-goodsSellersInfo-title is-hidden-\">Информация о\n                        продавце</span>\n                    <div class=\"js-goods-modal__button-underinfo is-hidden\">\n                        <p class=\"goods-modal__title\">\n                            Ольга\n                            <span class=\"goods-modal__text card-modal__insert\"> - на OLX c <span class=\"\">нояб.\n                                    2018</span></span>\n                        </p>\n                        <a class=\"phone-title\" href=\"tel:+380961111111\">\n                            <span>+38 096 111 11 11</span>\n                            <span class=\"material-icons md-18 cards__icons\">\n                                icon-phone\n                            </span>\n                        </a>\n                    </div>\n                </button>\n\n            </div>\n            <ul class=\"card-modal__like-share\">\n                <li>\n                    <button class=\"goods-modal__item card-modal__like\">\n                        <p class=\"goods-modal__text \">В обране</p>\n                        <span class=\"material-icons md-15 cards__icons\">\n                            favorite_border\n                        </span>\n                    </button>\n                </li>\n                <li>\n                    <button class=\"goods-modal__item card-modal__share\">\n                        <p class=\"goods-modal__text \">Поділитися</p>\n                        <span class=\"material-icons md-18 cards__icons\">\n                            share\n                        </span>\n                    </button>\n                </li>\n            </ul>\n            <p class=\"goods-modal__text discription-title\">Опис:</p>\n            <p class=\"goods-modal__discription-text\">\n                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum\n                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae\n                    nihil dolorem incidunt. Hic?</span>\n            </p>\n        </div>\n    </div>\n    <!-- </div> -->\n\n    <!-- <button type=\"button\" class=\"close-modal__button\" data-action=\"close-modal\">\n			<span class=\"materaal-icons card-modal__icon-close\">close</span>\n		</button> -->\n</div>";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/main/modal_advert/open_advent.js":[function(require,module,exports) {
+"use strict";
+
+var _adverdMurkup = _interopRequireDefault(require("../../../templates/adverdMurkup.hbs"));
+
+var _modal_advend = _interopRequireDefault(require("../../../templates/modal_advend.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var advertContainer = document.querySelector('.card-modal-body');
+var backDrop = document.querySelector('[data-advent-open]');
+document.addEventListener('click', openAdvendModal);
+
+function openAdvendModal(event) {
+  var cardAtrubutes = {};
+
+  if (event.target.classList.contains('js-fullScreen')) {
+    backDrop.classList.remove('is-hidden');
+    renderAdvertStartMarkup();
+    var imgAtributes = getAtributs(cardAtrubutes);
+    var closeAdventBtn = document.querySelector('.card-modal__close-btn');
+    closeAdventBtn.addEventListener('click', closeAdventModal);
+    backDrop.addEventListener('click', onBackDropClick);
+  }
 }
 
-function hideGoodsSellersInfo() {
-  goodsSellersInfoTitle.classList.remove('is-hidden');
-  underBtnInfo.classList.add('is-hidden');
+function closeAdventModal(e) {
+  backDrop.classList.add('is-hidden');
 }
-},{}],"js/main/edit-modal.logic.js/open-edit-modal.js":[function(require,module,exports) {
+
+function onBackDropClick(e) {
+  if (e.target.classList.contains('card-modal-body')) {
+    backDrop.classList.add('is-hidden');
+  }
+}
+
+function renderAdvertStartMarkup() {
+  advertContainer.innerHTML = (0, _modal_advend.default)();
+}
+
+function getAtributs(atrubutes) {
+  // const isonBackDropClick = event.target.classList.contains('js-product-card');
+  //   console.log(isonBackDropClick);
+  atrubutes.imageUrls = [];
+  atrubutes.title = document.querySelector('.js-fullScreen').getAttribute('data-title');
+  atrubutes.description = document.querySelector('.js-fullScreen').getAttribute('data-description');
+  atrubutes.phone = document.querySelector('.js-fullScreen').getAttribute('data-phone');
+  atrubutes.category = document.querySelector('.js-fullScreen').getAttribute('data-category');
+  atrubutes.id = document.querySelector('.js-fullScreen').getAttribute('data-id');
+  atrubutes.price = document.querySelector('.js-fullScreen').getAttribute('data-price');
+  atrubutes.imageUrls = document.querySelector('.js-fullScreen').getAttribute('data-images');
+  console.log(atrubutes.imageUrls);
+  renderMarkupAdvert(atrubutes);
+  return atrubutes;
+}
+
+function renderMarkupAdvert(atrubutes) {
+  advertContainer.innerHTML = (0, _adverdMurkup.default)(atrubutes);
+}
+},{"../../../templates/adverdMurkup.hbs":"templates/adverdMurkup.hbs","../../../templates/modal_advend.hbs":"templates/modal_advend.hbs"}],"js/main/edit-modal.logic.js/open-edit-modal.js":[function(require,module,exports) {
 var refs = {
   closeModalBtn: document.querySelector('[data-modal-add-edit-close]'),
   backdrop: document.querySelector('[data-modal-edit-bill]'),
@@ -17574,17 +18008,15 @@ function openEditModal(e) {
 }
 
 function getAtributs(atrubutes, event) {
-  var isonBackDropClick = event.target.classList.contains('js-product-card');
-  console.log(isonBackDropClick);
-
-  if (isonBackDropClick) {
-    atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
-    atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
-    atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
-    atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
-    atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
-    atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
-  }
+  // const isonBackDropClick = event.target.classList.contains('js-product-card');
+  // console.log(isonBackDropClick);
+  // if (isonBackDropClick) {
+  atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
+  atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
+  atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
+  atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
+  atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
+  atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price'); // }
 
   console.log(atrubutes);
   return atrubutes;
@@ -18026,12 +18458,14 @@ require("./js/routes/renderAllByCategory");
 
 require("./js/main/modal_advert/modal_advert");
 
+require("./js/main/modal_advert/open_advent");
+
 require("./js/main/edit-modal.logic.js/open-edit-modal");
 
 require("./js/main/edit-modal.logic.js/send-edit");
 
 require("./js/main/edit-modal.logic.js/deleteAdd");
-},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./sass/main.scss":"sass/main.scss","./js/header/header-main":"js/header/header-main.js","./js/start-page/start-page":"js/start-page/start-page.js","./js/main/catigoriesApi":"js/main/catigoriesApi.js","./js/main/add-modal-logic/main-add-modal":"js/main/add-modal-logic/main-add-modal.js","./js/my-cabinet/open-myCabunet":"js/my-cabinet/open-myCabunet.js","./js/my-cabinet/addToFavorie":"js/my-cabinet/addToFavorie.js","./js/header/render-categories-taras":"js/header/render-categories-taras.js","./js/routes/router":"js/routes/router.js","./js/routes/rout-main":"js/routes/rout-main.js","./js/routes/update-page":"js/routes/update-page.js","./js/routes/search":"js/routes/search.js","./js/routes/category":"js/routes/category.js","./js/routes/main-pages":"js/routes/main-pages.js","./js/routes/renderAllByCategory":"js/routes/renderAllByCategory.js","./js/main/modal_advert/modal_advert":"js/main/modal_advert/modal_advert.js","./js/main/edit-modal.logic.js/open-edit-modal":"js/main/edit-modal.logic.js/open-edit-modal.js","./js/main/edit-modal.logic.js/send-edit":"js/main/edit-modal.logic.js/send-edit.js","./js/main/edit-modal.logic.js/deleteAdd":"js/main/edit-modal.logic.js/deleteAdd.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./sass/main.scss":"sass/main.scss","./js/header/header-main":"js/header/header-main.js","./js/start-page/start-page":"js/start-page/start-page.js","./js/main/catigoriesApi":"js/main/catigoriesApi.js","./js/main/add-modal-logic/main-add-modal":"js/main/add-modal-logic/main-add-modal.js","./js/my-cabinet/open-myCabunet":"js/my-cabinet/open-myCabunet.js","./js/my-cabinet/addToFavorie":"js/my-cabinet/addToFavorie.js","./js/header/render-categories-taras":"js/header/render-categories-taras.js","./js/routes/router":"js/routes/router.js","./js/routes/rout-main":"js/routes/rout-main.js","./js/routes/update-page":"js/routes/update-page.js","./js/routes/search":"js/routes/search.js","./js/routes/category":"js/routes/category.js","./js/routes/main-pages":"js/routes/main-pages.js","./js/routes/renderAllByCategory":"js/routes/renderAllByCategory.js","./js/main/modal_advert/modal_advert":"js/main/modal_advert/modal_advert.js","./js/main/modal_advert/open_advent":"js/main/modal_advert/open_advent.js","./js/main/edit-modal.logic.js/open-edit-modal":"js/main/edit-modal.logic.js/open-edit-modal.js","./js/main/edit-modal.logic.js/send-edit":"js/main/edit-modal.logic.js/send-edit.js","./js/main/edit-modal.logic.js/deleteAdd":"js/main/edit-modal.logic.js/deleteAdd.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -18059,7 +18493,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49707" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58664" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
