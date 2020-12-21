@@ -6,7 +6,6 @@ import './js/start-page/start-page';
 import './js/main/catigoriesApi';
 import './js/main/add-modal-logic/main-add-modal';
 import './js/my-cabinet/open-myCabunet';
-import './js/my-cabinet/addToFavorie';
 
 import './js/header/render-categories-taras';
 // import './js/pagination/main';

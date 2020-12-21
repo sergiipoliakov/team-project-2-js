@@ -2,11 +2,11 @@ import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 import { error } from '@pnotify/core';
 
-import searchResoultTmpl from '../../templates/card-initial.hbs';
+import searchResoultTmpl from '../../templates/test.hbs';
 
 const searchFormEl = document.querySelector('.js-search-modal-form');
 const searchInputEl = document.querySelector('#searchInput');
-const searchResoultContainer = document.querySelector('.catigories-container');
+const searchResoultContainer = document.querySelector('.search-resoult');
 const searchModal = document.querySelector('[data-modal]');
 
 let searchQuery = {};

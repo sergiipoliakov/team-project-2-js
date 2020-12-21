@@ -16,8 +16,7 @@ const myStorage = window.localStorage;
 let token = myStorage.getItem('Bearer');
 let id = myStorage.getItem('id');
 let sid = myStorage.getItem('sid');
-let refreshToken = myStorage.getItem('refreshToken');
-// console.log(refreshToken);
+// console.log(token);
 // console.log(id);
 // console.log(sid);
 
@@ -60,7 +59,9 @@ registerFormBtn.addEventListener('click', onRegisterFormBtnClick);
 loginFormBtn.addEventListener('click', onLoginFormBtnClick);
 
 function onRegisterFormBtnClick(event) {
-  isOnRegisterFormBtnClick = event.target.classList.contains('register-form-button');
+  isOnRegisterFormBtnClick = event.target.classList.contains(
+    'register-form-button',
+  );
 }
 function onLoginFormBtnClick(event) {
   isLoginFormBtn = event.target.classList.contains('login-form-button');
@@ -79,7 +80,6 @@ function onRegisterFormSubmit(event) {
 
     toLogin(registerFormQuery).then(data => {
       const message = data.message;
-      console.log(data);
 
       if (message) {
         return error({
@@ -91,8 +91,6 @@ function onRegisterFormSubmit(event) {
       }
       Token = data.accessToken;
       sid = data.sid;
-      refreshToken = data.refreshToken;
-      console.log(refreshToken);
 
       if (Token !== undefined) {
         localStorage.setItem('Bearer', Token);
@@ -102,9 +100,6 @@ function onRegisterFormSubmit(event) {
         }
         if (sid) {
           localStorage.setItem('sid', sid);
-        }
-        if (refreshToken) {
-          localStorage.setItem('refreshToken', refreshToken);
         }
 
         location.reload();
@@ -193,7 +188,11 @@ function onRegisterFormSubmit(event) {
 }
 
 const toLogin = function (param) {
-  async function postData(url = 'https://callboard-backend.herokuapp.com/auth/login', data = param, method = 'POST') {
+  async function postData(
+    url = 'https://callboard-backend.herokuapp.com/auth/login',
+    data = param,
+    method = 'POST',
+  ) {
     const response = await fetch(url, {
       method: method, // *GET, POST, PUT, DELETE, etc.
       headers: {
@@ -241,7 +240,7 @@ function onLogout() {
   myStorage.removeItem('Bearer');
   myStorage.removeItem('id');
   myStorage.removeItem('sid');
-  myStorage.removeItem('refreshToken');
+
   async function postData(
     url = 'https://callboard-backend.herokuapp.com/auth/logout',
     // data = param,
