@@ -6,8 +6,6 @@ const addBillFormEl = document.querySelector('.js-edit-form');
 const imageList = document.querySelector('.image-preview__edit');
 const formImage = document.querySelector('#fileEdit');
 
-console.log(addBillFormEl);
-
 const myStorage = window.localStorage;
 
 let token = myStorage.getItem('Bearer');
@@ -27,9 +25,7 @@ async function formEditSend(event) {
 
   // const cardID = '5fde627764501b0017308fb3';
 
-  const cardId = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-id');
+  const cardId = document.querySelector('.js-product-card').getAttribute('data-id');
 
   let errorsForm = formValidate(addBillFormEl);
 
@@ -178,10 +174,7 @@ function telefonTest(element) {
 }
 function catigoryTest(element) {
   console.log(element);
-  if (
-    (element.value === 'work' || element.value === 'for-free') &&
-    price.value !== '0'
-  ) {
+  if ((element.value === 'work' || element.value === 'for-free') && price.value !== '0') {
     console.log('ошибка1');
     error({
       text: 'Ціна для цїєї категорії має бути 0',
@@ -205,10 +198,7 @@ function catigoryTest(element) {
   }
 }
 function priceTest(element) {
-  if (
-    (!Number(element.value) && Number(element.value) !== 0) ||
-    element.value === ''
-  ) {
+  if ((!Number(element.value) && Number(element.value) !== 0) || element.value === '') {
     console.log('Введіть коректну ціну товару');
     error({
       text: 'Введіть коректну ціну товару',
