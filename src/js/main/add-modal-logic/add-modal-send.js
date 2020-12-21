@@ -78,6 +78,7 @@ async function takeFormData(event) {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+        location.reload();
       })
       .catch(function (error) {
         console.log(error);
@@ -235,10 +236,7 @@ function telefonTest(element) {
 }
 function catigoryTest(element) {
   console.log(element);
-  if (
-    (element.value === 'work' || element.value === 'for-free') &&
-    price.value !== '0'
-  ) {
+  if ((element.value === 'work' || element.value === 'for-free') && price.value !== '0') {
     console.log('ошибка1');
     error({
       text: 'Ціна для цїєї категорії має бути 0',
@@ -262,10 +260,7 @@ function catigoryTest(element) {
   }
 }
 function priceTest(element) {
-  if (
-    (!Number(element.value) && Number(element.value) !== 0) ||
-    element.value === ''
-  ) {
+  if ((!Number(element.value) && Number(element.value) !== 0) || element.value === '') {
     console.log('Введіть коректну ціну товару');
     error({
       text: 'Введіть коректну ціну товару',
