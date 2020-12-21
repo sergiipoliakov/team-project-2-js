@@ -92,7 +92,6 @@ function onRegisterFormSubmit(event) {
       Token = data.accessToken;
       sid = data.sid;
       refreshToken = data.refreshToken;
-      console.log(refreshToken);
 
       if (Token !== undefined) {
         localStorage.setItem('Bearer', Token);
@@ -120,10 +119,10 @@ function onRegisterFormSubmit(event) {
         const id = data.id;
         const message = data.message;
 
-        console.log(data);
-        console.log(id);
+        // console.log(data);
+        // console.log(id);
 
-        console.log(data.message);
+        // console.log(data.message);
         if (message) {
           return error({
             text: message,

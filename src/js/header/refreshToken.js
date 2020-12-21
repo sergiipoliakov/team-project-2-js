@@ -2,12 +2,12 @@ async function takeFormData() {
   const refreshToken = localStorage.getItem('refreshToken');
   const sid = localStorage.getItem('sid');
 
-  console.log(refreshToken);
+  // console.log(refreshToken);
   let data = {};
 
   data.sid = sid;
 
-  console.log(data);
+  // console.log(data);
 
   let config = {
     method: 'POST',

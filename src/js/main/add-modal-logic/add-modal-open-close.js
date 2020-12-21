@@ -29,7 +29,7 @@ function toggleModal() {
 function onBackDropClick(event) {
   const isonBackDropClick = event.target.classList.contains('js-backdrop');
 
-  console.log(isonBackDropClick);
+  // console.log(isonBackDropClick);
   if (!isonBackDropClick) {
     return;
   }
