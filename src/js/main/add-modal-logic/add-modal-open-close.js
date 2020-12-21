@@ -20,7 +20,7 @@ function toggleModal() {
       text: 'Авторизируйтесь!',
       type: 'info',
       animateSpeed: 'normal',
-      delay: 3000,
+      delay: 500,
     });
     return;
   }
