@@ -18,6 +18,10 @@ import './js/routes/category';
 import './js/routes/main-pages';
 import './js/routes/renderAllByCategory';
 
+import './js/main/modal_advert/modal_advert'; // Andrii
+
+
 import './js/main/edit-modal.logic.js/open-edit-modal'; //sergii
 import './js/main/edit-modal.logic.js/send-edit'; //sergii
 import './js/main/edit-modal.logic.js/deleteAdd'; //sergii
+
