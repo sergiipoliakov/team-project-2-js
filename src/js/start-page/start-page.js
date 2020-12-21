@@ -1,5 +1,7 @@
 // const imgContainerStPage = document.querySelector('.product-card__img-container-st-p');
 
+
+
 // const btnHeart = document.querySelector('.heart-button');
 // const btnFullscreen = document.querySelector('.fullscreen-button');
 
