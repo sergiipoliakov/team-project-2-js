@@ -57,6 +57,10 @@
 <symbol id="icon-arrow" viewBox="0 0 10 6">
 <path d="M0 5.54834L5 0.614929L10 5.54834H0Z" fill="black"></path>
 </symbol>
+<symbol id="icon-file-1" viewBox="0 0 32 32">
+<path fill="#bbb" style="fill: var(--color1, #bbb)" d="M20.8 0h-19.2v32h28.8v-22.4l-9.6-9.6zM20.8 4.528l5.072 5.072h-5.072v-5.072zM27.2 28.8h-22.4v-25.6h12.8v9.6h9.6v16z"></path>
+<path fill="#bbb" style="fill: var(--color1, #bbb)" d="M22.016 15.473l-2.256-2.272-3.728 3.728-3.904-3.904-2.256 2.272 3.888 3.888-3.696 3.712 2.256 2.256 3.712-3.696 3.728 3.728 2.256-2.272-3.728-3.728 3.728-3.712z"></path>
+</symbol>
 
 </defs>
 </svg>

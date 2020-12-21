@@ -4,71 +4,63 @@ const refs = {
   modalFavorites: document.querySelector('.modal-favorites'),
   myCard: document.querySelector('.my-goods-hbs'),
 };
+const imageList = document.querySelector('.image-preview__edit');
 
 // console.log(refs.openModalEditBtn);
 // console.log(refs.closeModalBtn);
-// console.log(refs.backdrop);
+// console.log(imageList);
 // console.log(refs.modalFavorites);
 // console.log(refs.myCard);
 
 refs.myCard.addEventListener('click', openEditModal);
 
+refs.closeModalBtn.addEventListener('click', closeEditAddForm);
+
+function closeEditAddForm() {
+  // const imageList = document.querySelector('.image-preview__item');
+  // console.dir(imageList.children[2]);
+  // imageList.children[2].innerHTML = '';
+  refs.backdrop.classList.add('is-hidden');
+}
+
 function openEditModal(e) {
-  console.log(e.target.id);
-
-  if (!e.target.id === 'openEditModal') {
-    return;
+  if (e.target.id === 'openEditModal') {
+    refs.backdrop.classList.remove('is-hidden');
   }
-  let atrubutes = {};
+  let cardAtrubutes = {};
 
-  refs.backdrop.classList.toggle('is-hidden');
   const openModalEditBtn = document.querySelector('.js-create-button');
-  openModalEditBtn.addEventListener('click', toggleModal);
-
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  function toggleModal() {
-    refs.backdrop.classList.toggle('is-hidden');
-  }
 
   const addBillFormEl = document.querySelector('.js-edit-form');
 
-  const imgAtributes = getAtributs(atrubutes);
+  const imgAtributes = getAtributs(cardAtrubutes, e);
 
   console.log('img', imgAtributes);
   setValuesToFormEdit(imgAtributes);
 }
-function getAtributs(atrubutes) {
-  atrubutes.title = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-title');
+function getAtributs(atrubutes, event) {
+  const isonBackDropClick = event.target.classList.contains('js-product-card');
+  console.log(isonBackDropClick);
+  if (isonBackDropClick) {
+    atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
 
-  atrubutes.description = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-description');
+    atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
 
-  atrubutes.phone = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-phone');
+    atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
 
-  atrubutes.category = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-category');
+    atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
 
-  atrubutes.id = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-id');
-  atrubutes.price = document
-    .querySelector('.js-product-card')
-    .getAttribute('data-price');
+    atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
+    atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
+  }
 
-  // console.log(atrubutes);
+  console.log(atrubutes);
   return atrubutes;
 }
 
 function setValuesToFormEdit(imgAtributes) {
   document.querySelector('#nameEdit').value = imgAtributes.title;
-  document.querySelector('#form-descriptionEdit').value =
-    imgAtributes.description;
+  document.querySelector('#form-descriptionEdit').value = imgAtributes.description;
   document.querySelector('#priceEdit').value = imgAtributes.price;
   document.querySelector('#telefonEdit').value = imgAtributes.phone;
   console.log('inputValue', imgAtributes.title);
