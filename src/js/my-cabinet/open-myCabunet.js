@@ -12,9 +12,9 @@ const token = localStorage.getItem('Bearer');
 document.getElementById('myCabinetDiv').hidden = true;
 
 async function fetchMyCabinet() {
-   clearCategoryContainer();
+  clearCategoryContainer();
   document.getElementById('myCabinetDiv').hidden = false;
- 
+
   let config = {
     method: 'GET',
     url: 'https://callboard-backend.herokuapp.com/call/own',
@@ -29,7 +29,7 @@ async function fetchMyCabinet() {
 
   await axios(config)
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
       const myGoods = response.data.favourites;
 
       goodsContainer.innerHTML = myGoodsTmpl(myGoods);

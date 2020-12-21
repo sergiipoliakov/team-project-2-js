@@ -35,7 +35,6 @@ function openEditModal(e) {
 
   const imgAtributes = getAtributs(cardAtrubutes, e);
 
-  console.log('img', imgAtributes);
   setValuesToFormEdit(imgAtributes);
 }
 function getAtributs(atrubutes, event) {
@@ -54,7 +53,6 @@ function getAtributs(atrubutes, event) {
   atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
   // }
 
-  console.log(atrubutes);
   return atrubutes;
 }
 

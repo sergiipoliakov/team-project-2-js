@@ -24,17 +24,17 @@
     border-bottom: 1px solid #000;
   }
 
-  // &-label {
-  // position: absolute;
-  // top: 25%;
-  // right: 20px;
-  // transform: translateY(-50%);
-  // font-size: 14px;
-  // line-height: 16px;
-  // letter-spacing: 0.01em;
-  // // color: red;
-  // transition: transform $cubicBezier;
-  // }
+  &-label {
+    position: absolute;
+    top: 25%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    // color: red;
+    transition: transform $cubicBezier;
+  }
 }
 ::-webkit-input-placeholder {
   /* WebKit browsers */
