@@ -35,31 +35,31 @@ async function formEditSend(event) {
   //   console.log(formData.get('file'));
 
   if (errorsForm === 0) {
-    console.log('нет ошики');
+    // console.log('нет ошики');
 
     let formReq = addBillFormEl.querySelectorAll('._req');
     for (let i = 0; i < formReq.length; i += 1) {
       const element = formReq[i];
 
-      if (element.classList.contains('_name')) {
+      if (element.classList.contains('_nameEdit')) {
         formData.append('title', `${element.value}`);
-      } else if (element.classList.contains('_description')) {
+      } else if (element.classList.contains('_descriptionEdit')) {
         formData.append('description', `${element.value}`);
-      } else if (element.classList.contains('_phone')) {
+      } else if (element.classList.contains('_phoneEdit')) {
         formData.append('phone', `${element.value}`);
-      } else if (element.classList.contains('_category')) {
+      } else if (element.classList.contains('_categoryEdit')) {
         let value = element.options[element.selectedIndex].value;
         formData.append('category', `${value}`);
-      } else if (element.classList.contains('_price')) {
+      } else if (element.classList.contains('_priceEdit')) {
         formData.append('price', `${element.value}`);
       }
     }
-    console.log(formData.get('file'));
-    console.log(formData.get('title'));
-    console.log(formData.get('description'));
-    console.log(formData.get('phone'));
-    console.log(formData.get('category'));
-    console.log(formData.get('price'));
+    // console.log(formData.get('file'));
+    // console.log(formData.get('title'));
+    // console.log(formData.get('description'));
+    // console.log(formData.get('phone'));
+    // console.log(formData.get('category'));
+    // console.log(formData.get('price'));
 
     let config = {
       method: 'PATCH',
@@ -90,7 +90,7 @@ function formValidate(form) {
     const input = formReq[i];
     formRemoveError(input);
 
-    if (input.classList.contains('_name')) {
+    if (input.classList.contains('_nameEdit')) {
       if (nameTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -114,7 +114,7 @@ function formValidate(form) {
         });
         //   пенетифай для шибки поля описания
       }
-    } else if (input.classList.contains('_phone')) {
+    } else if (input.classList.contains('_phoneEdit')) {
       if (telefonTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -126,8 +126,7 @@ function formValidate(form) {
         });
         //   пенетифай для шибки поля телефон
       }
-    } else if (input.classList.contains('_category')) {
-      console.log('category', !input.classList.contains('_category'));
+    } else if (input.classList.contains('_categoryEdit')) {
       if (catigoryTest(input)) {
         formAddError(input);
         errorData += 1;
