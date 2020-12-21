@@ -1,34 +1,34 @@
 <div class="backdrop- card-modal__overlay- backdrop-st-p- is-hidden-">
 
+
+
+
     <!-- <div class="card-modal__content modal-"> -->
     <div class="card-modal">
         <button class="card-modal__close-btn" type="button">
             <span class="material-icons card-modal__icon-close">close</span>
         </button>
-        {{!-- {{#each imageUrls}} --}}
-        {{!-- <img class="goods-modal__mob-photo-big" src="{{imageUrls}}" alt=""> --}}
 
         <div class="card-modal__image-wraper">
             <img class="card-modal__image-big" src="{{imageUrls}}" alt="card-image" />
             <ul class="card-modal_tumbnails-list">
                 <li class="card-modal__tumbnails-item is-selected">
-                    <img src="{{this}}" alt="" class="card-modal__image-tumbnail" />
+                    <img src="{{imageUrls}}" alt="" class="card-modal__image-tumbnail" />
                 </li>
                 <li class="card-modal__tumbnails-item">
-                    <img src="{{this}}" alt="" class="card-modal__image-tumbnail" />
+                    <img src="{{imageUrls}}" alt="" class="card-modal__image-tumbnail" />
                 </li>
                 <li class="card-modal__tumbnails-item">
-                    <img src="{{this}}" alt="" class="card-modal__image-tumbnail" />
+                    <img src="{{imageUrls}}" alt="" class="card-modal__image-tumbnail" />
                 </li>
                 <li class="card-modal__tumbnails-item">
-                    <img src="{{this}}" alt="" class="card-modal__image-tumbnail" />
+                    <img src="{{imageUrls}}" alt="" class="card-modal__image-tumbnail" />
                 </li>
                 <li class="card-modal__tumbnails-item">
-                    <img src="{{this}}" alt="" class="card-modal__image-tumbnail" />
+                    <img src="{{imageUrls}}" alt="" class="card-modal__image-tumbnail" />
                 </li>
             </ul>
         </div>
-        {{!-- {{/each}} --}}
         <div class="card-modal__info-container">
 
             <div class="card-modal__heading-wrapper">
@@ -40,12 +40,12 @@
             </div>
 
             <div class="goods-modal__mob-photo">
-                {{!-- {{#each imageUrls}}
-                <img class="goods-modal__mob-photo-big" src="{{this}}" alt="">
-                {{/each}} --}}
+                <!-- {{!-- {{#each imageUrls}} --}} -->
+                <!-- {{!-- <img class="goods-modal__mob-photo-big" src="{{}}" alt=""> --}} -->
+                <!-- {{!-- {{/each}} --}} -->
             </div>
 
-            <h2 class="goods-modal__price">{{price}}</h2>
+            <h2 class="goods-modal__price">{{price}} uah</h2>
             <div class="goods-modal__info">
                 <ul class="js-button"></ul>
 
@@ -58,8 +58,8 @@
                                     2018</span></span>
                         </p>
                         <a class="phone-title" href="tel:+380961111111">
-                            <span>{{phone}}</span>
-                            <span class="material-icons md-18 cards__icons">
+                            <span class="phone-title__span">{{phone}}</span>
+                            <span class="material-icons md-15 cards__icons icon-phone">
                                 icon-phone
                             </span>
                         </a>
@@ -70,7 +70,7 @@
             <ul class="card-modal__like-share">
                 <li>
                     <button class="goods-modal__item card-modal__like">
-                        <p class="goods-modal__text ">В обране</p>
+                        <p class="goods-modal__text like-share-text">В обране</p>
                         <span class="material-icons md-15 cards__icons">
                             favorite_border
                         </span>
@@ -78,8 +78,8 @@
                 </li>
                 <li>
                     <button class="goods-modal__item card-modal__share">
-                        <p class="goods-modal__text ">Поділитися</p>
-                        <span class="material-icons md-18 cards__icons">
+                        <p class="goods-modal__text like-share-text">Поділитися</p>
+                        <span class="material-icons md-15 cards__icons">
                             share
                         </span>
                     </button>
@@ -87,13 +87,11 @@
             </ul>
             <p class="goods-modal__text discription-title">Опис:</p>
             <p class="goods-modal__discription-text">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nesciunt. Unde a quos eum
-                    labore vero totam doloribus, odio assumenda, aut nostrum porro quibusdam explicabo beatae
-                    nihil dolorem incidunt. Hic?</span>
+                <span>{{description}}</span>
             </p>
         </div>
+
     </div>
-    <!-- </div> -->
 
     <!-- <button type="button" class="close-modal__button" data-action="close-modal">
 			<span class="materaal-icons card-modal__icon-close">close</span>
