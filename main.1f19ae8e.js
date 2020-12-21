@@ -1075,7 +1075,6 @@ function onRegisterFormSubmit(event) {
       Token = data.accessToken;
       sid = data.sid;
       refreshToken = data.refreshToken;
-      console.log(refreshToken);
 
       if (Token !== undefined) {
         localStorage.setItem('Bearer', Token);
@@ -1103,10 +1102,9 @@ function onRegisterFormSubmit(event) {
     if (Token === undefined) {
       toRegistation(registerFormQuery).then(function (data) {
         var id = data.id;
-        var message = data.message;
-        console.log(data);
-        console.log(id);
-        console.log(data.message);
+        var message = data.message; // console.log(data);
+        // console.log(id);
+        // console.log(data.message);
 
         if (message) {
           return (0, _core.error)({
@@ -1384,11 +1382,11 @@ function _takeFormData() {
         switch (_context.prev = _context.next) {
           case 0:
             refreshToken = localStorage.getItem('refreshToken');
-            sid = localStorage.getItem('sid');
-            console.log(refreshToken);
+            sid = localStorage.getItem('sid'); // console.log(refreshToken);
+
             data = {};
-            data.sid = sid;
-            console.log(data);
+            data.sid = sid; // console.log(data);
+
             config = {
               method: 'POST',
               url: 'https://callboard-backend.herokuapp.com/auth/refresh',
@@ -1412,7 +1410,7 @@ function _takeFormData() {
               console.log('refreshTokenError', error);
             });
 
-          case 8:
+          case 6:
           case "end":
             return _context.stop();
         }
@@ -16088,8 +16086,8 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-console.log(_renderCategoriesTaras.refMainContainer);
-console.log(_variablesRefs.optionalContainerMain);
+// console.log(refMainContainer);
+// console.log(optionalContainerMain);
 var categoriesListContainer = document.querySelector('.js-categories-list');
 var catogoriesContainer = document.querySelector('.js-catigories'); // const searchResoultContainer = document.querySelector('.search-resoult');
 // const searchModal = document.querySelector('[data-modal]');
@@ -16227,8 +16225,7 @@ function toggleModal() {
 }
 
 function onBackDropClick(event) {
-  var isonBackDropClick = event.target.classList.contains('js-backdrop');
-  console.log(isonBackDropClick);
+  var isonBackDropClick = event.target.classList.contains('js-backdrop'); // console.log(isonBackDropClick);
 
   if (!isonBackDropClick) {
     return;
@@ -17778,24 +17775,7 @@ document.addEventListener('click', function (event) {
     underBtnInfo.classList.toggle('is-hidden'); // showGoodsSellersInfo();
     // btnGoodsSellersInfo.addEventListener('click', hideGoodsSellersInfo);
   }
-}); // function hideGoodsSellersInfo() {
-//   //   goodsSellersInfoTitle.classList.remove('is-hidden');
-//   underBtnInfo.classList.toggle('is-hidden');
-// }
-// const btnGoodsSellersInfo = document.querySelector('.js-goodsSellersInfo');
-// const goodsSellersInfoTitle = document.querySelector('.js-goodsSellersInfo-title');
-// const underBtnInfo = document.querySelector('.js-goods-modal__button-underinfo');
-// btnGoodsSellersInfo.addEventListener('click', showGoodsSellersInfo);
-// btnGoodsSellersInfo.addEventListener('onemouseout', showGoodsSellersInfo);
-// function showGoodsSellersInfo() {
-//   btnGoodsSellersInfo.classList.add('b-color-gray');
-//   goodsSellersInfoTitle.classList.add('is-hidden');
-//   underBtnInfo.classList.remove('is-hidden');
-// }
-// function hideGoodsSellersInfo() {
-//   goodsSellersInfoTitle.classList.remove('is-hidden');
-//   underBtnInfo.classList.add('is-hidden');
-// }
+});
 },{}],"templates/adverdMurkup.hbs":[function(require,module,exports) {
 "use strict";
 
@@ -18003,7 +17983,6 @@ function openEditModal(e) {
   var openModalEditBtn = document.querySelector('.js-create-button');
   var addBillFormEl = document.querySelector('.js-edit-form');
   var imgAtributes = getAtributs(cardAtrubutes, e);
-  console.log('img', imgAtributes);
   setValuesToFormEdit(imgAtributes);
 }
 
@@ -18018,7 +17997,6 @@ function getAtributs(atrubutes, event) {
   atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
   atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price'); // }
 
-  console.log(atrubutes);
   return atrubutes;
 }
 
@@ -18128,32 +18106,32 @@ function _formEditSend() {
             //   console.log(formData.get('file'));
 
             if (errorsForm === 0) {
-              console.log('нет ошики');
+              // console.log('нет ошики');
               formReq = addBillFormEl.querySelectorAll('._req');
 
               for (i = 0; i < formReq.length; i += 1) {
                 element = formReq[i];
 
-                if (element.classList.contains('_name')) {
+                if (element.classList.contains('_nameEdit')) {
                   formData.append('title', "".concat(element.value));
-                } else if (element.classList.contains('_description')) {
+                } else if (element.classList.contains('_descriptionEdit')) {
                   formData.append('description', "".concat(element.value));
-                } else if (element.classList.contains('_phone')) {
+                } else if (element.classList.contains('_phoneEdit')) {
                   formData.append('phone', "".concat(element.value));
-                } else if (element.classList.contains('_category')) {
+                } else if (element.classList.contains('_categoryEdit')) {
                   value = element.options[element.selectedIndex].value;
                   formData.append('category', "".concat(value));
-                } else if (element.classList.contains('_price')) {
+                } else if (element.classList.contains('_priceEdit')) {
                   formData.append('price', "".concat(element.value));
                 }
-              }
+              } // console.log(formData.get('file'));
+              // console.log(formData.get('title'));
+              // console.log(formData.get('description'));
+              // console.log(formData.get('phone'));
+              // console.log(formData.get('category'));
+              // console.log(formData.get('price'));
 
-              console.log(formData.get('file'));
-              console.log(formData.get('title'));
-              console.log(formData.get('description'));
-              console.log(formData.get('phone'));
-              console.log(formData.get('category'));
-              console.log(formData.get('price'));
+
               config = {
                 method: 'PATCH',
                 url: "https://callboard-backend.herokuapp.com/call/".concat(cardId),
@@ -18190,7 +18168,7 @@ function formValidate(form) {
     var input = formReq[i];
     formRemoveError(input);
 
-    if (input.classList.contains('_name')) {
+    if (input.classList.contains('_nameEdit')) {
       if (nameTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -18212,7 +18190,7 @@ function formValidate(form) {
           delay: 3000
         }); //   пенетифай для шибки поля описания
       }
-    } else if (input.classList.contains('_phone')) {
+    } else if (input.classList.contains('_phoneEdit')) {
       if (telefonTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -18223,9 +18201,7 @@ function formValidate(form) {
           delay: 3000
         }); //   пенетифай для шибки поля телефон
       }
-    } else if (input.classList.contains('_category')) {
-      console.log('category', !input.classList.contains('_category'));
-
+    } else if (input.classList.contains('_categoryEdit')) {
       if (catigoryTest(input)) {
         formAddError(input);
         errorData += 1;
@@ -18493,7 +18469,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58664" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59696" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
