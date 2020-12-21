@@ -3654,7 +3654,7 @@ var templateFunction = _handlebars.default.template({
           "column": 34
         }
       }
-    }) : helper)) + " test test</h3>\n			<div class=\"price-cont\">\n				<h3 class=\"old-price-st-p is-hidden\">" + alias4((helper = (helper = lookupProperty(helpers, "oldPrice") || (depth0 != null ? lookupProperty(depth0, "oldPrice") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h3>\n			<div class=\"price-cont\">\n				<h3 class=\"old-price-st-p is-hidden\">" + alias4((helper = (helper = lookupProperty(helpers, "oldPrice") || (depth0 != null ? lookupProperty(depth0, "oldPrice") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "oldPrice",
       "hash": {},
       "data": data,
@@ -18552,7 +18552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61686" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57049" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
