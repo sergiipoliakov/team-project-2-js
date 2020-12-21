@@ -39,20 +39,20 @@ function openEditModal(e) {
   setValuesToFormEdit(imgAtributes);
 }
 function getAtributs(atrubutes, event) {
-  const isonBackDropClick = event.target.classList.contains('js-product-card');
-  console.log(isonBackDropClick);
-  if (isonBackDropClick) {
-    atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
+  // const isonBackDropClick = event.target.classList.contains('js-product-card');
+  // console.log(isonBackDropClick);
+  // if (isonBackDropClick) {
+  atrubutes.title = document.querySelector('.js-product-card').getAttribute('data-title');
 
-    atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
+  atrubutes.description = document.querySelector('.js-product-card').getAttribute('data-description');
 
-    atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
+  atrubutes.phone = document.querySelector('.js-product-card').getAttribute('data-phone');
 
-    atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
+  atrubutes.category = document.querySelector('.js-product-card').getAttribute('data-category');
 
-    atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
-    atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
-  }
+  atrubutes.id = document.querySelector('.js-product-card').getAttribute('data-id');
+  atrubutes.price = document.querySelector('.js-product-card').getAttribute('data-price');
+  // }
 
   console.log(atrubutes);
   return atrubutes;

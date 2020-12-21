@@ -26,7 +26,10 @@
 					</button>
 
 					<button class="fullscreen-button icons-container">
-						<span class="material-icons md-18 cards__icons">
+						<span class="material-icons md-18 cards__icons js-fullScreen" data-category="{{category}}"
+							data-phone="{{phone}}" data-images="{{imageUrls}}" data-price="{{price}}"
+							data-userID="{{userId}}" data-id="{{_id}}" data-description="{{description}}"
+							data-title="{{title}}">
 							fullscreen
 						</span>
 					</button>
@@ -38,7 +41,7 @@
 		</div>
 
 		<div class="cards__text-cont">
-			<h3 class="name-st-p">{{title}}</h3>
+			<h3 class="name-st-p">{{title}} test test</h3>
 			<div class="price-cont">
 				<h3 class="old-price-st-p is-hidden">{{oldPrice}}<span class="
 					currency UAH"> грн</span></h3>
